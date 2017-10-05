@@ -1,3 +1,4 @@
+
 config = {
     entry:'./src/index.js',
 
@@ -17,20 +18,23 @@ config = {
         loaders: [
             {
                 test: /\.jsx?$/,
+                exclude: /(node_modules)/,
                 loader: 'babel-loader',
                 query:{
-                    presets:['es2015', 'react']
+                    presets:['es2015', 'react', 'latest', 'stage-0']
                 }
             },
 
             {
-                test: /\.css/,
-                loader:'css-loader!style-loader'
+                test: /\.css$/,
+                exclude: /(node_modules)/,
+                loader: 'css-loader!style-loader'
             },
 
             {
-                test: /\.scss/,
-                loader: 'sass-loader!style-loader!css-loader'
+                test: /\.scss$/,
+                exclude: /(node_modules)/,
+                loader: 'sass-loader!css-loader!style-loader'
             }
         ]
     }
