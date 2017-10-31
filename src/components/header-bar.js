@@ -9,7 +9,7 @@ class Header extends React.Component {
             <div id='header-bar'>
                 <h1>
                     <FaMusic /> 
-                    Music tracking
+                    Music tracker
                 </h1>
             </div>
         )
