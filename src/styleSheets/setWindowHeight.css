@@ -1,0 +1,9 @@
+.windowPosition {
+    position:absolute;
+    left: 0;
+    right: 0;
+    top:42px;    
+    bottom: 66px;
+    width: 100%;
+    height: 527px;
+}

@@ -1,5 +1,14 @@
-/*reset css*/
-body {
-    margin: 0px 0px 0px 0px;
-    background-color:green;
+.home {
+        background-color: #e6f2ff;
+
+}
+
+.trendsBoard {
+    position:relative;
+    top: 10px;
+    background-color: rgba(0,23,34,0.212);
+    margin: auto;
+    width:80%;
+    height: 515px;
+    text-align: center;
 }

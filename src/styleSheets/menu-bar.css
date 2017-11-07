@@ -1,24 +1,29 @@
 #menu-bar {
     background-color: black;
-    color:white;
+    color:#80bfff;
     width:100%;
     height: 65px;
     position:fixed;
     bottom: 0;
-    text-align: center;
+    left: 0;
     min-width: 908px;
 }
 
 #menu-bar-item {
-    margin: auto;
-    width:500px;
+    margin: 0 auto;
+    width: 330px;
 }
 
 .menu-item {
     float:left;
-    font-size: 2em;
+    font-size: 30px;
     margin-right: 50px;
     margin-top: 7px;
-    border: 4px solid white;
-    border-radius: 5px;
+    /*border: 4px solid white;
+    border-radius: 5px;*/
 }
+
+.faSize {
+    font-size: 2em;
+}
+

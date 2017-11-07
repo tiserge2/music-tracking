@@ -12,19 +12,16 @@ class Menu extends React.Component {
             <div id='menu-bar'>
                 <div id='menu-bar-item'>
                     <div className='menu-item'>
-                    <FaHome />
-                    Home
+                        <FaHome className='faSize'/> 
                     </div>
 
                     <div className='menu-item'>
-                    <FaPlusSquare />
-                    Add
+                        <FaPlusSquare className='faSize'/> 
                     </div>
 
                     <div className='menu-item'>
-                    <FaList />
-                    List
-                </div>
+                        <FaList className='faSize'/> 
+                    </div>
                 </div>
             </div>
         )
