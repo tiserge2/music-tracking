@@ -1,7 +1,57 @@
+
 .musicField {
     position:relative;
-    background-color: red;
+    background-color: rgba(34,23,12,0.72);
     width: 90%;
     margin:0 auto;
     height: 110px;
+    margin-top:10px;
+}
+
+.titleImage {
+    background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);
+    float: left;
+    position:relative;
+    top: 6px;
+    left:10px;
+    width:19%;
+    height: 100px;
+    background-color:#d9b3ff;
+}
+
+.titleInfos {
+    float: left;
+    position:relative;
+    top: 6px;
+    left:10px;
+    width:60%;
+    height: 100px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+p {
+    color: white;
+    font-size: 17px;
+    margin-left: 7px;
+    margin-top: -1px;
+}
+
+.artistName {
+    font-size:24px;
+}
+
+.albumName {
+    font-size:15px;
+}
+
+.addButton {
+    float: left;
+    position:relative;
+    top: 6px;
+    width:19%;
+    height: 100px;
+    margin-left: 5px;
+    font-size: 5em;
+    color:#80bfff;
 }

@@ -5,6 +5,30 @@ require('!style-loader!css-loader!../styleSheets/home.css');
 
 
 class Home extends React.Component {
+    constructor(props) {
+            super(props);
+            this.state = {
+                values : Array(
+
+                    {
+                        "artist" : "Aldo Ranks",
+                        "title" : "Como Hago para olvidarte",
+                        "album" : "Yo no se"
+                    },
+                    {
+                        "artist" : "Makano",
+                        "title" : "Me rehuso",
+                        "album" : "Yo no se"
+                    },
+                    {
+                        "artist" : "Makano",
+                        "title" : "Como Hago para olvidarte",
+                        "album" : "La discusion"
+                    }
+                )
+            };
+        }
+
     render () {
         return (
             <div className='windowPosition home'>
@@ -13,8 +37,17 @@ class Home extends React.Component {
                         Music Trends
                     </h1>
 
-                    <div className=''>
-                        <Title />
+                    <div className='titleContainer' id='style-2'>
+                        {
+                            this.state.values.map(function(musicInfos, i){
+                                return(
+                                    <Title key={i} artist={musicInfos['artist']} 
+                                                   title={musicInfos['title']}
+                                                   album={musicInfos['album']} 
+                                    />
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>

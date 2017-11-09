@@ -1,4 +1,5 @@
 import React from 'react'
+import FaPlus from 'react-icons/lib/fa/plus'
 require('!style-loader!css-loader!../styleSheets/track-info.css');
 
 class Title extends React.Component {
@@ -9,9 +10,19 @@ class Title extends React.Component {
                 </div>
 
                 <div className='titleInfos'>
+                    <p className='artistName'>
+                        {this.props.artist}                       
+                    </p>
+                    <p className='titleName'>
+                        {this.props.title}
+                    </p>
+                    <p className='albumName'>
+                        {this.props.album}
+                    </p>
                 </div>
 
                 <div className='addButton'>
+                    <FaPlus />
                 </div>
             </div>
         )
