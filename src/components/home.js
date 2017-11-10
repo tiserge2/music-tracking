@@ -48,7 +48,7 @@ class Home extends React.Component {
         return (
             <div className='windowPosition home'>
                 <div className='trendsBoard'>
-                    <h1>
+                    <h1 className='texte1'>
                         Music Trends
                     </h1>
 

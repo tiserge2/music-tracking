@@ -2,6 +2,7 @@ import React from 'react'
 import FaHome from 'react-icons/lib/fa/home'
 import FaList from 'react-icons/lib/fa/list'
 import FaPlus from 'react-icons/lib/fa/plus'
+import FaSearch from 'react-icons/lib/fa/search'
 import FaListOl from 'react-icons/lib/fa/list-ol'
 import FaPlusSquare from 'react-icons/lib/fa/plus-square'
 require('!style-loader!css-loader!../styleSheets/menu-bar.css');
@@ -18,7 +19,7 @@ class Menu extends React.Component {
                     </div>
 
                     <div className='menu-item'>
-                        <FaPlus className='faSize'/> 
+                        <FaSearch className='faSize'/> 
                     </div>
 
                     <div className='menu-item'>

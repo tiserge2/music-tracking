@@ -1,5 +1,6 @@
 .home {
-        background-color: #e6f2ff;
+        background-color: #d4eff7;
+        background-image: url(http://hdbackgroundspic.com/wp-content/uploads/2017/02/green-beautiful-background.jpg);
         min-width: 482px;
 
 }
@@ -11,8 +12,14 @@
     margin: auto;
     width:80%;
     height: 515px;
-    text-align: center;
     min-width: 434px;
+}
+
+.texte1 {
+    position:relative;
+    top: 7px;
+    left: 7px;
+    font-size: 30px;
 }
 
 .titleContainer {
@@ -21,6 +28,7 @@
     width: 100%;
     height: 445px;
 }
+
 
 #style-2::-webkit-scrollbar-track
 {

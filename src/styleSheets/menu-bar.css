@@ -10,6 +10,8 @@
 }
 
 #menu-bar-item {
+    position: relative;
+    bottom:3px;
     margin: 0 auto;
     width: 330px;
 }
@@ -28,7 +30,6 @@
 }
 
 .faSize:hover {
-    background-color: #80bfff;
-    color: black;
+    color:rgba(128, 212, 55,0.72);
 }
 
