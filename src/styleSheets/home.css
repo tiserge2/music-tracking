@@ -1,5 +1,6 @@
 .home {
         background-color: #e6f2ff;
+        min-width: 482px;
 
 }
 
@@ -11,6 +12,7 @@
     width:80%;
     height: 515px;
     text-align: center;
+    min-width: 434px;
 }
 
 .titleContainer {

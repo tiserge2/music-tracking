@@ -1,6 +1,8 @@
 import React from 'react'
 import FaHome from 'react-icons/lib/fa/home'
 import FaList from 'react-icons/lib/fa/list'
+import FaPlus from 'react-icons/lib/fa/plus'
+import FaListOl from 'react-icons/lib/fa/list-ol'
 import FaPlusSquare from 'react-icons/lib/fa/plus-square'
 require('!style-loader!css-loader!../styleSheets/menu-bar.css');
 //import '../styleSheets/menu-bar.css'
@@ -16,11 +18,11 @@ class Menu extends React.Component {
                     </div>
 
                     <div className='menu-item'>
-                        <FaPlusSquare className='faSize'/> 
+                        <FaPlus className='faSize'/> 
                     </div>
 
                     <div className='menu-item'>
-                        <FaList className='faSize'/> 
+                        <FaListOl className='faSize'/> 
                     </div>
                 </div>
             </div>
