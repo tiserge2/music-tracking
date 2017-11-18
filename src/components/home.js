@@ -18,7 +18,7 @@ class Home extends React.Component {
             };
         }
 
-        componentDidMount(){
+        componentWillMount(){
             axios.get('https://api.deezer.com/chart').then(res => {
                 const values = [];
                 
@@ -42,6 +42,8 @@ class Home extends React.Component {
                 console.log(values);
             });
         }
+
+        
 
     render () {
         

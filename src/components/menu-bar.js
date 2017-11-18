@@ -1,4 +1,5 @@
 import React from 'react'
+import { browserRoute as Router, Link, Route} from 'react-router-dom'
 import FaHome from 'react-icons/lib/fa/home'
 import FaList from 'react-icons/lib/fa/list'
 import FaPlus from 'react-icons/lib/fa/plus'
@@ -15,15 +16,21 @@ class Menu extends React.Component {
             <div id='menu-bar'>
                 <div id='menu-bar-item'>
                     <div className='menu-item'>
-                        <FaHome className='faSize'/> 
+                        <Link to='/' >
+                            <FaHome className='faSize'/> 
+                        </Link>
                     </div>
 
                     <div className='menu-item'>
-                        <FaSearch className='faSize'/> 
+                        <Link to='/search'>  
+                            <FaSearch className='faSize'/> 
+                        </Link>
                     </div>
 
                     <div className='menu-item'>
-                        <FaListOl className='faSize'/> 
+                        <Link to='/list'>
+                            <FaListOl className='faSize'/> 
+                        </Link>
                     </div>
                 </div>
             </div>

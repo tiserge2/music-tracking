@@ -67,9 +67,9 @@ p {
     margin-left: 5px;
     max-width: 80px;
     font-size:5em;
-    color:#80bfff;
+    color:rgba(128, 212, 55,0.32);
 }
 
 .addButton:hover {
-    color:rgba(128, 212, 55,0.72);
+    color:rgba(128, 212, 55,0.92);
 }

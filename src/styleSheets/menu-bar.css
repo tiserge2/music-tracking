@@ -25,11 +25,15 @@
     border-radius: 5px;*/
 }
 
+.faSize:active {
+    color:rgba(128, 212, 55,0.99999);
+}
+
 .faSize {
     font-size: 2em;
 }
 
 .faSize:hover {
-    color:rgba(128, 212, 55,0.72);
+    color:rgba(128, 212, 55,0.99999);
 }
 

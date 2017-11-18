@@ -10,7 +10,8 @@ config = {
     devServer: {
         inline: true,
         port: 3000,
-        contentBase: './dist'
+        contentBase: './dist',
+        
 
     },
 
