@@ -1,18 +1,21 @@
 
 config = {
-    entry:'./src/index.js',
+    entry:'./client/index.js',
 
     output: {
-        path:'/',
+        path:__dirname + '/client/',
         filename: 'bundle.js'
     },
+    
 
     devServer: {
         inline: true,
         port: 3000,
-        contentBase: './dist',
-        
-
+        hot: true,
+        contentBase: './client',
+        proxy: {
+            "*": "http://localhost:8080"
+        }
     },
 
     module: {
@@ -30,6 +33,11 @@ config = {
                 test: /\.css$/,
                 exclude: /(node_modules)/,
                 loader: 'css-loader!style-loader'
+            },
+
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader'
             },
 
             {

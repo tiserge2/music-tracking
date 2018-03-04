@@ -1,6 +1,6 @@
 import React from 'react'
 import FaMusic from 'react-icons/lib/fa/music'
-require('!style-loader!css-loader!../styleSheets/header-bar.css');
+require('!style-loader!css-loader!../css/header-bar.css');
 
 class Header extends React.Component {
     render() {

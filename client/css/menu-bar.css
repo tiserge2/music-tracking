@@ -1,0 +1,123 @@
+#menu-bar {
+    background-color: black;
+    color:#80bfff;
+    width:100%;
+    height: 65px;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    min-width: 542px;
+}
+
+#menu-bar-item {
+    position: relative;
+    bottom:3px;
+    margin: 0 auto;
+    width: 330px;
+}
+
+.menu-item {
+    float:left;
+    font-size: 30px;
+    margin-right: 50px;
+    margin-top: 7px;
+    /*border: 4px solid white;
+    border-radius: 5px;*/
+}
+
+.faSize:active {
+    color:rgba(128, 212, 55,0.99999);
+}
+
+.faSize {
+    font-size: 2em;
+}
+
+.faSize:hover {
+    color:rgba(128, 212, 55,0.99999);
+}
+
+@media all and (max-width:320px) {
+    #menu-bar {
+        background-color: black;
+        color:#80bfff;
+        width:100%;
+        height: 65px;
+        position:fixed;
+        bottom: 0;
+        left: 0;
+        min-width: 290px;
+    }
+
+    #menu-bar-item {
+        position: relative;
+        bottom:3px;
+        width: 100%;
+        left: 11px;
+        margin: 3px 40px;
+    }
+
+    .menu-item {
+        float:left;
+        font-size: 28px;
+        margin-right: 25px;
+        margin-top: 7px;
+        /*border: 4px solid white;
+        border-radius: 5px;*/
+    }
+
+
+    .faSize:active {
+        color:rgba(128, 212, 55,0.99999);
+    }
+
+    .faSize {
+        font-size: 2em;
+    }
+
+    .faSize:hover {
+        color:rgba(128, 212, 55,0.99999);
+    }
+}
+
+@media all and (min-width: 321px) and (max-width: 484px){
+    #menu-bar {
+        background-color: black;
+        color:#80bfff;
+        width:100%;
+        height: 65px;
+        position:fixed;
+        bottom: 0;
+        left: 0;
+        min-width: 290px;
+    }
+
+    #menu-bar-item {
+        position: relative;
+        bottom:3px;
+        left: 22%;
+        width: auto;
+    }
+
+    .menu-item {
+        float:left;
+        font-size: 28px;
+        margin-right: 25px;
+        margin-top: 7px;
+        /*border: 4px solid white;
+        border-radius: 5px;*/
+    }
+
+
+    .faSize:active {
+        color:rgba(128, 212, 55,0.99999);
+    }
+
+    .faSize {
+        font-size: 2em;
+    }
+
+    .faSize:hover {
+        color:rgba(128, 212, 55,0.99999);
+    }
+}

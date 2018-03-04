@@ -6,7 +6,7 @@ import FaPlus from 'react-icons/lib/fa/plus'
 import FaSearch from 'react-icons/lib/fa/search'
 import FaListOl from 'react-icons/lib/fa/list-ol'
 import FaPlusSquare from 'react-icons/lib/fa/plus-square'
-require('!style-loader!css-loader!../styleSheets/menu-bar.css');
+require('!style-loader!css-loader!../css/menu-bar.css');
 //import '../styleSheets/menu-bar.css'
 
 

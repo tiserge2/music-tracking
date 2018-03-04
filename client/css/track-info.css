@@ -1,0 +1,407 @@
+
+.musicField {
+    position:relative;
+    background-color: rgba(34,23,12,0.72);
+    margin:0 auto;
+    height: 110px;
+    margin-top:10px;
+}
+
+.musicField:hover {
+    background-color: rgba(3,3,2,0.92);
+}
+
+.titleImage {
+    background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);
+    float: left;
+    position:relative;
+    top: 6px;
+    left:10px;
+    width:56px;
+    height: 56px;
+    background-color:#d9b3ff;
+}
+
+.titleInfos {
+    float: left;
+    position:relative;
+    top: 6px;
+    left:10px;
+    min-width:160px;
+    height: 100px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+p {
+    color: white;
+    font-size: 17px;
+    margin-left: 7px;
+    margin-top: -1px;
+}
+
+.artistName {
+    position:relative;
+    font-size:25px;
+}
+
+.titleName {
+    position:relative;
+    font-size: 19px;
+    top:-15px;
+}
+
+.albumName {
+    position:relative;
+    font-size:15px;
+    top:-23px;
+}
+
+.addButton {
+    float: right;
+    position:relative;
+    top: 6px;
+    width:19%;
+    height: 100px;
+    margin-left: 5px;
+    max-width: 80px;
+    font-size:3.5em;
+    color:rgba(128, 212, 55,0.32);
+}
+
+.addButton:hover {
+    color:rgba(128, 212, 55,0.92);
+}
+
+@media all and (min-width: 482px) and (max-width: 770px) {
+
+    .musicField {
+        position:relative;
+        background-color: rgba(34,23,12,0.72);
+        margin:0 auto;
+        height: 110px;
+        margin-top:10px;
+    }
+
+    .musicField:hover {
+        background-color: rgba(3,3,2,0.92);
+    }
+
+    .titleImage {
+        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);
+        float: left;
+        position:relative;
+        top: 6px;
+        left:10px;
+        width:56px;
+        height: 56px;
+        background-color:#d9b3ff;
+    }
+
+    .titleInfos {
+        float: left;
+        position:relative;
+        top: 6px;
+        left:10px;
+        min-width:160px;
+        height: 100px;
+        margin-left: 5px;
+        text-align: left;
+    }
+
+    p {
+        color: white;
+        font-size: 17px;
+        margin-left: 7px;
+        margin-top: -1px;
+    }
+
+    .artistName {
+        position:relative;
+        font-size:25px;
+    }
+
+    .titleName {
+        position:relative;
+        font-size: 19px;
+        top:-15px;
+    }
+
+    .albumName {
+        position:relative;
+        font-size:15px;
+        top:-23px;
+    }
+
+    .buttonGroup {
+        display: inline-block;
+        float: right;
+        width: 120px;
+        margin-right: 20px;
+    }
+
+    .addButton {
+        display: inline-block;
+        float: right;
+        position:relative;
+        top: 6px;
+        height: 100px;
+        margin-left: 15px;
+        font-size:2em;
+        color:rgba(128, 212, 55,0.32);
+    }
+
+    .addButton:hover {
+        color:rgba(128, 212, 55,0.92);
+    }
+}
+
+@media all and (max-width: 320px) {
+
+    .musicField {
+        position:relative;
+        background-color: rgba(34,23,12,0.72);
+        width: 307px;
+        height: 90px;
+        margin-left: 0px;
+        margin-top:10px;
+    }
+
+    .musicField:hover {
+        background-color: rgba(3,3,2,0.92);
+    }
+
+    .titleImage {
+        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);
+        float: left;
+        position:relative;
+        top: 6px;
+        left:10px;
+        width:56px;
+        height: 56px;
+        background-color:#d9b3ff;
+    }
+
+    .titleInfos {
+        float: left;
+        position:relative;
+        top: 6px;
+        left:10px;
+        min-width:160px;
+        height: 100px;
+        margin-left: 5px;
+        text-align: left;
+    }
+
+    p {
+        color: white;
+        font-size: 17px;
+        margin-left: 7px;
+        margin-top: -1px;
+    }
+
+    .artistName {
+        position:relative;
+        font-size:20px;
+    }
+
+    .titleName {
+        position:relative;
+        font-size: 14px;
+        top:-15px;
+    }
+
+    .albumName {
+        position:relative;
+        font-size:10px;
+        top:-23px;
+    }
+
+    .buttonGroup {
+        display: inline-block;
+        float: left;
+        position: relative;
+        height: inherit;
+        width:10px;
+        margin-left: 40px;
+    }
+    .addButton {
+        display: block;
+        height: inherit;
+        margin-left: 5px;
+        max-width: 80px;
+        font-size:1.4em;
+        color:rgba(128, 212, 55,0.32);
+    }
+
+    .addButton:hover {
+        color:rgba(128, 212, 55,0.92);
+    }
+}
+
+@media all and (min-width: 321px) and (max-width: 481px) {
+
+    .musicField {
+        position:relative;
+        background-color: rgba(34,23,12,0.72);
+        min-width: 321px;
+        height: 90px;
+        margin-left: 0px;
+        margin-top:10px;
+    }
+
+    .musicField:hover {
+        background-color: rgba(3,3,2,0.92);
+    }
+
+    .titleImage {
+        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);
+        float: left;
+        position:relative;
+        top: 6px;
+        left:10px;
+        width:56px;
+        height: 56px;
+        background-color:#d9b3ff;
+    }
+
+    .titleInfos {
+        float: left;
+        position:relative;
+        top: 6px;
+        left:10px;
+        min-width:160px;
+        height: 100px;
+        margin-left: 5px;
+        text-align: left;
+    }
+
+    p {
+        color: white;
+        font-size: 17px;
+        margin-left: 7px;
+        margin-top: -1px;
+    }
+
+    .artistName {
+        position:relative;
+        font-size:20px;
+    }
+
+    .titleName {
+        position:relative;
+        font-size: 14px;
+        top:-15px;
+    }
+
+    .albumName {
+        position:relative;
+        font-size:10px;
+        top:-23px;
+    }
+
+    .buttonGroup {
+        width: 120px;
+        float: right;
+    }
+
+    .addButton {
+        float: right;
+        position:relative;
+        width:40px;
+        font-size:1.6em;
+        margin-left: -8px;
+        color:rgba(128, 212, 55,0.32);
+    }
+
+    .addButton:hover {
+        color:rgba(128, 212, 55,0.92);
+    }
+}
+
+@media all and (min-width: 321px) and (max-width: 372px) {
+
+    .musicField {
+        position:relative;
+        background-color: rgba(34,23,12,0.72);
+        min-width: 321px;
+        height: 90px;
+        margin-left: 0px;
+        margin-top:10px;
+    }
+
+    .musicField:hover {
+        background-color: rgba(3,3,2,0.92);
+    }
+
+    .titleImage {
+        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);
+        float: left;
+        position:relative;
+        top: 6px;
+        left:10px;
+        width:56px;
+        height: 56px;
+        background-color:#d9b3ff;
+    }
+
+    .titleInfos {
+        float: left;
+        position:relative;
+        top: 6px;
+        left:10px;
+        min-width:160px;
+        height: 100px;
+        margin-left: 5px;
+        text-align: left;
+    }
+
+    p {
+        color: white;
+        font-size: 17px;
+        margin-left: 7px;
+        margin-top: -1px;
+    }
+
+    .artistName {
+        position:relative;
+        font-size:20px;
+    }
+
+    .titleName {
+        position:relative;
+        font-size: 14px;
+        top:-15px;
+    }
+
+    .albumName {
+        position:relative;
+        font-size:10px;
+        top:-23px;
+    }
+
+    .buttonGroup {
+        display: inline-block;
+        float: right;
+        position: relative;
+        height: inherit;
+        width:10px;
+    }
+    .addButton {
+        display: block;
+        height: inherit;
+        margin-left: 5px;
+        max-width: 80px;
+        font-size:1.4em;
+        color:rgba(128, 212, 55,0.32);
+    }
+
+    .addButton:hover {
+        color:rgba(128, 212, 55,0.92);
+    }
+}
+
+
+/**gestion des boutons downloads, add pour
+    quils soient responsive**/
+

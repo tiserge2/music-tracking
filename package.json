@@ -4,8 +4,8 @@
   "description": "App for managing favorite music",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --hot"
+    "test": "webpack-dev-server --hot",
+    "start": " node  bin/www"
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,15 @@
     "billboard-top-100": "^2.0.8",
     "cors": "^2.8.4",
     "css-loader": "^0.28.7",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
     "node-sass": "^4.5.3",
+    "nodemon": "^1.15.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-icons": "^2.2.5",
+    "react-responsive-modal": "^2.0.1",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "sass-loader": "^6.0.6",

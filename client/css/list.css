@@ -1,0 +1,59 @@
+.home {
+        background-color: #d4eff7;
+        background-image: url(../asset/img/music-tracker-background.jpg);
+        min-width: 482px;
+        position: fixed;
+}
+
+.listPreferenceBoard  {
+    position:relative;
+    top: 10px;
+    background-color: rgba(0,23,34,0.212);
+    margin: auto;
+    width:80%;
+    height: 515px;
+    min-width: 434px;
+}
+
+.texte1 {
+    position:relative;
+    top: 7px;
+    left: 7px;
+    font-size: 30px;
+}
+
+@media all and (max-width:320px) {
+    .home {
+        background-color: #d4eff7;
+        background-image: url(../asset/img/music-tracker-background.jpg);
+        width: 320px;
+        position: fixed;
+    }
+
+    .listPreferenceBoard  {
+        position:absolute;
+        top: 5px;
+        background-color: rgba(0,23,34,0.212);
+        width:320px;
+        height: auto;
+        min-width: 290px;
+    }
+}
+
+@media all and (min-width:320px) and (max-width: 481px) {
+    .home {
+        background-color: #d4eff7;
+        background-image: url(../asset/img/music-tracker-background.jpg);
+        width: 100vw;
+        position: fixed;
+    }
+
+    .listPreferenceBoard  {
+        position:absolute;
+        top: 5px;
+        background-color: rgba(0,23,34,0.212);
+        width:100vw;
+        height: auto;
+        min-width: 290px;
+    }
+}
