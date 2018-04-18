@@ -49,9 +49,12 @@ class Search extends React.Component {
                                         this.state.trackSearch.map((track,i) => {
                                             return(
                                                 <Title key={i}  artist = {track.artist} 
-                                                                title = {track.title}
+                                                                title = {track.title} 
                                                                 album = {track.album} 
                                                                 cover = {track.cover}
+                                                                preview = {track.preview}
+                                                                cover_medium = {track.cover_medium}
+                                                                parent="search"
                                                 />
                                             )
                                         })

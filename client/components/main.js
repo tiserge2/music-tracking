@@ -10,23 +10,16 @@ require('!style-loader!css-loader!../css/setWindowHeight.css');
 
 class Main extends React.Component {
      /*ill make the api call here instead*/
-        constructor(props) {
-            super(props);
+        constructor(props) { 
+            super(props)
             this.state = {
-                values : [
-                    
-                ]
+                values : [],
             };
+            this.getChart    = this.getChart.bind(this)
         }
 
-        truncate(string){
-            if (string.length > 15)
-                return string.substring(0,15)+'...';
-            else
-                return string;
-        }
 
-        componentDidMount(){
+        getChart = () => {
             var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
                 targetUrl = 'https://api.deezer.com/chart&limit=50';
             const values = [];
@@ -38,21 +31,16 @@ class Main extends React.Component {
                     data.tracks.data.map((infos) => {
                         var object = {
                             "artist" : "",
-                            "artist_fullname": "",
                             "title" : "",
-                            "title_fullname": "",
                             "album" : "",
-                            "album_fullname": "",
                             "cover" : "",
                             "cover_medium" : "",
+                            "preview": ""
                         }
-                        object["artist"] = this.truncate(infos.artist.name);
-                        object["title"] = this.truncate(infos.title);
-                        object["album"] = this.truncate(infos.album.title);
-                        
-                        object["artist_fullname"] = infos.artist.name;
-                        object["title_fullname"] = infos.title;
-                        object["album_fullname"] = infos.album.title;
+                        object["artist"] = infos.artist.name;
+                        object["title"] = infos.title;
+                        object["album"] = infos.album.title;
+                        object["preview"] = infos.preview
 
                         object["cover"] = infos.album.cover_small;
                         object["cover_medium"] = infos.album.cover_medium;
@@ -65,7 +53,10 @@ class Main extends React.Component {
                     console.log(e);
                     return e;
                 });
-                
+        }
+
+        componentDidMount(){
+            this.getChart()
         }
 
     render() {
@@ -75,10 +66,14 @@ class Main extends React.Component {
                 <main>
                     <Switch>
                         <Route exact path='/' render={(props) => (
-                            <Home data={this.state.values}/>)} 
+                            <Home data={this.state.values}/>
+                            )} 
                         />
                         <Route path='/search' component={Search} />
-                        <Route path='/list' component={List} />
+                        <Route path='/list' render={(props) => (
+                                <List />
+                            )}
+                        />
                         <Route path='*' component={Error} />
                     </Switch>
                 </main>

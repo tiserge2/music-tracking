@@ -1,6 +1,4 @@
 .home {
-        background-color: #d4eff7;
-        background-image: url(../asset/img/music-tracker-background.jpg);
         min-width: 482px;
         position: fixed;
 }
@@ -8,7 +6,6 @@
 .listPreferenceBoard  {
     position:relative;
     top: 10px;
-    background-color: rgba(0,23,34,0.212);
     margin: auto;
     width:80%;
     height: 515px;
@@ -33,7 +30,6 @@
     .listPreferenceBoard  {
         position:absolute;
         top: 5px;
-        background-color: rgba(0,23,34,0.212);
         width:320px;
         height: auto;
         min-width: 290px;
@@ -51,7 +47,6 @@
     .listPreferenceBoard  {
         position:absolute;
         top: 5px;
-        background-color: rgba(0,23,34,0.212);
         width:100vw;
         height: auto;
         min-width: 290px;

@@ -1,13 +1,12 @@
 .home {
-        background-color: #d4eff7;
-        background-image: url(../asset/img/music-tracker-background.jpg);
-        position: fixed;
+    background-image: none !important;
+    background-color: white !important; 
+    position: fixed;
 }
 
 .trendsBoard {
     position:relative;
     top: 5px;
-    background-color: rgba(0,23,34,0.212);
     margin: auto;
     width:80%;
     height: auto;
@@ -21,7 +20,7 @@
     font-size: 30px;
 }
 
-.titleContainer {
+.titleContainer { 
     position: relative;
     overflow-y: auto;
     width: 100%;
@@ -46,13 +45,22 @@
 {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: rgba(34,23,12,0.72);
+	background-color: #B3E5FC;
+}
+
+.example-enter {
+    opacity: 0.1;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: 3000ms  ease-out;
 }
 
 @media all and (max-width: 320px){
     .home {
-        background-color: #d4eff7;
-        background-image: url(../asset/img/music-tracker-background.jpg);
+        background-image: none !important;
+        background-color: white !important;
         width:320px;
         position: fixed;
     }
@@ -60,7 +68,6 @@
     .trendsBoard {
         position:absolute;
         top: 5px;
-        background-color: rgba(0,23,34,0.212);
         width:320px;
         height: auto;
         min-width: 290px;
@@ -99,14 +106,14 @@
     {
         border-radius: 10px;
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-        background-color: rgba(34,23,12,0.72);
+        background-color: #B3E5FC;
     }
 }
 
 @media all and (min-width: 321px) and (max-width: 481px){
     .home {
-        background-color: #d4eff7;
-        background-image: url(../asset/img/music-tracker-background.jpg);
+        background-image: none !important;
+        background-color: white !important;
         width:100vw;
         position: fixed;
     }
@@ -114,7 +121,6 @@
     .trendsBoard {
         position:absolute;
         top: 5px;
-        background-color: rgba(0,23,34,0.212);
         width:100vw;
         height: auto;
         min-width: 290px;
@@ -153,6 +159,6 @@
     {
         border-radius: 10px;
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-        background-color: rgba(34,23,12,0.72);
+        background-color: #B3E5FC;
     }
 }

@@ -1,14 +1,15 @@
 
 .musicField {
     position:relative;
-    background-color: rgba(34,23,12,0.72);
     margin:0 auto;
     height: 110px;
     margin-top:10px;
+    border-left: 5px solid #0091EA;
+    background-color: #E1F5FE;
 }
 
 .musicField:hover {
-    background-color: rgba(3,3,2,0.92);
+    background-color: #B3E5FC;
 }
 
 .titleImage {
@@ -34,7 +35,7 @@
 }
 
 p {
-    color: white;
+    color: black;
     font-size: 17px;
     margin-left: 7px;
     margin-top: -1px;
@@ -66,25 +67,26 @@ p {
     margin-left: 5px;
     max-width: 80px;
     font-size:3.5em;
-    color:rgba(128, 212, 55,0.32);
+    color:#40C4FF;
 }
 
 .addButton:hover {
-    color:rgba(128, 212, 55,0.92);
+    color:#0D47A1;
 }
 
 @media all and (min-width: 482px) and (max-width: 770px) {
 
     .musicField {
         position:relative;
-        background-color: rgba(34,23,12,0.72);
         margin:0 auto;
         height: 110px;
         margin-top:10px;
+        border-left: 5px solid #0091EA;
+        background-color: #E1F5FE;
     }
 
     .musicField:hover {
-        background-color: rgba(3,3,2,0.92);
+        background-color: #B3E5FC;
     }
 
     .titleImage {
@@ -110,7 +112,7 @@ p {
     }
 
     p {
-        color: white;
+        color: black;
         font-size: 17px;
         margin-left: 7px;
         margin-top: -1px;
@@ -148,11 +150,11 @@ p {
         height: 100px;
         margin-left: 15px;
         font-size:2em;
-        color:rgba(128, 212, 55,0.32);
+        color:#40C4FF;
     }
 
     .addButton:hover {
-        color:rgba(128, 212, 55,0.92);
+        color:#E1F5FE;
     }
 }
 
@@ -160,15 +162,16 @@ p {
 
     .musicField {
         position:relative;
-        background-color: rgba(34,23,12,0.72);
         width: 307px;
         height: 90px;
         margin-left: 0px;
         margin-top:10px;
+        border-left: 5px solid #0091EA;
+        background-color: #E1F5FE;
     }
 
     .musicField:hover {
-        background-color: rgba(3,3,2,0.92);
+        background-color: #B3E5FC;
     }
 
     .titleImage {
@@ -194,7 +197,7 @@ p {
     }
 
     p {
-        color: white;
+        color: black;
         font-size: 17px;
         margin-left: 7px;
         margin-top: -1px;
@@ -230,12 +233,12 @@ p {
         height: inherit;
         margin-left: 5px;
         max-width: 80px;
-        font-size:1.4em;
-        color:rgba(128, 212, 55,0.32);
+        font-size:1.2em;
+        color:#40C4FF;
     }
 
     .addButton:hover {
-        color:rgba(128, 212, 55,0.92);
+        color:#E1F5FE;
     }
 }
 
@@ -248,10 +251,12 @@ p {
         height: 90px;
         margin-left: 0px;
         margin-top:10px;
+        border-left: 5px solid #0091EA;
+        background-color: #E1F5FE;
     }
 
     .musicField:hover {
-        background-color: rgba(3,3,2,0.92);
+        background-color: #B3E5FC;
     }
 
     .titleImage {
@@ -277,7 +282,7 @@ p {
     }
 
     p {
-        color: white;
+        color: black;
         font-size: 17px;
         margin-left: 7px;
         margin-top: -1px;
@@ -311,11 +316,11 @@ p {
         width:40px;
         font-size:1.6em;
         margin-left: -8px;
-        color:rgba(128, 212, 55,0.32);
+        color:#40C4FF;
     }
 
     .addButton:hover {
-        color:rgba(128, 212, 55,0.92);
+        color:#E1F5FE;
     }
 }
 
@@ -323,15 +328,16 @@ p {
 
     .musicField {
         position:relative;
-        background-color: rgba(34,23,12,0.72);
         min-width: 321px;
         height: 90px;
         margin-left: 0px;
         margin-top:10px;
+        border-left: 5px solid #0091EA;
+        background-color: #E1F5FE;
     }
 
     .musicField:hover {
-        background-color: rgba(3,3,2,0.92);
+        background-color: #B3E5FC;
     }
 
     .titleImage {
@@ -357,7 +363,7 @@ p {
     }
 
     p {
-        color: white;
+        color: black;
         font-size: 17px;
         margin-left: 7px;
         margin-top: -1px;
@@ -392,12 +398,12 @@ p {
         height: inherit;
         margin-left: 5px;
         max-width: 80px;
-        font-size:1.4em;
-        color:rgba(128, 212, 55,0.32);
+        font-size:1.2em;
+        color:#40C4FF;
     }
 
     .addButton:hover {
-        color:rgba(128, 212, 55,0.92);
+        color:#E1F5FE;
     }
 }
 

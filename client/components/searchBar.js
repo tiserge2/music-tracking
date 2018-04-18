@@ -14,12 +14,6 @@ class SearchBar extends React.Component {
         }
     }
 
-    truncate(string){
-        if (string.length > 15)
-            return string.substring(0,15)+'...';
-        else
-            return string;
-    }
     
     makeApiCall(e) {
         e.preventDefault();
@@ -29,8 +23,6 @@ class SearchBar extends React.Component {
             const newState = !this.state.search
             this.setState({search : newState})
             this.props.callbackParent(newState)
-            let stringthis = 'Je vais a la maison de ma mere pour plus dinfos'
-            console.log(stringthis,this.truncate(stringthis))
             //this place will be for the api call
             //so that the user could search for something
             var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
@@ -45,25 +37,29 @@ class SearchBar extends React.Component {
                             "artist" : "",
                             "title" : "",
                             "album" : "",
-                            "cover" : ""
+                            "cover" : "",
+                            "cover_medium" : "",
+                            "preview":""
                         }
                         
                         if(inpt === 'track'){
-                            object["artist"] = this.truncate(infos.artist.name)
-                            object["title"] = this.truncate(infos.title)
-                            object["album"] = this.truncate(infos.album.title)
+                            object["artist"] = infos.artist.name
+                            object["title"] = infos.title
+                            object["album"] = infos.album.title 
                             object["cover"] = infos.album.cover_small
+                            object["cover_medium"] = infos.album.cover_medium
+                            object["preview"] = infos.preview
                         } 
                         if(inpt === 'artist') {
-                            object["artist"] = this.truncate(infos.name)
+                            object["artist"] = infos.name
                             object["title"] = 'See all his titles'
                             object["album"] = infos.nb_album + ' album(s)'
                             object["cover"] = infos.picture_small
                         }
                         if(inpt === 'album') {
-                            object["artist"] = this.truncate(infos.artist.name)
+                            object["artist"] = infos.artist.name
                             object["title"] = infos.nb_tracks + ' tracks'
-                            object["album"] = this.truncate(infos.title)
+                            object["album"] = infos.title
                             object["cover"] = infos.cover_small
                         }
                         
@@ -79,7 +75,6 @@ class SearchBar extends React.Component {
         } else {
             alert("No search words")
         }
-
         
     }
     
@@ -89,7 +84,7 @@ class SearchBar extends React.Component {
                 <select name="categorie" ref="selectInput">
                     <option value="artist">Artist</option>
                     <option value="album">Album</option>
-                    <option value="track">Track</option>
+                    <option value="track" selected>Track</option>
                 </select>
                 <input
                     type='text'

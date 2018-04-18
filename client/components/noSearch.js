@@ -8,7 +8,7 @@ class NoSearch extends React.Component {
             <div className='noSearch'>
                 <FaSearch className='faSearch'/>
             </div>
-        )
+        ) 
     }
 }
 

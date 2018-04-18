@@ -379,7 +379,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 
 var bind = __webpack_require__(73);
-var isBuffer = __webpack_require__(207);
+var isBuffer = __webpack_require__(203);
 
 /*global toString:true*/
 
@@ -1849,7 +1849,7 @@ var _createRule = __webpack_require__(23);
 
 var _createRule2 = _interopRequireDefault(_createRule);
 
-var _linkRule = __webpack_require__(66);
+var _linkRule = __webpack_require__(67);
 
 var _linkRule2 = _interopRequireDefault(_linkRule);
 
@@ -2117,7 +2117,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(109);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(55);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(111);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
@@ -2127,7 +2127,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(119);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(56);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(32);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
@@ -2173,8 +2173,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createLocation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(16);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -2372,7 +2372,7 @@ var isBrowser = (typeof window === "undefined" ? "undefined" : _typeof(window)) 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(224);
+var content = __webpack_require__(227);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2579,11 +2579,11 @@ exports.locationsAreEqual = exports.createLocation = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _resolvePathname = __webpack_require__(51);
+var _resolvePathname = __webpack_require__(52);
 
 var _resolvePathname2 = _interopRequireDefault(_resolvePathname);
 
-var _valueEqual = __webpack_require__(52);
+var _valueEqual = __webpack_require__(53);
 
 var _valueEqual2 = _interopRequireDefault(_valueEqual);
 
@@ -3122,7 +3122,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.createGenerateClassNameDefault = exports.SheetsManager = exports.getDynamicStyles = exports.SheetsRegistry = undefined;
 
-var _jss = __webpack_require__(63);
+var _jss = __webpack_require__(64);
 
 Object.defineProperty(exports, 'SheetsRegistry', {
   enumerable: true,
@@ -3282,7 +3282,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _SheetsRegistry = __webpack_require__(64);
+var _SheetsRegistry = __webpack_require__(65);
 
 var _SheetsRegistry2 = _interopRequireDefault(_SheetsRegistry);
 
@@ -3373,11 +3373,17 @@ var sheetOptions = exports.sheetOptions = '6fc570d6bd61383819d0f9e7407c452d';
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(202);
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(4);
-var normalizeHeaderName = __webpack_require__(209);
+var normalizeHeaderName = __webpack_require__(205);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -3470,7 +3476,7 @@ module.exports = defaults;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3551,7 +3557,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3622,7 +3628,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3665,7 +3671,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3695,7 +3701,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3737,7 +3743,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3758,7 +3764,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3835,7 +3841,7 @@ function resolvePathname(to) {
 /* harmony default export */ __webpack_exports__["default"] = (resolvePathname);
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3880,7 +3886,7 @@ function valueEqual(a, b) {
 /* harmony default export */ __webpack_exports__["default"] = (valueEqual);
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3941,7 +3947,7 @@ var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isE
 };
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4051,18 +4057,18 @@ Link.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Link);
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__ = __webpack_require__(57);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__["a" /* default */]);
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4211,7 +4217,7 @@ Route.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Route);
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4277,7 +4283,7 @@ var isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
 };
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4349,7 +4355,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4387,7 +4393,7 @@ exports.default = FaPlusSquare;
 module.exports = exports['default'];
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4411,15 +4417,15 @@ var _Add = __webpack_require__(139);
 
 var _Add2 = _interopRequireDefault(_Add);
 
-var _play = __webpack_require__(202);
+var _play = __webpack_require__(223);
 
 var _play2 = _interopRequireDefault(_play);
 
-var _download = __webpack_require__(203);
+var _download = __webpack_require__(224);
 
 var _download2 = _interopRequireDefault(_download);
 
-var _plusSquare = __webpack_require__(59);
+var _plusSquare = __webpack_require__(60);
 
 var _plusSquare2 = _interopRequireDefault(_plusSquare);
 
@@ -4431,7 +4437,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-__webpack_require__(204);
+__webpack_require__(225);
 
 var Title = function (_React$Component) {
     _inherits(Title, _React$Component);
@@ -4443,6 +4449,11 @@ var Title = function (_React$Component) {
     }
 
     _createClass(Title, [{
+        key: 'truncate',
+        value: function truncate(string) {
+            if (string.length > 15) return string.substring(0, 15) + '...';else return string;
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -4462,17 +4473,17 @@ var Title = function (_React$Component) {
                         _react2.default.createElement(
                             'p',
                             { className: 'artistName' },
-                            this.props.artist
+                            this.truncate(this.props.artist)
                         ),
                         _react2.default.createElement(
                             'p',
                             { className: 'titleName' },
-                            this.props.title
+                            this.truncate(this.props.title)
                         ),
                         _react2.default.createElement(
                             'p',
                             { className: 'albumName' },
-                            this.props.album
+                            this.truncate(this.props.album)
                         )
                     ),
                     _react2.default.createElement(
@@ -4481,7 +4492,12 @@ var Title = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'addButton' },
-                            _react2.default.createElement(_Add2.default, null)
+                            _react2.default.createElement(_Add2.default, { artist: this.props.artist,
+                                title: this.props.title,
+                                album: this.props.album,
+                                cover: this.props.cover,
+                                cover_medium: this.props.cover_medium
+                            })
                         ),
                         _react2.default.createElement(
                             'div',
@@ -4505,7 +4521,7 @@ var Title = function (_React$Component) {
 exports.default = Title;
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4517,7 +4533,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (immutable) */ __webpack_exports__["createTheming"] = createTheming;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__create_theme_provider__ = __webpack_require__(142);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__create_with_theme__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_theme_listener__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_theme_listener__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__channel__ = __webpack_require__(21);
 
 
@@ -4548,7 +4564,7 @@ function createTheming() {
 });
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4595,7 +4611,7 @@ function createThemeListener() {
 }
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4624,7 +4640,7 @@ Object.defineProperty(exports, 'toCssValue', {
   }
 });
 
-var _SheetsRegistry = __webpack_require__(64);
+var _SheetsRegistry = __webpack_require__(65);
 
 Object.defineProperty(exports, 'SheetsRegistry', {
   enumerable: true,
@@ -4660,7 +4676,7 @@ Object.defineProperty(exports, 'sheets', {
   }
 });
 
-var _createGenerateClassName = __webpack_require__(67);
+var _createGenerateClassName = __webpack_require__(68);
 
 Object.defineProperty(exports, 'createGenerateClassName', {
   enumerable: true,
@@ -4688,7 +4704,7 @@ var create = exports.create = function create(options) {
 exports['default'] = create();
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4792,7 +4808,7 @@ var SheetsRegistry = function () {
 exports['default'] = SheetsRegistry;
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4813,7 +4829,7 @@ exports['default'] = function (value) {
 };
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4832,7 +4848,7 @@ function linkRule(rule, cssRule) {
 }
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4846,7 +4862,7 @@ var _warning = __webpack_require__(1);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _StyleSheet = __webpack_require__(68);
+var _StyleSheet = __webpack_require__(69);
 
 var _StyleSheet2 = _interopRequireDefault(_StyleSheet);
 
@@ -4896,7 +4912,7 @@ exports['default'] = function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4910,7 +4926,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _linkRule = __webpack_require__(66);
+var _linkRule = __webpack_require__(67);
 
 var _linkRule2 = _interopRequireDefault(_linkRule);
 
@@ -5136,7 +5152,7 @@ var StyleSheet = function () {
 exports['default'] = StyleSheet;
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5154,7 +5170,7 @@ var _ns = __webpack_require__(43);
 
 var ns = _interopRequireWildcard(_ns);
 
-var _propTypes2 = __webpack_require__(70);
+var _propTypes2 = __webpack_require__(71);
 
 var _propTypes3 = _interopRequireDefault(_propTypes2);
 
@@ -5167,7 +5183,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 exports['default'] = (_ns$jss$ns$sheetOptio = {}, _defineProperty(_ns$jss$ns$sheetOptio, ns.jss, _propTypes3['default'].jss), _defineProperty(_ns$jss$ns$sheetOptio, ns.sheetOptions, _propTypes.object), _defineProperty(_ns$jss$ns$sheetOptio, ns.sheetsRegistry, _propTypes3['default'].registry), _defineProperty(_ns$jss$ns$sheetOptio, ns.managers, _propTypes.object), _ns$jss$ns$sheetOptio);
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5194,7 +5210,7 @@ exports['default'] = {
 };
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5248,12 +5264,6 @@ var classNamesShape = exports.classNamesShape = _propTypes2.default.oneOfType([_
 })]);
 
 /***/ }),
-/* 72 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(206);
-
-/***/ }),
 /* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5279,12 +5289,12 @@ module.exports = function bind(fn, thisArg) {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(4);
-var settle = __webpack_require__(210);
-var buildURL = __webpack_require__(212);
-var parseHeaders = __webpack_require__(213);
-var isURLSameOrigin = __webpack_require__(214);
+var settle = __webpack_require__(206);
+var buildURL = __webpack_require__(208);
+var parseHeaders = __webpack_require__(209);
+var isURLSameOrigin = __webpack_require__(210);
 var createError = __webpack_require__(75);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(215);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(211);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -5382,7 +5392,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(216);
+      var cookies = __webpack_require__(212);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -5467,7 +5477,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(211);
+var enhanceError = __webpack_require__(207);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -5530,7 +5540,7 @@ module.exports = Cancel;
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(225);
+var content = __webpack_require__(228);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -5561,7 +5571,7 @@ if(false) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(231);
+var content = __webpack_require__(234);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -7415,7 +7425,7 @@ module.exports = ReactEntry;
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0);__webpack_require__(6);var l=__webpack_require__(29),n=__webpack_require__(14),ba=__webpack_require__(45),ca=__webpack_require__(7),da=__webpack_require__(18),ea=__webpack_require__(46),fa=__webpack_require__(47),ha=__webpack_require__(48),ia=__webpack_require__(49);
+var aa=__webpack_require__(0);__webpack_require__(6);var l=__webpack_require__(29),n=__webpack_require__(14),ba=__webpack_require__(46),ca=__webpack_require__(7),da=__webpack_require__(18),ea=__webpack_require__(47),fa=__webpack_require__(48),ha=__webpack_require__(49),ia=__webpack_require__(50);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -7744,7 +7754,7 @@ var react = __webpack_require__(0);
 var invariant = __webpack_require__(6);
 var ExecutionEnvironment = __webpack_require__(29);
 var _assign = __webpack_require__(14);
-var EventListener = __webpack_require__(45);
+var EventListener = __webpack_require__(46);
 var require$$0 = __webpack_require__(12);
 var hyphenateStyleName = __webpack_require__(88);
 var emptyFunction = __webpack_require__(7);
@@ -7753,10 +7763,10 @@ var performanceNow = __webpack_require__(92);
 var propTypes = __webpack_require__(3);
 var emptyObject = __webpack_require__(18);
 var checkPropTypes = __webpack_require__(26);
-var shallowEqual = __webpack_require__(46);
-var containsNode = __webpack_require__(47);
-var focusNode = __webpack_require__(48);
-var getActiveElement = __webpack_require__(49);
+var shallowEqual = __webpack_require__(47);
+var containsNode = __webpack_require__(48);
+var focusNode = __webpack_require__(49);
+var getActiveElement = __webpack_require__(50);
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -26008,7 +26018,7 @@ var emptyFunction = __webpack_require__(7);
 var invariant = __webpack_require__(6);
 var warning = __webpack_require__(12);
 
-var ReactPropTypesSecret = __webpack_require__(50);
+var ReactPropTypesSecret = __webpack_require__(51);
 var checkPropTypes = __webpack_require__(101);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
@@ -26493,7 +26503,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(6);
   var warning = __webpack_require__(12);
-  var ReactPropTypesSecret = __webpack_require__(50);
+  var ReactPropTypesSecret = __webpack_require__(51);
   var loggedTypeFailures = {};
 }
 
@@ -26783,7 +26793,7 @@ var _listOl = __webpack_require__(134);
 
 var _listOl2 = _interopRequireDefault(_listOl);
 
-var _plusSquare = __webpack_require__(59);
+var _plusSquare = __webpack_require__(60);
 
 var _plusSquare2 = _interopRequireDefault(_plusSquare);
 
@@ -26950,7 +26960,7 @@ var _createTransitionManager = __webpack_require__(31);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-var _DOMUtils = __webpack_require__(53);
+var _DOMUtils = __webpack_require__(54);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27327,7 +27337,7 @@ var _createTransitionManager = __webpack_require__(31);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-var _DOMUtils = __webpack_require__(53);
+var _DOMUtils = __webpack_require__(54);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27893,8 +27903,8 @@ exports.default = createMemoryHistory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Route__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Route__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(55);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -28666,7 +28676,7 @@ Redirect.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(58);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -28970,7 +28980,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(58);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -29777,9 +29787,9 @@ Switch.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(57);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -29993,11 +30003,11 @@ var _home = __webpack_require__(138);
 
 var _home2 = _interopRequireDefault(_home);
 
-var _search = __webpack_require__(226);
+var _search = __webpack_require__(229);
 
 var _search2 = _interopRequireDefault(_search);
 
-var _list = __webpack_require__(235);
+var _list = __webpack_require__(238);
 
 var _list2 = _interopRequireDefault(_list);
 
@@ -30005,7 +30015,7 @@ var _Error = __webpack_require__(80);
 
 var _Error2 = _interopRequireDefault(_Error);
 
-var _axios = __webpack_require__(72);
+var _axios = __webpack_require__(44);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -30037,11 +30047,6 @@ var Main = function (_React$Component) {
     }
 
     _createClass(Main, [{
-        key: 'truncate',
-        value: function truncate(string) {
-            if (string.length > 15) return string.substring(0, 15) + '...';else return string;
-        }
-    }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
             var _this2 = this;
@@ -30059,12 +30064,16 @@ var Main = function (_React$Component) {
                         "artist": "",
                         "title": "",
                         "album": "",
-                        "cover": ""
+                        "cover": "",
+                        "cover_medium": ""
                     };
-                    object["artist"] = _this2.truncate(infos.artist.name);
-                    object["title"] = _this2.truncate(infos.title);
-                    object["album"] = _this2.truncate(infos.album.title);
+                    object["artist"] = infos.artist.name;
+                    object["title"] = infos.title;
+                    object["album"] = infos.album.title;
+
                     object["cover"] = infos.album.cover_small;
+                    object["cover_medium"] = infos.album.cover_medium;
+
                     values.push(object);
                 });
                 _this2.setState({ values: values });
@@ -30122,11 +30131,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _trackInfo = __webpack_require__(60);
+var _trackInfo = __webpack_require__(61);
 
 var _trackInfo2 = _interopRequireDefault(_trackInfo);
 
-var _axios = __webpack_require__(72);
+var _axios = __webpack_require__(44);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -30172,7 +30181,8 @@ var Home = function (_React$Component) {
                             return _react2.default.createElement(_trackInfo2.default, { key: i, artist: musicInfos['artist'],
                                 title: musicInfos['title'],
                                 album: musicInfos['album'],
-                                cover: musicInfos['cover']
+                                cover: musicInfos['cover'],
+                                cover_medium: musicInfos['cover_medium']
                             });
                         })
                     )
@@ -30211,6 +30221,10 @@ var _reactResponsiveModal = __webpack_require__(140);
 
 var _reactResponsiveModal2 = _interopRequireDefault(_reactResponsiveModal);
 
+var _axios = __webpack_require__(44);
+
+var _axios2 = _interopRequireDefault(_axios);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30219,34 +30233,57 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var querystring = __webpack_require__(220);
+
 var Add = function (_React$Component) {
     _inherits(Add, _React$Component);
 
     function Add() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
         _classCallCheck(this, Add);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
+        var _this = _possibleConstructorReturn(this, (Add.__proto__ || Object.getPrototypeOf(Add)).call(this));
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Add.__proto__ || Object.getPrototypeOf(Add)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            open: false
-        }, _this.onOpenModal = function () {
+        _this.onOpenModal = function () {
             _this.setState({ open: true });
             console.log(_this.state);
-        }, _this.onCloseModal = function () {
+        };
+
+        _this.onCloseModal = function () {
             _this.setState({ open: false });
-        }, _temp), _possibleConstructorReturn(_this, _ret);
+            console.log(_this.state);
+        };
+
+        _this.addFavorite = function () {
+            console.log("add favorite button has been clicked...");
+            console.log(_this.props.title, _this.props.artist, new Date());
+            _axios2.default.post('/addFavorite', querystring.stringify({
+                artist: _this.props.artist,
+                title: _this.props.title,
+                album: _this.props.album,
+                cover: _this.props.cover,
+                cover_medium: _this.props.cover_medium
+            }), {
+                headers: {
+                    "content-type": "application/x-www-form-urlencoded"
+                }
+            }).then(function (response) {
+                console.log(response.data);
+                this.setState({ messageFromServer: response.data, open: false });
+            });
+        };
+
+        _this.state = {
+            open: false,
+            messageFromServer: ''
+        };
+        _this.addFavorite = _this.addFavorite.bind(_this);
+        return _this;
     }
 
     _createClass(Add, [{
         key: 'render',
         value: function render() {
-            var open = this.state.open;
+            var open = this.state.open.open;
 
             return _react2.default.createElement(
                 'div',
@@ -30254,11 +30291,52 @@ var Add = function (_React$Component) {
                 _react2.default.createElement(_plus2.default, { onClick: this.onOpenModal }),
                 _react2.default.createElement(
                     _reactResponsiveModal2.default,
-                    { open: open, onClose: this.onCloseModal, little: true },
+                    { open: open, onClose: this.onCloseModal, litte: true },
                     _react2.default.createElement(
-                        'h2',
+                        'div',
                         null,
-                        'Simple centered modal'
+                        _react2.default.createElement('img', { src: this.props.cover_medium }),
+                        _react2.default.createElement('br', null),
+                        ' ',
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement(
+                            'p',
+                            { style: { color: 'black' } },
+                            'Title : ',
+                            _react2.default.createElement(
+                                'strong',
+                                null,
+                                this.props.title
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { style: { color: 'black' } },
+                            'Author: ',
+                            _react2.default.createElement(
+                                'strong',
+                                null,
+                                this.props.artist
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { style: { color: 'black' } },
+                            'Album : ',
+                            _react2.default.createElement(
+                                'strong',
+                                null,
+                                this.props.album
+                            )
+                        )
+                    ),
+                    _react2.default.createElement('br', null),
+                    ' ',
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'button',
+                        { onClick: this.addFavorite },
+                        'Add to preference'
                     )
                 )
             );
@@ -30308,7 +30386,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _theming = __webpack_require__(61);
+var _theming = __webpack_require__(62);
 
 Object.defineProperty(exports, 'ThemeProvider', {
   enumerable: true,
@@ -30655,7 +30733,7 @@ function createBroadcast (initialState) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__channel__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_theme_listener__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_theme_listener__ = __webpack_require__(63);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -30748,11 +30826,11 @@ var _ns = __webpack_require__(43);
 
 var ns = _interopRequireWildcard(_ns);
 
-var _contextTypes = __webpack_require__(69);
+var _contextTypes = __webpack_require__(70);
 
 var _contextTypes2 = _interopRequireDefault(_contextTypes);
 
-var _propTypes2 = __webpack_require__(70);
+var _propTypes2 = __webpack_require__(71);
 
 var _propTypes3 = _interopRequireDefault(_propTypes2);
 
@@ -31001,7 +31079,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 exports['default'] = cloneStyle;
 
-var _isObservable = __webpack_require__(65);
+var _isObservable = __webpack_require__(66);
 
 var _isObservable2 = _interopRequireDefault(_isObservable);
 
@@ -31193,7 +31271,7 @@ var _isInBrowser = __webpack_require__(24);
 
 var _isInBrowser2 = _interopRequireDefault(_isInBrowser);
 
-var _StyleSheet = __webpack_require__(68);
+var _StyleSheet = __webpack_require__(69);
 
 var _StyleSheet2 = _interopRequireDefault(_StyleSheet);
 
@@ -31221,7 +31299,7 @@ var _StyleRule = __webpack_require__(13);
 
 var _StyleRule2 = _interopRequireDefault(_StyleRule);
 
-var _createGenerateClassName = __webpack_require__(67);
+var _createGenerateClassName = __webpack_require__(68);
 
 var _createGenerateClassName2 = _interopRequireDefault(_createGenerateClassName);
 
@@ -31934,7 +32012,7 @@ var _createRule = __webpack_require__(23);
 
 var _createRule2 = _interopRequireDefault(_createRule);
 
-var _isObservable = __webpack_require__(65);
+var _isObservable = __webpack_require__(66);
 
 var _isObservable2 = _interopRequireDefault(_isObservable);
 
@@ -32765,7 +32843,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 exports['default'] = jssGlobal;
 
-var _jss = __webpack_require__(63);
+var _jss = __webpack_require__(64);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -34303,7 +34381,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports['default'] = injectSheet;
 
-var _hoistNonReactStatics = __webpack_require__(58);
+var _hoistNonReactStatics = __webpack_require__(59);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -34372,7 +34450,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _theming = __webpack_require__(61);
+var _theming = __webpack_require__(62);
 
 var _theming2 = _interopRequireDefault(_theming);
 
@@ -34392,7 +34470,7 @@ var _ns = __webpack_require__(43);
 
 var ns = _interopRequireWildcard(_ns);
 
-var _contextTypes = __webpack_require__(69);
+var _contextTypes = __webpack_require__(70);
 
 var _contextTypes2 = _interopRequireDefault(_contextTypes);
 
@@ -35107,7 +35185,7 @@ var _Transition = __webpack_require__(198);
 
 var _Transition2 = _interopRequireDefault(_Transition);
 
-var _PropTypes = __webpack_require__(71);
+var _PropTypes = __webpack_require__(72);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35470,7 +35548,7 @@ var _reactDom = __webpack_require__(28);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _PropTypes = __webpack_require__(71);
+var _PropTypes = __webpack_require__(72);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36206,131 +36284,10 @@ exports.default = {
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactIconBase = __webpack_require__(8);
-
-var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var FaPlay = function FaPlay(props) {
-    return _react2.default.createElement(
-        _reactIconBase2.default,
-        _extends({ viewBox: '0 0 40 40' }, props),
-        _react2.default.createElement(
-            'g',
-            null,
-            _react2.default.createElement('path', { d: 'm35.4 20.7l-29.6 16.5q-0.6 0.3-0.9 0t-0.4-0.8v-32.8q0-0.6 0.4-0.8t0.9 0l29.6 16.5q0.5 0.3 0.5 0.7t-0.5 0.7z' })
-        )
-    );
-};
-
-exports.default = FaPlay;
-module.exports = exports['default'];
-
-/***/ }),
-/* 203 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactIconBase = __webpack_require__(8);
-
-var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var FaDownload = function FaDownload(props) {
-    return _react2.default.createElement(
-        _reactIconBase2.default,
-        _extends({ viewBox: '0 0 40 40' }, props),
-        _react2.default.createElement(
-            'g',
-            null,
-            _react2.default.createElement('path', { d: 'm30.1 30q0-0.6-0.5-1t-1-0.4-1 0.4-0.4 1 0.4 1 1 0.4 1-0.4 0.5-1z m5.7 0q0-0.6-0.4-1t-1-0.4-1 0.4-0.5 1 0.5 1 1 0.4 1-0.4 0.4-1z m2.8-5v7.1q0 0.9-0.6 1.6t-1.5 0.6h-32.9q-0.8 0-1.5-0.6t-0.6-1.6v-7.1q0-0.9 0.6-1.5t1.5-0.6h10.4l3 3q1.3 1.2 3.1 1.2t3-1.2l3-3h10.4q0.9 0 1.5 0.6t0.6 1.5z m-7.2-12.7q0.4 0.9-0.3 1.6l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.7-0.7-0.3-1.6 0.3-0.9 1.3-0.9h5.7v-10q0-0.6 0.4-1t1-0.4h5.7q0.6 0 1 0.4t0.5 1v10h5.7q0.9 0 1.3 0.9z' })
-        )
-    );
-};
-
-exports.default = FaDownload;
-module.exports = exports['default'];
-
-/***/ }),
-/* 204 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(205);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(10)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!./track-info.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!./track-info.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 205 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(9)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.musicField {\n    position:relative;\n    background-color: rgba(34,23,12,0.72);\n    margin:0 auto;\n    height: 110px;\n    margin-top:10px;\n}\n\n.musicField:hover {\n    background-color: rgba(3,3,2,0.92);\n}\n\n.titleImage {\n    background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);\n    float: left;\n    position:relative;\n    top: 6px;\n    left:10px;\n    width:56px;\n    height: 56px;\n    background-color:#d9b3ff;\n}\n\n.titleInfos {\n    float: left;\n    position:relative;\n    top: 6px;\n    left:10px;\n    min-width:160px;\n    height: 100px;\n    margin-left: 5px;\n    text-align: left;\n}\n\np {\n    color: white;\n    font-size: 17px;\n    margin-left: 7px;\n    margin-top: -1px;\n}\n\n.artistName {\n    position:relative;\n    font-size:25px;\n}\n\n.titleName {\n    position:relative;\n    font-size: 19px;\n    top:-15px;\n}\n\n.albumName {\n    position:relative;\n    font-size:15px;\n    top:-23px;\n}\n\n.addButton {\n    float: right;\n    position:relative;\n    top: 6px;\n    width:19%;\n    height: 100px;\n    margin-left: 5px;\n    max-width: 80px;\n    font-size:3.5em;\n    color:rgba(128, 212, 55,0.32);\n}\n\n.addButton:hover {\n    color:rgba(128, 212, 55,0.92);\n}\n\n@media all and (min-width: 482px) and (max-width: 770px) {\n\n    .musicField {\n        position:relative;\n        background-color: rgba(34,23,12,0.72);\n        margin:0 auto;\n        height: 110px;\n        margin-top:10px;\n    }\n\n    .musicField:hover {\n        background-color: rgba(3,3,2,0.92);\n    }\n\n    .titleImage {\n        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        width:56px;\n        height: 56px;\n        background-color:#d9b3ff;\n    }\n\n    .titleInfos {\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        min-width:160px;\n        height: 100px;\n        margin-left: 5px;\n        text-align: left;\n    }\n\n    p {\n        color: white;\n        font-size: 17px;\n        margin-left: 7px;\n        margin-top: -1px;\n    }\n\n    .artistName {\n        position:relative;\n        font-size:25px;\n    }\n\n    .titleName {\n        position:relative;\n        font-size: 19px;\n        top:-15px;\n    }\n\n    .albumName {\n        position:relative;\n        font-size:15px;\n        top:-23px;\n    }\n\n    .buttonGroup {\n        display: inline-block;\n        float: right;\n        width: 120px;\n        margin-right: 20px;\n    }\n\n    .addButton {\n        display: inline-block;\n        float: right;\n        position:relative;\n        top: 6px;\n        height: 100px;\n        margin-left: 15px;\n        font-size:2em;\n        color:rgba(128, 212, 55,0.32);\n    }\n\n    .addButton:hover {\n        color:rgba(128, 212, 55,0.92);\n    }\n}\n\n@media all and (max-width: 320px) {\n\n    .musicField {\n        position:relative;\n        background-color: rgba(34,23,12,0.72);\n        width: 307px;\n        height: 90px;\n        margin-left: 0px;\n        margin-top:10px;\n    }\n\n    .musicField:hover {\n        background-color: rgba(3,3,2,0.92);\n    }\n\n    .titleImage {\n        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        width:56px;\n        height: 56px;\n        background-color:#d9b3ff;\n    }\n\n    .titleInfos {\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        min-width:160px;\n        height: 100px;\n        margin-left: 5px;\n        text-align: left;\n    }\n\n    p {\n        color: white;\n        font-size: 17px;\n        margin-left: 7px;\n        margin-top: -1px;\n    }\n\n    .artistName {\n        position:relative;\n        font-size:20px;\n    }\n\n    .titleName {\n        position:relative;\n        font-size: 14px;\n        top:-15px;\n    }\n\n    .albumName {\n        position:relative;\n        font-size:10px;\n        top:-23px;\n    }\n\n    .buttonGroup {\n        display: inline-block;\n        float: left;\n        position: relative;\n        height: inherit;\n        width:10px;\n        margin-left: 40px;\n    }\n    .addButton {\n        display: block;\n        height: inherit;\n        margin-left: 5px;\n        max-width: 80px;\n        font-size:1.4em;\n        color:rgba(128, 212, 55,0.32);\n    }\n\n    .addButton:hover {\n        color:rgba(128, 212, 55,0.92);\n    }\n}\n\n@media all and (min-width: 321px) and (max-width: 481px) {\n\n    .musicField {\n        position:relative;\n        background-color: rgba(34,23,12,0.72);\n        min-width: 321px;\n        height: 90px;\n        margin-left: 0px;\n        margin-top:10px;\n    }\n\n    .musicField:hover {\n        background-color: rgba(3,3,2,0.92);\n    }\n\n    .titleImage {\n        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        width:56px;\n        height: 56px;\n        background-color:#d9b3ff;\n    }\n\n    .titleInfos {\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        min-width:160px;\n        height: 100px;\n        margin-left: 5px;\n        text-align: left;\n    }\n\n    p {\n        color: white;\n        font-size: 17px;\n        margin-left: 7px;\n        margin-top: -1px;\n    }\n\n    .artistName {\n        position:relative;\n        font-size:20px;\n    }\n\n    .titleName {\n        position:relative;\n        font-size: 14px;\n        top:-15px;\n    }\n\n    .albumName {\n        position:relative;\n        font-size:10px;\n        top:-23px;\n    }\n\n    .buttonGroup {\n        width: 120px;\n        float: right;\n    }\n\n    .addButton {\n        float: right;\n        position:relative;\n        width:40px;\n        font-size:1.6em;\n        margin-left: -8px;\n        color:rgba(128, 212, 55,0.32);\n    }\n\n    .addButton:hover {\n        color:rgba(128, 212, 55,0.92);\n    }\n}\n\n@media all and (min-width: 321px) and (max-width: 372px) {\n\n    .musicField {\n        position:relative;\n        background-color: rgba(34,23,12,0.72);\n        min-width: 321px;\n        height: 90px;\n        margin-left: 0px;\n        margin-top:10px;\n    }\n\n    .musicField:hover {\n        background-color: rgba(3,3,2,0.92);\n    }\n\n    .titleImage {\n        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        width:56px;\n        height: 56px;\n        background-color:#d9b3ff;\n    }\n\n    .titleInfos {\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        min-width:160px;\n        height: 100px;\n        margin-left: 5px;\n        text-align: left;\n    }\n\n    p {\n        color: white;\n        font-size: 17px;\n        margin-left: 7px;\n        margin-top: -1px;\n    }\n\n    .artistName {\n        position:relative;\n        font-size:20px;\n    }\n\n    .titleName {\n        position:relative;\n        font-size: 14px;\n        top:-15px;\n    }\n\n    .albumName {\n        position:relative;\n        font-size:10px;\n        top:-23px;\n    }\n\n    .buttonGroup {\n        display: inline-block;\n        float: right;\n        position: relative;\n        height: inherit;\n        width:10px;\n    }\n    .addButton {\n        display: block;\n        height: inherit;\n        margin-left: 5px;\n        max-width: 80px;\n        font-size:1.4em;\n        color:rgba(128, 212, 55,0.32);\n    }\n\n    .addButton:hover {\n        color:rgba(128, 212, 55,0.92);\n    }\n}\n\n\n/**gestion des boutons downloads, add pour\n    quils soient responsive**/\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 206 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 var utils = __webpack_require__(4);
 var bind = __webpack_require__(73);
-var Axios = __webpack_require__(208);
-var defaults = __webpack_require__(44);
+var Axios = __webpack_require__(204);
+var defaults = __webpack_require__(45);
 
 /**
  * Create an instance of Axios
@@ -36364,14 +36321,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(77);
-axios.CancelToken = __webpack_require__(222);
+axios.CancelToken = __webpack_require__(218);
 axios.isCancel = __webpack_require__(76);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(223);
+axios.spread = __webpack_require__(219);
 
 module.exports = axios;
 
@@ -36380,7 +36337,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 207 */
+/* 203 */
 /***/ (function(module, exports) {
 
 /*!
@@ -36407,16 +36364,16 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 208 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(44);
+var defaults = __webpack_require__(45);
 var utils = __webpack_require__(4);
-var InterceptorManager = __webpack_require__(217);
-var dispatchRequest = __webpack_require__(218);
+var InterceptorManager = __webpack_require__(213);
+var dispatchRequest = __webpack_require__(214);
 
 /**
  * Create a new instance of Axios
@@ -36493,7 +36450,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 209 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36512,7 +36469,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 210 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36545,7 +36502,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 211 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36573,7 +36530,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 212 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36648,7 +36605,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 213 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36708,7 +36665,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 214 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36783,7 +36740,7 @@ module.exports = (
 
 
 /***/ }),
-/* 215 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36826,7 +36783,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 216 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36886,7 +36843,7 @@ module.exports = (
 
 
 /***/ }),
-/* 217 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36945,18 +36902,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 218 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(4);
-var transformData = __webpack_require__(219);
+var transformData = __webpack_require__(215);
 var isCancel = __webpack_require__(76);
-var defaults = __webpack_require__(44);
-var isAbsoluteURL = __webpack_require__(220);
-var combineURLs = __webpack_require__(221);
+var defaults = __webpack_require__(45);
+var isAbsoluteURL = __webpack_require__(216);
+var combineURLs = __webpack_require__(217);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -37038,7 +36995,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 219 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37065,7 +37022,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 220 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37086,7 +37043,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 221 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37107,7 +37064,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 222 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37171,7 +37128,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 223 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37205,7 +37162,322 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
+/* 220 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.decode = exports.parse = __webpack_require__(221);
+exports.encode = exports.stringify = __webpack_require__(222);
+
+
+/***/ }),
+/* 221 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+// If obj.hasOwnProperty has been overridden, then calling
+// obj.hasOwnProperty(prop) will break.
+// See: https://github.com/joyent/node/issues/1707
+function hasOwnProperty(obj, prop) {
+  return Object.prototype.hasOwnProperty.call(obj, prop);
+}
+
+module.exports = function(qs, sep, eq, options) {
+  sep = sep || '&';
+  eq = eq || '=';
+  var obj = {};
+
+  if (typeof qs !== 'string' || qs.length === 0) {
+    return obj;
+  }
+
+  var regexp = /\+/g;
+  qs = qs.split(sep);
+
+  var maxKeys = 1000;
+  if (options && typeof options.maxKeys === 'number') {
+    maxKeys = options.maxKeys;
+  }
+
+  var len = qs.length;
+  // maxKeys <= 0 means that we should not limit keys count
+  if (maxKeys > 0 && len > maxKeys) {
+    len = maxKeys;
+  }
+
+  for (var i = 0; i < len; ++i) {
+    var x = qs[i].replace(regexp, '%20'),
+        idx = x.indexOf(eq),
+        kstr, vstr, k, v;
+
+    if (idx >= 0) {
+      kstr = x.substr(0, idx);
+      vstr = x.substr(idx + 1);
+    } else {
+      kstr = x;
+      vstr = '';
+    }
+
+    k = decodeURIComponent(kstr);
+    v = decodeURIComponent(vstr);
+
+    if (!hasOwnProperty(obj, k)) {
+      obj[k] = v;
+    } else if (isArray(obj[k])) {
+      obj[k].push(v);
+    } else {
+      obj[k] = [obj[k], v];
+    }
+  }
+
+  return obj;
+};
+
+var isArray = Array.isArray || function (xs) {
+  return Object.prototype.toString.call(xs) === '[object Array]';
+};
+
+
+/***/ }),
+/* 222 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+var stringifyPrimitive = function(v) {
+  switch (typeof v) {
+    case 'string':
+      return v;
+
+    case 'boolean':
+      return v ? 'true' : 'false';
+
+    case 'number':
+      return isFinite(v) ? v : '';
+
+    default:
+      return '';
+  }
+};
+
+module.exports = function(obj, sep, eq, name) {
+  sep = sep || '&';
+  eq = eq || '=';
+  if (obj === null) {
+    obj = undefined;
+  }
+
+  if (typeof obj === 'object') {
+    return map(objectKeys(obj), function(k) {
+      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
+      if (isArray(obj[k])) {
+        return map(obj[k], function(v) {
+          return ks + encodeURIComponent(stringifyPrimitive(v));
+        }).join(sep);
+      } else {
+        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
+      }
+    }).join(sep);
+
+  }
+
+  if (!name) return '';
+  return encodeURIComponent(stringifyPrimitive(name)) + eq +
+         encodeURIComponent(stringifyPrimitive(obj));
+};
+
+var isArray = Array.isArray || function (xs) {
+  return Object.prototype.toString.call(xs) === '[object Array]';
+};
+
+function map (xs, f) {
+  if (xs.map) return xs.map(f);
+  var res = [];
+  for (var i = 0; i < xs.length; i++) {
+    res.push(f(xs[i], i));
+  }
+  return res;
+}
+
+var objectKeys = Object.keys || function (obj) {
+  var res = [];
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) res.push(key);
+  }
+  return res;
+};
+
+
+/***/ }),
+/* 223 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactIconBase = __webpack_require__(8);
+
+var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var FaPlay = function FaPlay(props) {
+    return _react2.default.createElement(
+        _reactIconBase2.default,
+        _extends({ viewBox: '0 0 40 40' }, props),
+        _react2.default.createElement(
+            'g',
+            null,
+            _react2.default.createElement('path', { d: 'm35.4 20.7l-29.6 16.5q-0.6 0.3-0.9 0t-0.4-0.8v-32.8q0-0.6 0.4-0.8t0.9 0l29.6 16.5q0.5 0.3 0.5 0.7t-0.5 0.7z' })
+        )
+    );
+};
+
+exports.default = FaPlay;
+module.exports = exports['default'];
+
+/***/ }),
 /* 224 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactIconBase = __webpack_require__(8);
+
+var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var FaDownload = function FaDownload(props) {
+    return _react2.default.createElement(
+        _reactIconBase2.default,
+        _extends({ viewBox: '0 0 40 40' }, props),
+        _react2.default.createElement(
+            'g',
+            null,
+            _react2.default.createElement('path', { d: 'm30.1 30q0-0.6-0.5-1t-1-0.4-1 0.4-0.4 1 0.4 1 1 0.4 1-0.4 0.5-1z m5.7 0q0-0.6-0.4-1t-1-0.4-1 0.4-0.5 1 0.5 1 1 0.4 1-0.4 0.4-1z m2.8-5v7.1q0 0.9-0.6 1.6t-1.5 0.6h-32.9q-0.8 0-1.5-0.6t-0.6-1.6v-7.1q0-0.9 0.6-1.5t1.5-0.6h10.4l3 3q1.3 1.2 3.1 1.2t3-1.2l3-3h10.4q0.9 0 1.5 0.6t0.6 1.5z m-7.2-12.7q0.4 0.9-0.3 1.6l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.7-0.7-0.3-1.6 0.3-0.9 1.3-0.9h5.7v-10q0-0.6 0.4-1t1-0.4h5.7q0.6 0 1 0.4t0.5 1v10h5.7q0.9 0 1.3 0.9z' })
+        )
+    );
+};
+
+exports.default = FaDownload;
+module.exports = exports['default'];
+
+/***/ }),
+/* 225 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(226);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(10)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!./track-info.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!./track-info.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.musicField {\n    position:relative;\n    background-color: rgba(34,23,12,0.72);\n    margin:0 auto;\n    height: 110px;\n    margin-top:10px;\n}\n\n.musicField:hover {\n    background-color: rgba(3,3,2,0.92);\n}\n\n.titleImage {\n    background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);\n    float: left;\n    position:relative;\n    top: 6px;\n    left:10px;\n    width:56px;\n    height: 56px;\n    background-color:#d9b3ff;\n}\n\n.titleInfos {\n    float: left;\n    position:relative;\n    top: 6px;\n    left:10px;\n    min-width:160px;\n    height: 100px;\n    margin-left: 5px;\n    text-align: left;\n}\n\np {\n    color: white;\n    font-size: 17px;\n    margin-left: 7px;\n    margin-top: -1px;\n}\n\n.artistName {\n    position:relative;\n    font-size:25px;\n}\n\n.titleName {\n    position:relative;\n    font-size: 19px;\n    top:-15px;\n}\n\n.albumName {\n    position:relative;\n    font-size:15px;\n    top:-23px;\n}\n\n.addButton {\n    float: right;\n    position:relative;\n    top: 6px;\n    width:19%;\n    height: 100px;\n    margin-left: 5px;\n    max-width: 80px;\n    font-size:3.5em;\n    color:rgba(128, 212, 55,0.32);\n}\n\n.addButton:hover {\n    color:rgba(128, 212, 55,0.92);\n}\n\n@media all and (min-width: 482px) and (max-width: 770px) {\n\n    .musicField {\n        position:relative;\n        background-color: rgba(34,23,12,0.72);\n        margin:0 auto;\n        height: 110px;\n        margin-top:10px;\n    }\n\n    .musicField:hover {\n        background-color: rgba(3,3,2,0.92);\n    }\n\n    .titleImage {\n        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        width:56px;\n        height: 56px;\n        background-color:#d9b3ff;\n    }\n\n    .titleInfos {\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        min-width:160px;\n        height: 100px;\n        margin-left: 5px;\n        text-align: left;\n    }\n\n    p {\n        color: white;\n        font-size: 17px;\n        margin-left: 7px;\n        margin-top: -1px;\n    }\n\n    .artistName {\n        position:relative;\n        font-size:25px;\n    }\n\n    .titleName {\n        position:relative;\n        font-size: 19px;\n        top:-15px;\n    }\n\n    .albumName {\n        position:relative;\n        font-size:15px;\n        top:-23px;\n    }\n\n    .buttonGroup {\n        display: inline-block;\n        float: right;\n        width: 120px;\n        margin-right: 20px;\n    }\n\n    .addButton {\n        display: inline-block;\n        float: right;\n        position:relative;\n        top: 6px;\n        height: 100px;\n        margin-left: 15px;\n        font-size:2em;\n        color:rgba(128, 212, 55,0.32);\n    }\n\n    .addButton:hover {\n        color:rgba(128, 212, 55,0.92);\n    }\n}\n\n@media all and (max-width: 320px) {\n\n    .musicField {\n        position:relative;\n        background-color: rgba(34,23,12,0.72);\n        width: 307px;\n        height: 90px;\n        margin-left: 0px;\n        margin-top:10px;\n    }\n\n    .musicField:hover {\n        background-color: rgba(3,3,2,0.92);\n    }\n\n    .titleImage {\n        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        width:56px;\n        height: 56px;\n        background-color:#d9b3ff;\n    }\n\n    .titleInfos {\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        min-width:160px;\n        height: 100px;\n        margin-left: 5px;\n        text-align: left;\n    }\n\n    p {\n        color: white;\n        font-size: 17px;\n        margin-left: 7px;\n        margin-top: -1px;\n    }\n\n    .artistName {\n        position:relative;\n        font-size:20px;\n    }\n\n    .titleName {\n        position:relative;\n        font-size: 14px;\n        top:-15px;\n    }\n\n    .albumName {\n        position:relative;\n        font-size:10px;\n        top:-23px;\n    }\n\n    .buttonGroup {\n        display: inline-block;\n        float: left;\n        position: relative;\n        height: inherit;\n        width:10px;\n        margin-left: 40px;\n    }\n    .addButton {\n        display: block;\n        height: inherit;\n        margin-left: 5px;\n        max-width: 80px;\n        font-size:1.4em;\n        color:rgba(128, 212, 55,0.32);\n    }\n\n    .addButton:hover {\n        color:rgba(128, 212, 55,0.92);\n    }\n}\n\n@media all and (min-width: 321px) and (max-width: 481px) {\n\n    .musicField {\n        position:relative;\n        background-color: rgba(34,23,12,0.72);\n        min-width: 321px;\n        height: 90px;\n        margin-left: 0px;\n        margin-top:10px;\n    }\n\n    .musicField:hover {\n        background-color: rgba(3,3,2,0.92);\n    }\n\n    .titleImage {\n        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        width:56px;\n        height: 56px;\n        background-color:#d9b3ff;\n    }\n\n    .titleInfos {\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        min-width:160px;\n        height: 100px;\n        margin-left: 5px;\n        text-align: left;\n    }\n\n    p {\n        color: white;\n        font-size: 17px;\n        margin-left: 7px;\n        margin-top: -1px;\n    }\n\n    .artistName {\n        position:relative;\n        font-size:20px;\n    }\n\n    .titleName {\n        position:relative;\n        font-size: 14px;\n        top:-15px;\n    }\n\n    .albumName {\n        position:relative;\n        font-size:10px;\n        top:-23px;\n    }\n\n    .buttonGroup {\n        width: 120px;\n        float: right;\n    }\n\n    .addButton {\n        float: right;\n        position:relative;\n        width:40px;\n        font-size:1.6em;\n        margin-left: -8px;\n        color:rgba(128, 212, 55,0.32);\n    }\n\n    .addButton:hover {\n        color:rgba(128, 212, 55,0.92);\n    }\n}\n\n@media all and (min-width: 321px) and (max-width: 372px) {\n\n    .musicField {\n        position:relative;\n        background-color: rgba(34,23,12,0.72);\n        min-width: 321px;\n        height: 90px;\n        margin-left: 0px;\n        margin-top:10px;\n    }\n\n    .musicField:hover {\n        background-color: rgba(3,3,2,0.92);\n    }\n\n    .titleImage {\n        background-image: url(https://www.colourbox.com/preview/4246472-music-stars-background-colorfull-music-notes.jpg);\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        width:56px;\n        height: 56px;\n        background-color:#d9b3ff;\n    }\n\n    .titleInfos {\n        float: left;\n        position:relative;\n        top: 6px;\n        left:10px;\n        min-width:160px;\n        height: 100px;\n        margin-left: 5px;\n        text-align: left;\n    }\n\n    p {\n        color: white;\n        font-size: 17px;\n        margin-left: 7px;\n        margin-top: -1px;\n    }\n\n    .artistName {\n        position:relative;\n        font-size:20px;\n    }\n\n    .titleName {\n        position:relative;\n        font-size: 14px;\n        top:-15px;\n    }\n\n    .albumName {\n        position:relative;\n        font-size:10px;\n        top:-23px;\n    }\n\n    .buttonGroup {\n        display: inline-block;\n        float: right;\n        position: relative;\n        height: inherit;\n        width:10px;\n    }\n    .addButton {\n        display: block;\n        height: inherit;\n        margin-left: 5px;\n        max-width: 80px;\n        font-size:1.4em;\n        color:rgba(128, 212, 55,0.32);\n    }\n\n    .addButton:hover {\n        color:rgba(128, 212, 55,0.92);\n    }\n}\n\n\n/**gestion des boutons downloads, add pour\n    quils soient responsive**/\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(9)(undefined);
@@ -37219,7 +37491,7 @@ exports.push([module.i, ".windowPosition {\n    position:absolute;\n    left: 0;
 
 
 /***/ }),
-/* 225 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(9)(undefined);
@@ -37233,7 +37505,7 @@ exports.push([module.i, ".home {\n        background-color: #d4eff7;\n        ba
 
 
 /***/ }),
-/* 226 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37249,19 +37521,19 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _searchBar = __webpack_require__(227);
+var _searchBar = __webpack_require__(230);
 
 var _searchBar2 = _interopRequireDefault(_searchBar);
 
-var _noSearch = __webpack_require__(230);
+var _noSearch = __webpack_require__(233);
 
 var _noSearch2 = _interopRequireDefault(_noSearch);
 
-var _searchLoading = __webpack_require__(232);
+var _searchLoading = __webpack_require__(235);
 
 var _searchLoading2 = _interopRequireDefault(_searchLoading);
 
-var _trackInfo = __webpack_require__(60);
+var _trackInfo = __webpack_require__(61);
 
 var _trackInfo2 = _interopRequireDefault(_trackInfo);
 
@@ -37274,7 +37546,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 __webpack_require__(25);
-__webpack_require__(233);
+__webpack_require__(236);
 __webpack_require__(78);
 
 var Search = function (_React$Component) {
@@ -37346,7 +37618,7 @@ var Search = function (_React$Component) {
 exports.default = Search;
 
 /***/ }),
-/* 227 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37370,7 +37642,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-__webpack_require__(228);
+__webpack_require__(231);
 
 var SearchBar = function (_React$Component) {
     _inherits(SearchBar, _React$Component);
@@ -37504,13 +37776,13 @@ var SearchBar = function (_React$Component) {
 exports.default = SearchBar;
 
 /***/ }),
-/* 228 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(229);
+var content = __webpack_require__(232);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -37535,7 +37807,7 @@ if(false) {
 }
 
 /***/ }),
-/* 229 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(9)(undefined);
@@ -37549,7 +37821,7 @@ exports.push([module.i, "input[type=text] {\n    width: 200px;\n    box-sizing: 
 
 
 /***/ }),
-/* 230 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37605,7 +37877,7 @@ var NoSearch = function (_React$Component) {
 exports.default = NoSearch;
 
 /***/ }),
-/* 231 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(9)(undefined);
@@ -37619,7 +37891,7 @@ exports.push([module.i, ".noSearch {\n    top: 40%;\n    left: 45%;\n}\n\n.faSea
 
 
 /***/ }),
-/* 232 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37680,13 +37952,13 @@ var SearchLoading = function (_React$Component) {
 exports.default = SearchLoading;
 
 /***/ }),
-/* 233 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(234);
+var content = __webpack_require__(237);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -37711,7 +37983,7 @@ if(false) {
 }
 
 /***/ }),
-/* 234 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(9)(undefined);
@@ -37725,7 +37997,7 @@ exports.push([module.i, ".home {\n        background-color: #d4eff7;\n        ba
 
 
 /***/ }),
-/* 235 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37750,7 +38022,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 __webpack_require__(25);
-__webpack_require__(236);
+__webpack_require__(239);
 
 var List = function (_React$Component) {
     _inherits(List, _React$Component);
@@ -37786,13 +38058,13 @@ var List = function (_React$Component) {
 exports.default = List;
 
 /***/ }),
-/* 236 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(237);
+var content = __webpack_require__(240);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -37817,7 +38089,7 @@ if(false) {
 }
 
 /***/ }),
-/* 237 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(9)(undefined);

@@ -1,7 +1,6 @@
 #header-bar {
-    background-color:black;
+    background-color:#0D47A1 ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:#80bfff;
     width: 100%;
     position: fixed;
     top: 0;
@@ -10,15 +9,16 @@
     text-align: center;
 }
 
-h1 {
+#text {
     margin-top:-1px;
+    font-size: 30px;
+    color:white;
 }
 
 @media all and (max-width: 320px) {
     #header-bar {
-        background-color:black;
+        background-color:#0091EA ;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color:#80bfff;
         width: 100%;
         min-width:290px;
         position: fixed;
@@ -28,16 +28,17 @@ h1 {
         text-align: center;
     }
 
-    h1 {
+    #text {
         margin-top:-1px;
+        font-size: 30px;
+        color:white;
     }
 }
 
 @media all and (min-width: 321px) and (max-width: 484px) {
     #header-bar {
-        background-color:black;
+        background-color:#0091EA ;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color:#80bfff;
         width: 100%;
         min-width:290px;
         position: fixed;
@@ -47,7 +48,9 @@ h1 {
         text-align: center;
     }
 
-    h1 {
+    #text {
         margin-top:-1px;
+        font-size: 30px;
+        color:white;
     }
 }

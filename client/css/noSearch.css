@@ -1,4 +1,5 @@
 .noSearch {
+    position: absolute;
     top: 40%;
     left: 45%;
 }
@@ -9,7 +10,7 @@
     left: 45%;
     width: 120px;
     height: 120px;
-    color: rgba(43,34,43, 0.5);
+    color: #0091EA;
 }
 
 .loadingText {
@@ -25,6 +26,7 @@
 
 @media all and (max-width: 320px) {
     .noSearch {
+    position: absolute;
     top: 40%;
     left: 45%;
     }
@@ -35,7 +37,7 @@
         left: 35%;
         width: 120px;
         height: 120px;
-        color: rgba(43,34,43, 0.5);
+        color: #0091EA;
     }
 
     .loadingText {
@@ -52,6 +54,7 @@
 
 @media all and (min-width: 321px) and (max-width: 481px) {
     .noSearch {
+    position: absolute;
     top: 40%;
     left: 45%;
     }
@@ -62,7 +65,7 @@
         left: 35%;
         width: 120px;
         height: 120px;
-        color: rgba(43,34,43, 0.5);
+        color: #0091EA;
     }
 
     .loadingText {

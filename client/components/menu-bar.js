@@ -11,6 +11,12 @@ require('!style-loader!css-loader!../css/menu-bar.css');
 
 
 class Menu extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    
+    
+
     render(){
         return(
             <div id='menu-bar'>

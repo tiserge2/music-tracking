@@ -1,12 +1,25 @@
 import React from 'react'
 import FaPlus from 'react-icons/lib/fa/plus'
 import Add from './Add'
+import Remove from './Remove'
+import Download from './Download'
+import Play from './play'
 import FaPlay from 'react-icons/lib/fa/play'
 import FaDownload from 'react-icons/lib/fa/download'
 import FaPlusSquare from 'react-icons/lib/fa/plus-square'
 require('!style-loader!css-loader!../css/track-info.css');
 
 class Title extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    truncate(string){
+            if (string.length > 13)
+                return string.substring(0,13) + '...';
+            else
+                return string;
+        }
+
     render() {
         return (
             <div className='musicField'>
@@ -17,31 +30,62 @@ class Title extends React.Component {
                 <div >
                     <div className='titleInfos'>
                         <p className='artistName'>
-                            {this.props.artist}                       
+                        {
+                            this.truncate(this.props.artist)
+                        }                      
                         </p>
                         <p className='titleName'>
-                            {this.props.title}
+                        {
+                            this.truncate(this.props.title)
+                        }
                         </p>
                         <p className='albumName'>
-                            {this.props.album}
+                        {
+                            this.truncate(this.props.album)
+                        }
                         </p>
                     </div>
                     
                     <div className='buttonGroup'>
                         <div className='addButton'>
-                        <Add artist={this.props.artistFull} 
-                             title={this.props.titleFull} 
-                             album={this.props.albumFull}  
-                             imgUrl={this.props.cover_medium}
-                        />
+                        {
+                            this.props.parent === "home" || this.props.parent === "search" ? 
+                                <Add artist     = {this.props.artist} 
+                                     title      = {this.props.title} 
+                                     album      = {this.props.album}  
+                                     cover      = {this.props.cover}
+                                     cover_medium={this.props.cover_medium}
+                                />
+                            :
+                                <Remove 
+                                    artist     = {this.props.artist} 
+                                    title      = {this.props.title} 
+                                    album      = {this.props.album}  
+                                    cover      = {this.props.cover}
+                                    cover_medium={this.props.cover_medium}
+                                    id          ={this.props.id}
+                                    callRefresh ={() => {this.props.callGetFavorite()}}
+                                />
+                        }
+                        
                         </div>
 
                         <div className='addButton'>
-                            <FaDownload />
+                            <Download artist     = {this.props.artist} 
+                                      title      = {this.props.title} 
+                                      album      = {this.props.album}
+                            
+                            />
                         </div>
 
                         <div className='addButton'>
-                            <FaPlay />
+                            <Play   artist     = {this.props.artist} 
+                                    title      = {this.props.title} 
+                                    album      = {this.props.album}  
+                                    cover      = {this.props.cover}
+                                    cover_medium={this.props.cover_medium}
+                                    preview    ={this.props.preview}
+                            />
                         </div>
                     </div>
                 </div>

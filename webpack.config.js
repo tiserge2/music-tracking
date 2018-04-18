@@ -10,7 +10,7 @@ config = {
 
     devServer: {
         inline: true,
-        port: 3000,
+        port: 3001,
         hot: true,
         contentBase: './client',
         proxy: {

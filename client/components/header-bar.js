@@ -6,9 +6,9 @@ class Header extends React.Component {
     render() {
         return(
             <div id='header-bar'>
-                <h1>
+                <p id='text'>
                     <FaMusic /> Music tracker
-                </h1>
+                </p>
             </div>
         )
     }
