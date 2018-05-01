@@ -42,3 +42,7 @@
 <strong>start webpack in a separate cli</strong>
   <li>npm test</li>
 </ul>
+<h2>Preview</h2>
+<img src="https://www.4shared.com/img/sQS598Xofi/s25/1631c4e6da0/login" style="width:50%; height: 300px; margin-left: 50px 25%; box-shadow: 1px 1px 20px 3px" alt="login"/>
+<img src="https://www.4shared.com/img/MLBCROAkgm/s25/1631c4e7188/home" style="width:50%; height: 300px; margin-left: 50px 25%; box-shadow: 1px 1px 20px 3px" alt="home"/>
+<img src="https://www.4shared.com/img/EZcsDg4Mee/s25/1631c4e7570/search" style="width:50%; height: 300px; margin-left: 50px 25%; box-shadow: 1px 1px 20px 3px" alt="search"/>
