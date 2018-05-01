@@ -1,5 +1,5 @@
 //passport configuration for local signin and signup
-var LocalStrategy = require('passport-local');
+var LocalStrategy = require('passport-local').Strategy;
 
 var User = require('../models/User');
 
@@ -11,36 +11,34 @@ module.exports = function(passport) {
 
     //deserialize user
     passport.deserializeUser(function(id, done) {
-        User.findByIdId(id, function(err, user) {
+        User.findById(id, function(err, user) {
             done(err, user);
         })
     });
 
     //local signup 
     passport.use('local-signup' , new LocalStrategy({
-            lastnameField: "lastname",
-            firstnameField: "firstname",
-            emailField: "email",
+            usernameField: "email",
             passwordField: "password",
-            questionField: "question",
-            answerField: "answer",
+            session: false,
             passReqToCallback: true
-        }, function(req, lastname, firstname, email, password, question,answer, done) {
+        }, function(req, email, password, done) {
+            console.log("we are in the local-signup strategy")
             process.nextTick(function() {
-                console.log("we are in the local-signup strategy")
-                User.findOne({'local.email': email}, function(err, user) {
+                User.findOne({'email': email}, function(err, user) {
                     if(err)
                         return done(err);
                     if(user) {
-                        return done(null, false, req.send('user alreadu esxists'));
+                        console.log("User already exists");
+                        return done(null, false);
                     } else {
                         var newUser = new User();
-                        newUser.local.lastname = lastname;
-                        newUser.local.firstname = firstname;
-                        newUser.local.email = email;
-                        newUser.local.password = newUser.generateHash(password);
-                        newUser.local.question = question;
-                        newUser.local.answer = answer;
+                        newUser.lastname = req.body.lastname;
+                        newUser.firstname = req.body.firstname;
+                        newUser.email = email;
+                        newUser.password = newUser.generateHash(password);
+                        newUser.question = req.body.question;
+                        newUser.answer = req.body.answer;
 
                         newUser.save(function(err) {
                             if(err)
@@ -63,10 +61,10 @@ module.exports = function(passport) {
                 return done(err);
 
             if(!user) 
-                return done(null, false, req.send("no user find"));
+                return done(null, false);
 
             if(!user.validPassword(password))
-                return done(null, false, req.send("wrong password"));
+                return done(null, false);
 
             return done(null, user);
         })

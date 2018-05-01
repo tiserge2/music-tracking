@@ -9,7 +9,7 @@ var bodyParser  = require('body-parser');
 var flash       = require('connect-flash');
 var passport    = require('passport');
 var configDB    = require('./config/database');
-
+ 
 //connection to the database
 mongoose.connect(configDB.online_url);
 mongoose.Connection;

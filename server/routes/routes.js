@@ -35,7 +35,7 @@ module.exports = function(app, passport) {
     }) 
     
   });
-
+ 
   app.get('/getFavorite', function(req, res) {
     console.log("we are in the /getFavorite route");
     Favorite.find({}, function(err, favorites) {
@@ -89,13 +89,15 @@ module.exports = function(app, passport) {
       res.send("Music downloaded Successfully")
     });
   });
-
+ 
   //creating the route responsible of the registration
   app.post("/submitForm", passport.authenticate('local-signup' ,
       {
         successRedirect: '/home',
         faillureRedirect: '/'
       }
-    )
+    ), function() {
+      console.log("we are in the submit form route");
+    }
   );
 }
