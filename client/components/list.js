@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from './track-info'
 import axios from 'axios'
+import SearchLoading from './searchLoading'
 require('!style-loader!css-loader!../css/setWindowHeight.css');
 require('!style-loader!css-loader!../css/list.css');
 
@@ -9,7 +10,8 @@ class List extends React.Component {
         super(props);
         this.state = {
             favorites: [],
-            length: 0
+            length: 0,
+            hasData: false
         }
         this.getFavorite = this.getFavorite.bind(this)
     }
@@ -23,6 +25,7 @@ class List extends React.Component {
                     if(this.state.length === 0 || response.data.length > length) {
                         this.setState({favorites: response.data, length: response.data.length})
                         console.log(this.state)
+                        this.setState({hasData: true})
                     }
                 });
     }
@@ -49,6 +52,8 @@ class List extends React.Component {
 
                     <div className='titleContainer' id='style-2'>
                     {
+                        !this.state.hasData ? <SearchLoading />
+                        :
                         this.state.favorites.map((favorite, i) => {
                             return(
                                 <Title key={i}     artist = {favorite['artist']} 
@@ -60,8 +65,7 @@ class List extends React.Component {
                                                    callGetFavorite = {() => {this.getFavorite()}}
                                 />
                             )
-                            
-                        })
+                        })                        
                     }
                     </div>
                 </div>

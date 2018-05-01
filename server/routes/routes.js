@@ -4,12 +4,13 @@
 //var app       = require('../app');
 const videos = require('videos')
 var Favorite    = require('../models/Favorite');
+var Users        = require('../models/User')
 var getYoutubeMusic =  require('../module/youto.js')
 var youtubeSearch = require('youtube-api-v3-search');
 
 
 
-module.exports = function(app) {
+module.exports = function(app, passport) {
   app.get('/', function(req, res){
     res.render('index')
   });
@@ -88,4 +89,13 @@ module.exports = function(app) {
       res.send("Music downloaded Successfully")
     });
   });
+
+  //creating the route responsible of the registration
+  app.post("/submitForm", passport.authenticate('local-signup' ,
+      {
+        successRedirect: '/home',
+        faillureRedirect: '/'
+      }
+    )
+  );
 }

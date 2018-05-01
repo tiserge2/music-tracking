@@ -43,7 +43,7 @@ class Remove extends React.Component{
                     <p style={{color: "black"}}>Title: {this.props.title} </p>
                     <p style={{color: "black"}}>Artist: {this.props.artist} </p>
                     <p style={{color: "black"}}>Album: {this.props.album} </p>
-                <Button onClick={this.onRemove} bsStyle="success">Remove</Button>
+                <Button onClick={this.onRemove.bind(this)} bsStyle="success">Remove</Button>
                 <Button onClick={this.onCloseModal} style={{marginLeft: "10px"}} bsStyle="success">Cancel</Button>
                 </Modal>
             </div>

@@ -1,0 +1,122 @@
+.animation {
+    position: absolute;
+    float: left;
+    left: 30px;
+    top: 100px;
+    width: 400px;
+    height: 400px;
+}
+
+.famusic1 {
+    color:white;
+    font-size:91px;
+    position: absolute;
+    animation-name: famusicone;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes famusicone {
+    0% {font-size: 25px; top: 2%;left: 40%}
+    25% {font-size: 20px; top: -15%; left: 20%}
+    50% {font-size: 30px; top: -10%; left: -20%}
+    75% {font-size: 40px; top: 9%; left: -15%}
+    100% {font-size: 40px; top: 28%; left: 16%}
+
+}
+
+.famusic2 {
+    color:red;
+    font-size:75px;
+    position: absolute;
+    animation-name: famusictwo;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+
+@keyframes famusictwo {
+    0% {font-size: 25px; top: 2%; left: 90%}
+    25% {font-size: 20px; top: 15%; left: 80%}
+    50% {font-size: 30px; top: 10%; left: 70%}
+    75% {font-size: 40px; top: 9%; left: 75%}
+    100% {font-size: 40px; top: 28%; left: 76%}
+}
+
+.famusic3 {
+    color:yellow;
+    font-size:58px;
+    position: absolute;
+    animation-name: famusicthree;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes famusicthree {
+    0% {font-size: 25px; top: 110%; left: 10%}
+    25% {font-size: 20px; top: 105%; left: 20%}
+    50% {font-size: 30px; top: 90%; left: 10%}
+    75% {font-size: 40px; top: 99%; left: 5%}
+    100% {font-size: 40px; top: 88%; left: 16%}
+
+}
+
+.fanote1 {
+    color:green;
+    font-size: 80px;
+    position: absolute;
+    animation-name: fanoteone;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fanoteone {
+    0% {font-size: 25px; bottom: 50%; left: 45%}
+    25% {font-size: 20px; top: 65%; left: 50%}
+    50% {font-size: 30px; bottom: 50%; left: 60%}
+    75% {font-size: 40px; bottom: 49%; left: 15%}
+    100% {font-size: 40px; bottom: 58%; left: 26%}
+
+}
+
+.fanote2 {
+    color:purple;
+    font-size:79px;
+    position: absolute;
+    animation-name: fanotetwo;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fanotetwo {
+    0% {font-size: 25px; top: 100%; left: 130px}
+    25% {font-size: 20px; bottom: -3%; left: 120%}
+    50% {font-size: 30px; bottom: 10%; left: 120%}
+    75% {font-size: 40px; bottom: 9%; left: 150%}
+    100% {font-size: 40px; bottom: 8%; left: 100%}
+
+}
+
+.fanote3 {
+    color:darkslategray;
+    font-size:69px;
+    position: absolute;
+    animation-name: fanotethree;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fanotethree {
+    0% {font-size: 25px; top: 50%; right: -5px}
+    25% {font-size: 20px; bottom: 50%; right: 2%}
+    50% {font-size: 30px; bottom: 51%; right: -2%}
+    75% {font-size: 40px; bottom: 52%; right: -5%}
+    100% {font-size: 40px; bottom: 51%; right: 6%}
+}
+

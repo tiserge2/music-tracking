@@ -1,0 +1,12 @@
+.login-control {
+    width: 500px;
+    height: 390px;
+    background-color: white;
+    padding-top: 40px;
+    padding-left: 30px;
+    float: right;
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    box-shadow: 1px 1px 20px 3px;
+}

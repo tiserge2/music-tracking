@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormGroup, FormControl, Button} from 'react-bootstrap'
 require('!style-loader!css-loader!../css/searchBar.css');
 
 
@@ -16,10 +17,12 @@ class SearchBar extends React.Component {
 
     
     makeApiCall(e) {
+        console.log("we are in the search bar make api call " +
+                    this.refs.textInput.value + " " + this.selectInput.value)
         e.preventDefault();
         if( this.refs.textInput.value !== "") {
             let val = this.refs.textInput.value
-            let inpt = this.refs.selectInput.value
+            let inpt = this.selectInput.value
             const newState = !this.state.search
             this.setState({search : newState})
             this.props.callbackParent(newState)
@@ -29,7 +32,7 @@ class SearchBar extends React.Component {
                 targetUrl = 'https://api.deezer.com/search/'
             const values = []
             fetch(proxyUrl + targetUrl + inpt + '?q=' + val + '&limit=100')
-                .then( blob => blob.json())
+                .then( blob => blob.json()) 
                 .then( data => {
                     console.log(data);
                     data.data.map((infos) => {
@@ -78,23 +81,26 @@ class SearchBar extends React.Component {
         
     }
     
-    render() {
+    render() { 
         return(
-            <div>
-                <select name="categorie" ref="selectInput">
-                    <option value="artist">Artist</option>
-                    <option value="album">Album</option>
-                    <option value="track" selected>Track</option>
-                </select>
+            <div >
+                <FormGroup controlId="formControlsSelect" ref="selectInput" className='form-group1'>
+                    <FormControl  inputRef={input => this.selectInput = input} componentClass="select" id='select' placeholder="select">
+                        <option value="track" selected>Track</option>
+                        <option value="artist">Artist</option>
+                        <option value="album">Album</option>
+                    </FormControl>
+                </FormGroup>
                 <input
                     type='text'
                     placeholder='search for songs'
                     ref="textInput"
                 />
-                <button onClick={this.makeApiCall.bind(this)}
-                        >
+                <Button type="submit" 
+                        onClick={this.makeApiCall.bind(this)}
+                >
                         Search
-                </button>
+                </Button>
             </div>
         )
     }

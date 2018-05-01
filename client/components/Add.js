@@ -18,6 +18,7 @@ class Add extends React.Component{
         this.onCloseModal = this.onCloseModal.bind(this)
         this.onOpenModal  = this.onOpenModal.bind(this)
         this.openConfirm  = this.openConfirm.bind(this)
+        this.closeConfirm = this.closeConfirm.bind(this)
         this.serverResponse = ""
     }
 
@@ -40,10 +41,18 @@ class Add extends React.Component{
         console.log(this.state);
     }
 
+    closeConfirm = () => {
+        setTimeout(() => {
+                console.log("in set interval function...")
+                this.onCloseModal()
+        }, 2000)
+    }
 
-    addFavorite = () => {
+    addFavorite =  () => {
         console.log("add favorite button has been clicked...")
         console.log(this.props.title, this.props.artist, new Date())
+        // this.closeConfirm();
+        let responseArrived = false
         axios.post('/addFavorite', querystring.stringify({
             artist: this.props.artist,
             title: this.props.title,
@@ -58,25 +67,23 @@ class Add extends React.Component{
         }).then( function(response){
             
             console.log("Reponse du server:" + response.data)
-            this.setServerResponse(response.data)
-            this.setState({messageFromServer: response.data})
-            console.log(this.state)
+            if(response.data != "") 
+                responseArrived = true
+            //setServerResponse(response.data)
+            //this.setState({messageFromServer: response.data, open: false})
+            //this.onCloseModal()
         });
-        console.log(serverResponse)
-        this.onCloseModal();
-        this.openConfirm();
+        //console.log(serverResponse)
         this.closeConfirm();
+        //this.openConfirm();
+        
     }
 
     openConfirm = () => {
         this.setState({confirm: true})
     }
 
-    closeConfirm = () => {
-        setTimeout(() => {
-            this.setState({confirm: false})
-        }, 7000)
-    }
+    
 
     render() {
         let  open  = this.state.open;

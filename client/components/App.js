@@ -4,22 +4,37 @@ import Menu from './menu-bar'
 import Main from './main'
 import Error from './Error'
 import axios from 'axios'
-import { browserRoute as Router, Route, Link } from 'react-router-dom'
+import Authentication from './authentication/authentication'
+import { browserRoute as Router, Switch, Route } from 'react-router-dom'
 
 class App extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            getFavorite: []
+            isAuthenticated: false
         }
+        
+    }
+
+    changeAuthenticationState = () => {
+        this.setState({isAuthenticated: true})
     }
 
     render() {
         return (
             <div>
-                <Header />
-                <Main />
-                <Menu />
+            {
+                this.state.isAuthenticated ? 
+                                     <div>
+                                        <Header />
+                                        <Main />
+                                        <Menu />
+                                    </div>
+                                    
+                                    :
+                                    <Authentication callBackParentAuthenticated={() => {this.changeAuthenticationState()}}/>
+                                    
+            }
             </div>
         )
     }

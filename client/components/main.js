@@ -14,10 +14,10 @@ class Main extends React.Component {
             super(props)
             this.state = {
                 values : [],
+                loading: true
             };
             this.getChart    = this.getChart.bind(this)
         }
-
 
         getChart = () => {
             var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
@@ -47,7 +47,7 @@ class Main extends React.Component {
 
                         values.push(object);
                     });
-                    this.setState({ values });
+                    this.setState({ values: values, loading: false });
                 })
                 .catch(e => {
                     console.log(e);
@@ -66,7 +66,7 @@ class Main extends React.Component {
                 <main>
                     <Switch>
                         <Route exact path='/' render={(props) => (
-                            <Home data={this.state.values}/>
+                            <Home data={[this.state.values, this.state.loading]}/>
                             )} 
                         />
                         <Route path='/search' component={Search} />
