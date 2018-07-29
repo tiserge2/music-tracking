@@ -11,7 +11,12 @@ var passport    = require('passport');
 var configDB    = require('./config/database');
  
 //connection to the database
-mongoose.connect(configDB.online_url);
+mongoose.connect(configDB.online_url,
+        {
+                reconnectTries: Number.MAX_VALUE,
+              reconnectInterval:1000
+        }
+);
 mongoose.Connection;
 
 require('./config/passport')(passport);

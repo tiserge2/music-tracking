@@ -84,20 +84,23 @@ module.exports = function(app, passport) {
         downloads[0].catch(err => {
           console.log(err)
         })
-      })
+      }) 
       //getYoutubeMusic(listOFLink[1])
       res.send("Music downloaded Successfully")
     });
-  });
+  });  
  
   //creating the route responsible of the registration
-  app.post("/submitForm", passport.authenticate('local-signup' ,
-      {
-        successRedirect: '/home',
-        faillureRedirect: '/'
-      }
-    ), function() {
+  app.post("/register", passport.authenticate('local-signup'), function(req, res) {
       console.log("we are in the submit form route");
+      res.send("Vous etes enregistre et pouvez login");
     }
   );
+
+  //creating the route responsibe of the login
+  app.post("/login", passport.authenticate('local-signin', {faillureFlash: true}), function(req, res) {
+    console.log("we are in the login route");
+    console.log("request message" + req.flash())
+    res.send(req.flash()) ;
+  });
 }

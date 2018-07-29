@@ -3,7 +3,7 @@ import axios from 'axios'
 let queryString = require('querystring')
 import { Form, FormGroup, ControlLabel, Button, FormControl, Col, Checkbox } from 'react-bootstrap'
 require('!style-loader!css-loader!../../css/register.css')
-
+ 
 
 class Register extends React.Component {
     constructor(props) {
@@ -12,6 +12,14 @@ class Register extends React.Component {
             isRegistered: this.props.registerState
         }
         this.submitForm = this.submitForm.bind(this)
+    }
+
+    verifyEmail = (email) => {
+
+    }
+
+    verifyPassword = (password1, password2) => {
+
     }
 
     submitForm = () => {
@@ -24,7 +32,7 @@ class Register extends React.Component {
             question    = this.selectInputQuestion.value,
             answer      = this.textInputAnswer.value
             //sending the data to the db to be analyze
-            axios.post('/submitForm',queryString.stringify({
+            axios.post('/register',queryString.stringify({
                 lastname : lastname,
                 firstname: firstname,
                 email : email,
@@ -38,7 +46,7 @@ class Register extends React.Component {
             }).then(
                 (response) => {
                     console.log("message du server apres registration:" + response.data)
-                    this.props.callBackParent()
+                    this.props.callBackParent(response.data)
                 }
             )
             alert( lastname + "\n" + firstname+ "\n" + password1+ "\n" + password2+ "\n" + question+ "\n" + answer)
@@ -48,7 +56,6 @@ class Register extends React.Component {
             <div className='register-control'>
                     <FormGroup controlId="formControlName" >
                         <Col componentClass={ControlLabel} sm={2}>
-                        Lastname
                         </Col>
                         <Col sm={10}>
                         <FormControl type="text" 
@@ -59,7 +66,6 @@ class Register extends React.Component {
 
                     <FormGroup controlId="formControlName" ref="firstname">
                         <Col componentClass={ControlLabel} sm={2}>
-                        Firstname
                         </Col>
                         <Col sm={10}>
                         <FormControl type="text" 
@@ -70,7 +76,6 @@ class Register extends React.Component {
 
                     <FormGroup controlId="formControlEmail" ref="email">
                         <Col componentClass={ControlLabel} sm={2}>
-                        Email
                         </Col>
                         <Col sm={10}>
                         <FormControl type="text" 
@@ -81,37 +86,34 @@ class Register extends React.Component {
 
                     <FormGroup controlId="formHorizontalPassword" ref="lastname">
                         <Col componentClass={ControlLabel} sm={2}>
-                        Password
                         </Col>
                         <Col sm={10}>
                         <FormControl type="password" 
-                                     placeholder="password1"
+                                     placeholder="password"
                                      inputRef={value => this.password1 = value} />
                         </Col>
                     </FormGroup>
 
                     <FormGroup controlId="formHorizontalPassword2" ref="password2">
                         <Col componentClass={ControlLabel} sm={2}>
-                        Password again
                         </Col>
                         <Col sm={10}>
                         <FormControl type="password" 
-                                     placeholder="Password"
+                                     placeholder="Retype password"
                                      inputRef={value => this.password2 = value} />
                         </Col>
                     </FormGroup>
 
                     <FormGroup controlId="formControlsSelect" ref="selectInputQuestion"  className='form-group2'>
                         <FormControl  inputRef={input => this.selectInputQuestion = input} componentClass="select" placeholder="select">
-                            <option value="1" selected>Question 1</option>
-                            <option value="2">Question 2</option>
-                            <option value="3">Question 3</option>
+                            <option value="1" selected>Quel est Votre plat prefere?</option>
+                            <option value="2">Quel est le nom de votre professeur de maternelle preferee?</option>
+                            <option value="3">Ou avez-vous passez votre dernier vacance?</option>
                         </FormControl>
                     </FormGroup>
 
                     <FormGroup controlId="formControlName" ref="answer">
                         <Col componentClass={ControlLabel} sm={2}>
-                        Answer
                         </Col>
                         <Col sm={10}>
                         <FormControl type="text" 

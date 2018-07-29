@@ -1,4 +1,6 @@
 import React from 'react'
+import axios from 'axios'
+let queryString = require('querystring')
 require('!style-loader!css-loader!../../css/login.css')
 import { Form, FormGroup, ControlLabel, Button, FormControl, Col, Checkbox } from 'react-bootstrap'
 
@@ -15,13 +17,28 @@ class Login extends React.Component {
         let user="sergio"
         let password="sergio"
         console.log('we are in the submit form fnction...' +
-                    '\n' +  this.password.value + " " + this.username.value )
-        if(this.username.value === user && this.password.value === password) {
+                    '\n' +  this.password.value + " " + this.email.value )
+        if(this.password.value !== "" && this.email.value !== "") {
+            axios.post('/login', queryString.stringify(
+                {
+                    email: this.email.value,
+                    password: this.password.value
+                }
+            ), {
+                headers: {
+                    "content-type" : "application/x-www-form-urlencoded"
+                }
+            } ).then(
+                (response) => {
+                    console.log("response from server for local signin: " + response.data)
+                    setInterval(() => this.props.callBackParentLogin(), 2000)
+                }
+            )
             console.log("username & password are correct")
-            setInterval(() => this.props.callBackParentLogin(), 2000)
+            
+            //this.props.callBackParentFaillureLogin("correct")
         } else {
-            console.log("They are not correct")
-            this.props.callBackParentFaillureLogin()
+            this.props.callBackParentFaillureLogin("Password or Email cannot be empty!")
         }
     }
 
@@ -30,19 +47,17 @@ class Login extends React.Component {
             <div className='login-control'>
                     <FormGroup controlId="formHorizontalName">
                         <Col componentClass={ControlLabel} sm={2}>
-                        Username
                         </Col>
                         <Col sm={10}>
-                        <FormControl name="username" 
+                        <FormControl name="email" 
                                      type="text" 
-                                     inputRef={input => this.username = input} 
-                                     placeholder="Username" />
+                                     inputRef={input => this.email = input} 
+                                     placeholder="Email" />
                         </Col>
                     </FormGroup>
 
                     <FormGroup controlId="formHorizontalPassword">
                         <Col componentClass={ControlLabel} sm={2}>
-                        Password
                         </Col>
                         <Col sm={10}>
                         <FormControl name="password" 
@@ -68,7 +83,7 @@ class Login extends React.Component {
                             Don't have an account? 
                         </a>
                         <span> | </span>
-                        <a href='#'>
+                        <a href='#' onClick={this.props.callBackParentForget}>
                             Forget your password?
                         </a>
                     </p>

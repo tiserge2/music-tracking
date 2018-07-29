@@ -14,7 +14,7 @@ config = {
         hot: true,
         contentBase: './client',
         proxy: {
-            "*": "http://localhost:8080"
+            "*": "http://localhost:8081"
         }
     },
 

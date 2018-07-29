@@ -1,11 +1,10 @@
-.register-control {
+.forget-control {
     width: 500px;
     background-color: white;
-    padding-top: 20px;
-    padding-left: 30px;
+    padding: 20px;
     float: right;
     position: absolute;
-    top: 10px;
+    top: 100px;
     right: 40px;
     box-shadow: 1px 1px 20px 3px;
 }
@@ -19,24 +18,30 @@ input[type=text] , input[type=password] {
     line-height: 2;
 }
 
-.form-group2 {
-    width: 360px;
-    margin-left: 15px;
-
+#button-forget-send {
+    margin-top: 10px;
 }
 
 .col-sm-2 {
     max-width: 50% !important;
 }
 
+#return-button {
+    float: right;
+}
+
+#label-forget {
+    width: 100px;
+}
+
 @media all and (max-width: 600px) {
-    .register-control {
+    .forget-control {
         width: 80%;
         background-color: white;
         margin: 0 auto; 
         padding: 20px;
         position: absolute;
-        top: 10px;
+        top: 40px;
         box-shadow: 1px 1px 20px 3px;
     }
     
@@ -60,14 +65,14 @@ input[type=text] , input[type=password] {
 }
 
 @media all and (max-width: 400px) {
-    .register-control {
+    .forget-control {
         width: 100%;
         background-color: white;
         margin: 0 auto;  
         padding: 20px;
         right: 0;
         position: absolute;
-        top: 10px;
+        top: 60px;
         box-shadow: 1px 1px 20px 3px;
     }
     
@@ -78,12 +83,6 @@ input[type=text] , input[type=password] {
         border: 1px solid #CCB;
         padding-top: 0px;
         line-height: 2;
-    }
-    
-    .form-group2 {
-        width: 70%;
-        margin-left: 15px;
-    
     }
     
     .col-sm-2 {
