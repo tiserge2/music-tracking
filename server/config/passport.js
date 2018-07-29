@@ -26,8 +26,10 @@ module.exports = function(passport) {
             console.log("we are in the local-signup strategy")
             process.nextTick(function() {
                 User.findOne({'email': email}, function(err, user) {
+                    console.log("checking if there were an error")
                     if(err)
                         return done(err);
+                    console.log("checking if the user already exist")
                     if(user) {
                         console.log("User already exists");
                         return done(null, false);
@@ -39,7 +41,7 @@ module.exports = function(passport) {
                         newUser.password = newUser.generateHash(password);
                         newUser.question = req.body.question;
                         newUser.answer = req.body.answer;
-
+                        console.log("sending information to the user model")
                         newUser.save(function(err) {
                             if(err)
                                 throw err;
@@ -53,20 +55,25 @@ module.exports = function(passport) {
 
     //local signin
     passport.use('local-signin', new LocalStrategy({
-        emailField: "email",
-        passwordField: "password"
+        usernameField: "email",
+        passwordField: "password",
+        passReqToCallback : true
     }, function(req, email, password, done) {
-        User.findOne({'local.email': email}, function(err, user) {
-            if(err)
-                return done(err);
-
-            if(!user) 
-                return done(null, false);
-
-            if(!user.validPassword(password))
-                return done(null, false);
-
-            return done(null, user);
-        })
+        console.log("we are in the local signin strategy");
+        process.nextTick(function() {
+            User.findOne({'email': email}, function(err, user) {
+                console.log("going to check if there were error")
+                if(err)
+                    return done(err);
+                console.log("going to check if the user exist")
+                if(!user) 
+                    return done(null, false, {message: 'no user with that email'})
+                console.log("going to check if the password is valid")
+                if(!user.validPassword(password))
+                    return done(null, false);
+                console.log("going to return the user successfully")
+                return done(null, user);
+            })
+        });
     }))
 }

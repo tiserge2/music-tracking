@@ -1,10 +1,16 @@
 .animation {
-    position: absolute;
+    position: relative;
     float: left;
     left: 30px;
     top: 100px;
     width: 400px;
     height: 400px;
+}
+
+@media all and (max-width: 600px) {
+    .animation {
+        display:none;
+    }
 }
 
 .famusic1 {

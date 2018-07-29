@@ -1,8 +1,9 @@
 import React from 'react'
 import Login from './login'
+import Forget from './forget'
 import Register from './register'
 import Animation from './animation'
-import Faillure from './faillure'
+import Flash from './faillure'
 require('!style-loader!css-loader!../../css/authentication.css')
 
 class Authentication extends React.Component {
@@ -10,27 +11,31 @@ class Authentication extends React.Component {
         super(props);
         this.state = {
             notRegister: false,
-            faillure: false
+            forget: false,
+            flash: false,
+            serverMessage: ''
         }
     }
 
-    onChildChangeRegister = () => {
-        this.setState({notRegister: !this.state.notRegister})
+    onChildChangeRegister = () => { 
+        this.setState({
+            notRegister: !this.state.notRegister,
+        })
+    }
+
+    onChildChangeForget = () => {
+        this.setState({
+            forget: !this.state.forget
+        })
     }
 
     onChildChangeLogin = () => {
         this.props.callBackParentAuthenticated()
     }
 
-    LoginFaillure = () => {
-        <Alert bsStyle='warning'>
-            <strong>Sorry the username or password is incorrect</strong>
-        </Alert>
-    }
-
-    showFaillureMessage = () => {
-        this.setState({faillure: true})
-        setInterval(() => this.setState({faillure: false}), 5000)
+    showFaillureMessage = (message) => {
+        this.setState({flash: true, serverMessage: message})
+        setInterval(() => this.setState({flash: false}), 5000)
     }
 
     render() {
@@ -38,19 +43,26 @@ class Authentication extends React.Component {
             <div className='interface'>
                 <Animation />
                 {
-                    this.state.faillure ? <Faillure /> : ""
+                    this.state.flash ? <Flash message={this.state.serverMessage} /> : ""
                 }
                 {
                     this.state.notRegister ? 
                                         <Register registerState={this.state.notRegister}
-                                                  callBackParent={() => {this.onChildChangeRegister()}}
+                                            callBackParent={() => {this.onChildChangeRegister()}}
                                         />
                                         :
-                                        <Login registerState={this.state.notRegister}
-                                                callBackParentRegister={() => {this.onChildChangeRegister()}}
-                                                callBackParentLogin={() => {this.onChildChangeLogin()}}
-                                                callBackParentFaillureLogin={() => {this.showFaillureMessage()}}
-                                        />
+                                        this.state.forget ?
+                                            <Forget 
+                                                forgetState={this.state.forget}
+                                                callBackParentForget={() => this.onChildChangeForget()}
+                                            />
+                                            :
+                                            <Login registerState={this.state.notRegister}
+                                                    callBackParentRegister={() => {this.onChildChangeRegister()}}
+                                                    callBackParentLogin={() => {this.onChildChangeLogin()}}
+                                                    callBackParentForget={() => {this.onChildChangeForget()}}
+                                                    callBackParentFaillureLogin={(message) => {this.showFaillureMessage(message)}}
+                                            />
                 }
             </div>
         )
