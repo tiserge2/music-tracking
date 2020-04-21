@@ -5,7 +5,7 @@ import Main from './main'
 import Error from './Error'
 import axios from 'axios'
 import Authentication from './authentication/authentication'
-import { browserRoute as Router, Switch, Route } from 'react-router-dom'
+
 
 class App extends React.Component {
     constructor(props){
@@ -13,7 +13,6 @@ class App extends React.Component {
         this.state = {
             isAuthenticated: false
         }
-        
     }
 
     changeAuthenticationState = () => {

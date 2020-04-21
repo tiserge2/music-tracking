@@ -1,5 +1,5 @@
-var app = require('../server/app');
-var port = 8081;
+var app = require('../server/app.js');
+var port = 8080; 
 app.listen(port, function() {
  console.log('running at localhost: ' + port);
 });

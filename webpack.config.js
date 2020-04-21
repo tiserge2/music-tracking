@@ -1,5 +1,5 @@
 
-config = {
+config = { 
     entry:'./client/index.js',
 
     output: {
@@ -14,7 +14,7 @@ config = {
         hot: true,
         contentBase: './client',
         proxy: {
-            "*": "http://localhost:8081"
+            "*": "http://localhost:8080"
         }
     },
 
@@ -29,11 +29,11 @@ config = {
                 }
             },
 
-            {
-                test: /\.css$/,
-                exclude: /(node_modules)/,
-                loader: 'css-loader!style-loader'
-            },
+            // {
+            //     test: /\.css$/,
+            //     exclude: /(node_modules)/,
+            //     loader: 'css-loader!style-loader'
+            // },
 
             {
                 test: /\.(png|jpg)$/,
@@ -41,9 +41,9 @@ config = {
             },
 
             {
-                test: /\.scss$/,
-                exclude: /(node_modules)/,
-                loader: 'sass-loader!css-loader!style-loader'
+                test: /\.s?css$/,
+                // exclude: /(node_modules)/,
+                loader: ['sass-loader', 'style-loader', 'css-loader', 'postcss-loader']
             }
         ]
     }

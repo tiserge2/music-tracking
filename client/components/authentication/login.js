@@ -30,7 +30,7 @@ class Login extends React.Component {
                 }
             } ).then(
                 (response) => {
-                    console.log("response from server for local signin: " + response.data)
+                    console.table(response.data)
                     setInterval(() => this.props.callBackParentLogin(), 2000)
                 }
             )

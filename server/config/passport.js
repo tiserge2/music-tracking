@@ -70,8 +70,9 @@ module.exports = function(passport) {
                     return done(null, false, {message: 'no user with that email'})
                 console.log("going to check if the password is valid")
                 if(!user.validPassword(password))
-                    return done(null, false);
+                    return done(null, false, {message: "password is not correct"});
                 console.log("going to return the user successfully")
+                console.log(user)
                 return done(null, user);
             })
         });

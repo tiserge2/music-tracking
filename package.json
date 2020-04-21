@@ -4,7 +4,7 @@
   "description": "App for managing favorite music",
   "main": "index.js",
   "scripts": {
-    "test": "webpack-dev-server --hot",
+    "test": "webpack-dev-server --hot", 
     "start": "nodemon --exec babel-node --  bin/www"
   },
   "repository": {
@@ -38,12 +38,12 @@
     "nodemon": "^1.15.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "react": "^16.0.0",
+    "react": "^16.13.1",
     "react-addons-css-transition-group": "^15.6.2",
     "react-bootstrap": "^0.32.1",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.13.1",
     "react-icons": "^2.2.5",
-    "react-loader-spinner": "^2.0.0",
+    "react-loader-spinner": "^3.1.14",
     "react-responsive-modal": "^2.0.1",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
@@ -58,5 +58,11 @@
     "youtube-api-v3-search": "^1.0.2",
     "youtube-to": "^1.1.3",
     "ytdl-core": "^0.20.2"
+  },
+  "devDependencies": {
+    "ajv": "^6.5.5",
+    "file-loader": "^2.0.0",
+    "jquery": "^3.3.1",
+    "react": "^16.6.1"
   }
 }

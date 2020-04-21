@@ -35,11 +35,11 @@ class List extends React.Component {
     }
 
     componentWillUpdate = () => {
-        this.getFavorite()
+        // this.getFavorite()
     }
 
     componentDidMount = () => {
-        
+        // this.getFavorite()
     }
 
     render(){

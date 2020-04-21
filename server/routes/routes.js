@@ -2,11 +2,11 @@
 //var express   = require('express');
 //var router    = express.Router();
 //var app       = require('../app');
-const videos = require('videos')
-var Favorite    = require('../models/Favorite');
-var Users        = require('../models/User')
+const videos        = require('videos')
+var Favorite        = require('../models/Favorite');
+var Users           = require('../models/User')
 var getYoutubeMusic =  require('../module/youto.js')
-var youtubeSearch = require('youtube-api-v3-search');
+var youtubeSearch   = require('youtube-api-v3-search');
 
 
 
@@ -98,9 +98,28 @@ module.exports = function(app, passport) {
   );
 
   //creating the route responsibe of the login
-  app.post("/login", passport.authenticate('local-signin', {faillureFlash: true}), function(req, res) {
-    console.log("we are in the login route");
-    console.log("request message" + req.flash())
-    res.send(req.flash()) ;
-  });
+  // app.post("/login", passport.authenticate('local-signin'), function(req, res) {
+  //   console.log("authentification successful\nreturning infos about the user");
+  //   console.log("request message: " + req.user)
+  //   res.send(req.user);
+  // });
+
+    //creating the route responsibe of the login
+    app.post("/login", function(req, res, next) {
+      passport.authenticate('local-signin', function( err, user, info) {
+        if(err) {
+          console.err(err)
+          return next(err)
+        }
+        if(!user) {
+          console.log("message d'erreur: " + info.message)
+          return res.send({message: info.message})
+        }
+        req.login(user, function(err) {
+          if(err) 
+            return next(err)
+          return res.send(req.user)
+        })
+      })(req, res, next);
+    });
 }
