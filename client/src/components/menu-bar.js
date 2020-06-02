@@ -10,7 +10,7 @@ import '../css/menu-bar.css'
 // require('!style-loader!css-loader!../css/menu-bar.css');
 //import '../styleSheets/menu-bar.css'
 
-
+ 
 class Menu extends React.Component {
     constructor(props){
         super(props);

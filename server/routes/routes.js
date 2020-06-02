@@ -13,11 +13,13 @@ var secret          = 'mysecretsshhh';
 
 
 module.exports = function(app, passport) {
-  app.get('/', function(req, res){
+  app.get('/', function(req, res) {
+    console.log('redirection...')
     res.redirect(307, 'http://localhost:8080/home');
   });
 
   app.get('/home', function(req, res){
+    console.log('sending file')
     res.sendFile(path.join(path.resolve(__dirname, "../..") + '/client/build/index.html'));
   });
 

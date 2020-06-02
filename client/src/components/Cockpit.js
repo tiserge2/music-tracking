@@ -5,7 +5,7 @@ import Main from './main'
 
 class Cockpit extends React.Component {
     render() {
-        return (
+        return ( 
             <div>
                 <Header />
                 <Main {...this.props}/>
