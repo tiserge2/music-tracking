@@ -6,7 +6,7 @@ import Cockpit from './Cockpit'
 import Error from './Error'
 import axios from 'axios'
 import Authentication from './authentication/authentication'
-import { Switch, Route, Router } from 'react-router-dom'
+import { Switch, Route, Router, Redirect } from 'react-router-dom'
 import withAuth from '../utils/withAuth'
 
 
