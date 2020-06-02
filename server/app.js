@@ -22,15 +22,17 @@ mongoose.Connection;
 require('./config/passport')(passport);
 var app         = express();
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '../client'));
-
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(path.resolve(__dirname, '..'), 'client/build')));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser('keyboard cat'));
 app.use(flash());
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/client'));
+
+
 
 //passport setup
 app.use(session({

@@ -1,18 +1,107 @@
 //server/routes/routes.js
-//var express   = require('express');
-//var router    = express.Router();
-//var app       = require('../app');
 const videos        = require('videos')
 var Favorite        = require('../models/Favorite');
-var Users           = require('../models/User')
-var getYoutubeMusic =  require('../module/youto.js')
+var User            = require('../models/User')
+var getYoutubeMusic = require('../module/youto.js')
 var youtubeSearch   = require('youtube-api-v3-search');
+const path          = require('path');
+var withAuth        = require('../config/middleware');
+const jwt           = require('jsonwebtoken');
+
+var secret          = 'mysecretsshhh';
 
 
 
 module.exports = function(app, passport) {
   app.get('/', function(req, res){
-    res.render('index')
+    res.sendFile(path.join(path.resolve(__dirname, "../..") + '/client/build/index.html'));
+  });
+
+  app.get('/checkToken', withAuth, function(req, res) {
+    console.log("Checking toking");
+    res.sendStatus(200);
+  });
+
+  app.get('/api/secret', withAuth, function(req, res) {
+    res.send('The password is potato');
+  });
+
+    //creating the route responsible of the registration
+  app.post("/register", function(req, res) {
+      console.log("we are about to register a new user");
+      User.findOne({'email': req.body.email}, function(err, user) {
+        console.log("checking if there was an error")
+        if(err) {
+          console.log(err)
+        } else {
+          console.log("checking if the user already exist")
+          if(user) {
+              console.log("User already exists");
+              res.status(500).send("User already exist.");
+          } else {
+              var newUser = new User();
+              console.log("Body: ", req.body)
+              // TO-DO 
+              // Backend verify the value are not empty
+
+              newUser.lastname = req.body.lastname;
+              newUser.firstname = req.body.firstname;
+              newUser.email = req.body.email; 
+              newUser.password = newUser.generateHash(req.body.password);
+              newUser.question = req.body.question;
+              newUser.answer = req.body.answer;
+              newUser.save(function(err) {
+                console.log("Saving the new user to the DB");
+                if(err) {
+                  res.status(500).send("Error registering new user please try again.");
+                }
+                res.send("Vous etes enregistre!");
+              });
+          }
+        }
+      });
+  });
+
+    //creating the route responsibe of the login
+  app.post("/login", function(req, res) {
+    console.log("We are in login route");
+    // TO-DO 
+    // Backend verify the value are not empty
+    const { email, password } = req.body;
+    User.findOne({ email }, function(err, user) {
+      console.log("Checking if user exist");
+      if (err) {
+        console.error(err);
+        res.status(500)
+           .json({error: 'Internal error please try again'});
+      } 
+      
+      if (!user) {
+        res.status(401)
+           .json({error: 'Incorrect email or password'});
+      } else {
+        console.log("Checking if password is correct");
+        user.isCorrectPassword(password, function(err, same) {
+          if (err) {
+            res.status(500)
+               .json({error: 'Internal error please try again'});
+          } 
+          
+          if (!same) {
+            res.status(401)
+               .json({error: 'Incorrect email or password'});
+          } else {
+            console.log("Issuing token");
+            // Issue token
+            const payload = { email };
+            const token = jwt.sign(payload, secret, {
+              expiresIn: '1h'
+            });
+            res.cookie('token', token, { httpOnly: true }).sendStatus(200);
+          }
+        });
+      }
+    });
   });
 
   app.post('/addFavorite', async function(req, res) {
@@ -89,37 +178,4 @@ module.exports = function(app, passport) {
       res.send("Music downloaded Successfully")
     });
   });  
- 
-  //creating the route responsible of the registration
-  app.post("/register", passport.authenticate('local-signup'), function(req, res) {
-      console.log("we are in the submit form route");
-      res.send("Vous etes enregistre et pouvez login");
-    }
-  );
-
-  //creating the route responsibe of the login
-  // app.post("/login", passport.authenticate('local-signin'), function(req, res) {
-  //   console.log("authentification successful\nreturning infos about the user");
-  //   console.log("request message: " + req.user)
-  //   res.send(req.user);
-  // });
-
-    //creating the route responsibe of the login
-    app.post("/login", function(req, res, next) {
-      passport.authenticate('local-signin', function( err, user, info) {
-        if(err) {
-          console.err(err)
-          return next(err)
-        }
-        if(!user) {
-          console.log("message d'erreur: " + info.message)
-          return res.send({message: info.message})
-        }
-        req.login(user, function(err) {
-          if(err) 
-            return next(err)
-          return res.send(req.user)
-        })
-      })(req, res, next);
-    });
 }
