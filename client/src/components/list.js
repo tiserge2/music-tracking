@@ -4,6 +4,7 @@ import axios from 'axios'
 import SearchLoading from './searchLoading'
 import '../css/setWindowHeight.css'
 import '../css/home.css'
+import '../css/list.css'
 // require('!style-loader!css-loader!../css/setWindowHeight.css');
 // require('!style-loader!css-loader!../css/list.css');
 

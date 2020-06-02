@@ -19,7 +19,7 @@ class Home extends React.Component {
             <div className='windowPosition home'>
                 <div className='trendsBoard'>
                     <h1 className='texte1'>
-                        Music Trends
+                        Trending board
                     </h1>
 
                     <div className='titleContainer' id='style-2'>

@@ -34,6 +34,13 @@
         height: auto;
         min-width: 290px;
     }
+
+    .texte1 {
+        position:relative;
+        top: 7px;
+        left: 7px;
+        font-size: 30px;
+    }
 }
 
 @media all and (min-width:320px) and (max-width: 481px) {
@@ -50,5 +57,12 @@
         width:100vw;
         height: auto;
         min-width: 290px;
+    }
+
+    .texte1 {
+        position:relative;
+        top: 7px;
+        left: 7px;
+        font-size: 30px;
     }
 }
