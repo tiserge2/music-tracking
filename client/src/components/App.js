@@ -8,11 +8,46 @@ import axios from 'axios'
 import Authentication from './authentication/authentication'
 import { Switch, Route, Router, Redirect } from 'react-router-dom'
 import withAuth from '../utils/withAuth'
+import {isFirstTime} from '../utils/visitor'
+
 
 
  
 
 class App extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    componentDidMount = () => {
+        if(isFirstTime()) {
+          console.log("Send +1 visit to server")
+          this.updateVisit() 
+        } else {
+          console.log("Dont send +1 visit to server")
+        }
+      }
+    
+      updateVisit = () => {
+        const proxyurl = "https://cors-anywhere.herokuapp.com/";
+        fetch('https://tiserge2-visit.herokuapp.com/api/addVisit', {
+          method: 'POST',
+          mode: "no-cors",
+          cache: "no-cache", 
+          credentials: "same-origin",
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type':'application/x-www-form-urlencoded'
+          },
+          redirect: "follow", 
+          referrer: "no-referrer", 
+          body: 'websiteId=5ed2ee7a7c213e044cc035a8'
+        }).then(res => {
+          console.log(res)
+        }).catch(err => {
+          // throw new Error(err)
+        })
+      }
     render() {
         return (
             <div>

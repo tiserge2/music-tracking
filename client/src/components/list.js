@@ -34,7 +34,7 @@ class List extends React.Component {
     }
 
     componentWillMount = () => {
-        this.getFavorite()
+        // this.getFavorite()
     }
 
     componentWillUpdate = () => {
@@ -42,7 +42,7 @@ class List extends React.Component {
     }
 
     componentDidMount = () => {
-        // this.getFavorite()
+        this.getFavorite()
     }
 
     render(){
