@@ -1,6 +1,7 @@
 import React from 'react'
 import {Modal} from 'react-responsive-modal'
 import FaPlay from 'react-icons/lib/fa/play'
+import 'react-responsive-modal/styles.css';
 
 
 class Play extends React.Component {
