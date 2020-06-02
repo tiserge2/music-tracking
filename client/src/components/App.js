@@ -19,7 +19,7 @@ class App extends React.Component {
                 <Switch>
                     <Route  path='/home'  render={(props) =>  <Cockpit {...props}/>} />  
                     <Route  path='/login'  render={(props) =>  <Authentication {...props}/>} />
-                    <Route path='/' component={() => <Redirect to='/home'} />
+                    <Route path='/' component={() => <Redirect to='/home' />} />
                 </Switch>
             </div>
         )
