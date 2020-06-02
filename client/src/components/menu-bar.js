@@ -26,19 +26,19 @@ class Menu extends React.Component {
             <div id='menu-bar'>
                 <div id='menu-bar-item'>
                     <div className='menu-item'>
-                        <Link to={`${match.url}/`} >
+                        <Link to='/home' >
                             <FaHome className='faSize'/> 
                         </Link>
                     </div>
 
                     <div className='menu-item'>
-                        <Link to={`${match.url}/search`}>  
+                        <Link to='/home/search'>  
                             <FaSearch className='faSize'/> 
                         </Link>
                     </div>
 
                     <div className='menu-item'>
-                        <Link to={`${match.url}/list`}>
+                        <Link to='/home/list'>
                             <FaListOl className='faSize'/> 
                         </Link>
                     </div>

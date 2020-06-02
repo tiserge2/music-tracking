@@ -13,8 +13,10 @@ var configDB    = require('./config/database');
 //connection to the database
 mongoose.connect(configDB.online_url,
         {
-                reconnectTries: Number.MAX_VALUE,
-                reconnectInterval:1000
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+                // reconnectTries: Number.MAX_VALUE,
+                // reconnectInterval:1000
         }
 );
 mongoose.Connection;
@@ -47,5 +49,11 @@ app.use(passport.session());
 app.use(flash())
 
 require("./routes/routes.js")(app, passport);
+
+var serverPort = 8080;
+var port = process.env.PORT || serverPort;
+app.listen(port, function() {
+ console.log('running at localhost: ' + port);
+});
 
 module.exports = app;
