@@ -2,6 +2,7 @@ import React from 'react'
 import {Modal} from 'react-responsive-modal'
 import FaPlay from 'react-icons/lib/fa/play'
 
+
 class Play extends React.Component {
     constructor(props) {
         super(props);
