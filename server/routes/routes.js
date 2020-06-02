@@ -14,6 +14,10 @@ var secret          = 'mysecretsshhh';
 
 module.exports = function(app, passport) {
   app.get('/', function(req, res){
+    res.redirect(307, 'http://localhost:8080/home');
+  });
+
+  app.get('/home', function(req, res){
     res.sendFile(path.join(path.resolve(__dirname, "../..") + '/client/build/index.html'));
   });
 
