@@ -95,7 +95,7 @@ class Register extends React.Component {
 
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
-                        <Button type="submit" onClick={this.submitForm}>Get Registered</Button>
+                        <Button id='registerButton' type="submit" onClick={this.submitForm}>Get Registered</Button>
                         </Col>
                     </FormGroup>
                     <p>

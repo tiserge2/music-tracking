@@ -86,7 +86,7 @@ class Login extends React.Component {
 
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
-                        <Button type="submit" onClick={this.submitForm}>Sign in</Button>
+                        <Button id='signInButton' type="submit" onClick={this.submitForm}>Sign in</Button>
                         </Col>
                     </FormGroup>
                     <p>

@@ -1,6 +1,6 @@
 .register-control {
     width: 500px;
-    background-color: white;
+    background-color: white; 
     padding-top: 20px;
     padding-left: 30px;
     float: right;
@@ -27,6 +27,11 @@ input[type=text] , input[type=password] {
 
 .col-sm-2 {
     max-width: 50% !important;
+}
+
+#registerButton {
+    background-color: #0091EA;
+    color: white;
 }
 
 @media all and (max-width: 600px) {
@@ -56,6 +61,11 @@ input[type=text] , input[type=password] {
     
     .col-sm-2 {
         max-width: 50% !important;
+    }
+
+    #registerButton {
+        background-color: #0091EA;
+        color: white;
     }
 }
 
@@ -88,6 +98,11 @@ input[type=text] , input[type=password] {
     
     .col-sm-2 {
         max-width: 50% !important;
+    }
+
+    #registerButton {
+        background-color: #0091EA;
+        color: white;
     }
 }
 

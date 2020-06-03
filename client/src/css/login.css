@@ -3,10 +3,15 @@
     background-color: white; 
     padding: 20px;
     float: right;
-    position: absolute;
+    position: absolute; 
     top: 100px;
     right: 40px;
     box-shadow: 1px 1px 20px 3px;
+}
+
+#signInButton {
+    background-color: #0091EA;
+    color: white;
 }
 
 @media all and (max-width:600px) {
@@ -19,6 +24,11 @@
         top: 100px;
         box-shadow: 1px 1px 20px 3px;
     }
+
+    #signInButton {
+        background-color: #0091EA;
+        color: white;
+    }
 }
 
 @media all and (max-width:400px) {
@@ -30,5 +40,10 @@
         padding: 10px;
         top: 100px;
         box-shadow: 1px 1px 20px 3px;
+    }
+
+    #signInButton {
+        background-color: #0091EA;
+        color: white;
     }
 }
