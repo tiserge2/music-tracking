@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { Form, FormGroup, ControlLabel, Button, FormControl, Col, Checkbox } from 'react-bootstrap'
 import '../../css/register.css'
+import {Link} from 'react-router-dom'
 let queryString = require('querystring')
 
 // require('!style-loader!css-loader!../../css/register.css')
@@ -21,68 +22,54 @@ class Register extends React.Component {
     }
 
     verifyPassword = (password1, password2) => {
-
+        return password1 === password2;
     }
 
     submitForm = () => {
         console.log("we are in the submit form")
-        let lastname    = this.lastname.value,
-            firstname   = this.firstname.value,
-            email       = this.email.value,
+        let username    = this.username.value,
             password1   = this.password1.value,
-            password2   = this.password2.value,
-            question    = this.selectInputQuestion.value,
-            answer      = this.textInputAnswer.value
+            password2   = this.password2.value
             //sending the data to the db to be analyze
-            axios.post('/register',queryString.stringify({
-                lastname : lastname,
-                firstname: firstname,
-                email : email,
-                password : password1,
-                question : question,
-                answer : answer
-            }), {
-                headers: {
-                    "content-type": "application/x-www-form-urlencoded"
-                }
-            }).then(
-                (response) => {
-                    console.log("message du server apres registration:" + response.data)
-                    this.props.callBackParent(response.data)
-                }
-            )
-            alert( lastname + "\n" + firstname+ "\n" + password1+ "\n" + password2+ "\n" + question+ "\n" + answer)
+        if(this.username.value !== "" && this.password1.value !== "" && this.password2 !== "") {
+            if(this.verifyPassword(password1, password2)) {
+                axios.post('/register',queryString.stringify({
+                    username: username,
+                    password : password1,
+                }), {
+                    headers: {
+                        "content-type": "application/x-www-form-urlencoded"
+                    }
+                }).then((response) => {
+                        if(response.status === 200) {
+                            this.props.history.push('/auth/login');
+                        } 
+                        console.log("message du server apres registration:", response)
+                        this.props.callBackParentFaillure(response.data.message)
+                    }
+                ).catch((err) => {
+                    console.log(err)
+                })
+                // alert( username + "\n" + password1+ "\n" + password2)
+            } else {
+                console.log("Password arent the same")
+                this.props.callBackParentFaillure("Password aren't the same")
+            }
+        } else {
+            console.log("No empty field allowed")
+            this.props.callBackParentFaillure("No empty field allowed")
+        }
     }
     render() {
         return(
             <div className='register-control'>
-                    <FormGroup controlId="formControlName" >
+                    <FormGroup controlId="formControlUsername" ref="username">
                         <Col componentClass={ControlLabel} sm={2}>
                         </Col>
                         <Col sm={10}>
                         <FormControl type="text" 
-                                     placeholder="Lastname"
-                                     inputRef={value => this.lastname = value} />
-                        </Col>
-                    </FormGroup>
-
-                    <FormGroup controlId="formControlName" ref="firstname">
-                        <Col componentClass={ControlLabel} sm={2}>
-                        </Col>
-                        <Col sm={10}>
-                        <FormControl type="text" 
-                                     placeholder="Firstname"
-                                     inputRef={value => this.firstname = value} />
-                        </Col>
-                    </FormGroup>
-
-                    <FormGroup controlId="formControlEmail" ref="email">
-                        <Col componentClass={ControlLabel} sm={2}>
-                        </Col>
-                        <Col sm={10}>
-                        <FormControl type="text" 
-                                     placeholder="Email"
-                                     inputRef={value => this.email = value} />
+                                     placeholder="Usermane"
+                                     inputRef={value => this.username = value} />
                         </Col>
                     </FormGroup>
 
@@ -106,33 +93,13 @@ class Register extends React.Component {
                         </Col>
                     </FormGroup>
 
-                    <FormGroup controlId="formControlsSelect" ref="selectInputQuestion"  className='form-group2'>
-                        <FormControl  inputRef={input => this.selectInputQuestion = input} componentClass="select" placeholder="select">
-                            <option value="1" selected>Quel est Votre plat prefere?</option>
-                            <option value="2">Quel est le nom de votre professeur de maternelle preferee?</option>
-                            <option value="3">Ou avez-vous passez votre dernier vacance?</option>
-                        </FormControl>
-                    </FormGroup>
-
-                    <FormGroup controlId="formControlName" ref="answer">
-                        <Col componentClass={ControlLabel} sm={2}>
-                        </Col>
-                        <Col sm={10}>
-                        <FormControl type="text" 
-                                     placeholder="Answer question"
-                                     inputRef={input => this.textInputAnswer = input} />
-                        </Col>
-                    </FormGroup>
-
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
                         <Button type="submit" onClick={this.submitForm}>Get Registered</Button>
                         </Col>
                     </FormGroup>
                     <p>
-                        <a href='#' onClick={this.props.callBackParent}>
-                            Already have an Account?
-                        </a>
+                        <Link to='/auth/login'>Already have an Account?</Link>
                     </p>
             </div>
         )

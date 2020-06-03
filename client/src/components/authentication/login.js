@@ -3,7 +3,7 @@ import axios from 'axios'
 import '../../css/login.css'
 // require('!style-loader!css-loader!../../css/login.css')
 import { Form, FormGroup, ControlLabel, Button, FormControl, Col, Checkbox } from 'react-bootstrap'
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 let queryString = require('querystring')
 
 
@@ -21,11 +21,11 @@ class Login extends React.Component {
         let user="sergio"
         let password="sergio"
         console.log('we are in the submit form fnction...' +
-                    '\n' +  this.password.value + " " + this.email.value )
-        if(this.password.value !== "" && this.email.value !== "") {
+                    '\n' +  this.password.value + " " + this.username.value )
+        if(this.password.value !== "" && this.username.value !== "") {
             axios.post('/login', queryString.stringify(
                 {
-                    email: this.email.value,
+                    username: this.username.value,
                     password: this.password.value
                 }
             ), {
@@ -39,19 +39,17 @@ class Login extends React.Component {
                         console.log("user connected successfully")
                         this.props.history.push('/home/list');
                     } else {
-                        this.props.callBackParentFaillureLogin("Password or Email cannot be empty!")
+                        this.props.callBackParentFaillure(response.error)
                         const error = new Error(response.error)
                         throw error;
                     }
                 }
             ).catch(err => {
-                this.props.callBackParentFaillureLogin("Error logging in please try again!")
+                this.props.callBackParentFaillure('Internal server error.')
                 console.error(err);
               });
-            console.log("username & password are correct")
-            
         } else {
-            this.props.callBackParentFaillureLogin("Password or Email cannot be empty!")
+            this.props.callBackParentFaillure("Password or username cannot be empty!")
         }
     }
 
@@ -62,10 +60,10 @@ class Login extends React.Component {
                         <Col componentClass={ControlLabel} sm={2}>
                         </Col>
                         <Col sm={10}>
-                        <FormControl name="email" 
+                        <FormControl name="username" 
                                      type="text" 
-                                     inputRef={input => this.email = input} 
-                                     placeholder="Email" />
+                                     inputRef={input => this.username = input} 
+                                     placeholder="Username" />
                         </Col>
                     </FormGroup>
 
@@ -92,13 +90,9 @@ class Login extends React.Component {
                         </Col>
                     </FormGroup>
                     <p>
-                        <a href='#' onClick={this.props.callBackParentRegister}>
-                            Don't have an account? 
-                        </a>
+                        <Link to='/auth/register'>Don't have an account? </Link>
                         <span> | </span>
-                        <a href='#' onClick={this.props.callBackParentForget}>
-                            Forget your password?
-                        </a>
+                        <Link to='/auth/forget'>Forget your password?</Link>
                     </p>
             </div>
         )

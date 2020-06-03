@@ -4,14 +4,7 @@ var bcrypt   = require('bcrypt')
 
 var UserSchema = new Schema(
     {
-        lastname: String,
-        firstname: String,
-        email: String,
         username: String,
-        secret: {
-            question: String,
-            answer: String
-        },
         password: String,
         favorites: [
             {

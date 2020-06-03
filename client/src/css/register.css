@@ -5,7 +5,7 @@
     padding-left: 30px;
     float: right;
     position: absolute;
-    top: 10px;
+    top: 100px;
     right: 40px;
     box-shadow: 1px 1px 20px 3px;
 }
@@ -36,7 +36,7 @@ input[type=text] , input[type=password] {
         margin: 0 auto; 
         padding: 20px;
         position: absolute;
-        top: 10px;
+        top: 100px;
         box-shadow: 1px 1px 20px 3px;
     }
     
@@ -67,7 +67,7 @@ input[type=text] , input[type=password] {
         padding: 20px;
         right: 0;
         position: absolute;
-        top: 10px;
+        top: 100px;
         box-shadow: 1px 1px 20px 3px;
     }
     

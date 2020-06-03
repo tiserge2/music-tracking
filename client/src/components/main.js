@@ -4,7 +4,7 @@ import Search from './search'
 import List from './list'
 import Error from './Error'
 import axios from 'axios'
-import { Switch, Route, useParams, useRouteMatch, BrowserRouter } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import withAuth from '../utils/withAuth'
 
 var history = require("history").createBrowserHistory

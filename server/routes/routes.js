@@ -35,7 +35,7 @@ module.exports = function(app, passport) {
     //creating the route responsible of the registration
   app.post("/register", function(req, res) {
       console.log("we are about to register a new user");
-      User.findOne({'email': req.body.email}, function(err, user) {
+      User.findOne({'username': req.body.username}, function(err, user) {
         console.log("checking if there was an error")
         if(err) {
           console.log(err)
@@ -43,25 +43,21 @@ module.exports = function(app, passport) {
           console.log("checking if the user already exist")
           if(user) {
               console.log("User already exists");
-              res.status(500).send("User already exist.");
+              res.send({message:"User already exist."});
           } else {
               var newUser = new User();
               console.log("Body: ", req.body)
               // TO-DO 
               // Backend verify the value are not empty
 
-              newUser.lastname = req.body.lastname;
-              newUser.firstname = req.body.firstname;
-              newUser.email = req.body.email; 
+              newUser.username = req.body.username; 
               newUser.password = newUser.generateHash(req.body.password);
-              newUser.question = req.body.question;
-              newUser.answer = req.body.answer;
               newUser.save(function(err) {
                 console.log("Saving the new user to the DB");
                 if(err) {
-                  res.status(500).send("Error registering new user please try again.");
-                }
-                res.send("Vous etes enregistre!");
+                  res.json({message: "Error registering new user please try again."});
+                } 
+                res.json({message: "Vous etes enregistre!"});
               });
           }
         }
@@ -73,8 +69,8 @@ module.exports = function(app, passport) {
     console.log("We are in login route");
     // TO-DO 
     // Backend verify the value are not empty
-    const { email, password } = req.body;
-    User.findOne({ email }, function(err, user) {
+    const { username, password } = req.body;
+    User.findOne({ username }, function(err, user) {
       console.log("Checking if user exist");
       if (err) {
         console.error(err);
@@ -84,7 +80,7 @@ module.exports = function(app, passport) {
       
       if (!user) {
         res.status(401)
-           .json({error: 'Incorrect email or password'});
+           .json({error: 'Incorrect username or password'});
       } else {
         console.log("Checking if password is correct");
         user.isCorrectPassword(password, function(err, same) {
@@ -95,11 +91,11 @@ module.exports = function(app, passport) {
           
           if (!same) {
             res.status(401)
-               .json({error: 'Incorrect email or password'});
+               .json({error: 'Incorrect username or password'});
           } else {
             console.log("Issuing token");
             // Issue token
-            const payload = { email };
+            const payload = { username };
             const token = jwt.sign(payload, secret, {
               expiresIn: '1h'
             });
