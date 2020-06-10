@@ -6,6 +6,7 @@ import Animation from './animation'
 import Flash from './faillure'
 import { Switch, Route } from 'react-router-dom'
 
+
 import '../../css/authentication.css'
 // require('!style-loader!css-loader!../../css/authentication.css')
 
@@ -28,9 +29,6 @@ class Authentication extends React.Component {
         return(
             <div className='interface'>
                 <Animation />
-                {
-                    this.state.flash ? <Flash message={this.state.serverMessage} /> : ""
-                }
                 <Switch>
                     <Route exact path='/auth/login' render={() => <Login callBackParentFaillure={(message) => {this.showFaillureMessage(message)}}
                                                                     {...this.props}

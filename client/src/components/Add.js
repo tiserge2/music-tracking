@@ -4,12 +4,22 @@ import FaPlus from 'react-icons/lib/fa/plus'
 import Modal from 'react-responsive-modal'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Cookies from 'universal-cookie'
+import checkLogin from '../utils/checkLogin'
+import {Redirect} from 'react-router-dom'
+import {toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+
+
+const cookies = new Cookies();
 let querystring = require('querystring');
 
 class Add extends React.Component{
     constructor(){
         super();
         this.state = {
+            username: cookies.get('username'),
             open: false,
             confirm: false,
             messageFromServer: ''
@@ -48,35 +58,52 @@ class Add extends React.Component{
         }, 2000)
     }
 
-    addFavorite =  () => {
+     addFavorite =  () => {
         console.log("add favorite button has been clicked...")
         console.log(this.props.title, this.props.artist, new Date())
         // this.closeConfirm();
         let responseArrived = false
-        axios.post('/addFavorite', querystring.stringify({
-            artist: this.props.artist,
-            title: this.props.title,
-            album: this.props.album,
-            cover: this.props.cover,
-            cover_medium: this.props.cover_medium
-        }),
-        {
-            headers: {
-                "content-type": "application/x-www-form-urlencoded"
-            }
-        }).then( function(response){
-            
-            console.log("Reponse du server:" + response.data)
-            if(response.data != "") 
-                responseArrived = true
-            //setServerResponse(response.data)
-            //this.setState({messageFromServer: response.data, open: false})
-            //this.onCloseModal()
-        });
-        //console.log(serverResponse)
-        this.closeConfirm();
-        //this.openConfirm();
-        
+
+        fetch('/checkToken')
+            .then(res => {
+                if (res.status === 200) {
+                    console.log("status from true: ", res.status)
+                    // return true
+                    console.log('checking login state,', checkLogin()) 
+                    
+                    axios.post('/addFavorite', querystring.stringify({
+                        username: this.state.username,
+                        artist: this.props.artist,
+                        title: this.props.title,
+                        album: this.props.album,
+                        cover: this.props.cover,
+                        cover_medium: this.props.cover_medium
+                    }),
+                    {
+                        headers: {
+                            "content-type": "application/x-www-form-urlencoded"
+                        }
+                    }).then( function(response){
+                        
+                        console.log("Reponse du server:" + response.data)
+                        toast("Music added successfully", {position: toast.POSITION.TOP_CENTER,
+                            type: toast.TYPE.SUCCESS})
+                        if(response.data != "") 
+                            responseArrived = true
+                    });
+                    this.closeConfirm();
+                } else {
+                    console.log("status from false: ", res.status)
+                    console.log("You need to login first")
+                    toast("You need to login first", {position: toast.POSITION.TOP_CENTER,
+                                                      type: toast.TYPE.ERROR})
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                //   return false;
+                this.props.history.push('/home/list');
+            });
     }
 
     openConfirm = () => {

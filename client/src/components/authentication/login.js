@@ -1,9 +1,14 @@
 import React from 'react'
 import axios from 'axios'
 import '../../css/login.css'
-// require('!style-loader!css-loader!../../css/login.css')
 import { Form, FormGroup, ControlLabel, Button, FormControl, Col, Checkbox } from 'react-bootstrap'
 import { Redirect, Link } from 'react-router-dom';
+import Loader from 'react-loader-spinner'
+import Cookies from 'universal-cookie'
+import {toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+const cookies = new Cookies()
 let queryString = require('querystring')
 
 
@@ -12,12 +17,13 @@ class Login extends React.Component {
         super(props);
         console.log("[Login] props: ", this.props)
         this.state = {
-            isRegistered: this.props.registerState
+            loggingIn: false
         }
         this.submitForm = this.submitForm.bind(this)
     }
 
     submitForm = () => {
+        this.setState({loggingIn: true})
         let user="sergio"
         let password="sergio"
         console.log('we are in the submit form fnction...' +
@@ -36,20 +42,27 @@ class Login extends React.Component {
                 (response) => {
                     console.log("checking status... ", response.status)
                     if(response.status === 200) {
-                        console.log("user connected successfully")
+                        console.log("user connected successfully: ", this.username.value)
+                        cookies.set("username", this.username.value)
                         this.props.history.push('/home/list');
                     } else {
-                        this.props.callBackParentFaillure(response.error)
+                        this.setState({loggingIn: false})
+                        toast(response.error, {position: toast.POSITION.TOP_CENTER,
+                            type: toast.TYPE.ERROR})
                         const error = new Error(response.error)
                         throw error;
                     }
                 }
             ).catch(err => {
-                this.props.callBackParentFaillure('Internal server error.')
+                this.setState({loggingIn: false})
+                toast("Internal server error.", {position: toast.POSITION.TOP_CENTER,
+                    type: toast.TYPE.ERROR})
                 console.error(err);
               });
         } else {
-            this.props.callBackParentFaillure("Password or username cannot be empty!")
+            this.setState({loggingIn: false})
+            toast("Fields cannot be empty!", {position: toast.POSITION.TOP_CENTER,
+                                                            type: toast.TYPE.ERROR})
         }
     }
 
@@ -86,7 +99,16 @@ class Login extends React.Component {
 
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
-                        <Button id='signInButton' type="submit" onClick={this.submitForm}>Sign in</Button>
+                            
+                        <Button id='signInButton' type="submit" onClick={this.submitForm}>
+                            {
+                                this.state.loggingIn ? <Loader type="Circles" 
+                                                                color="#80bfff" 
+                                                                height={20} 
+                                                                width={20} 
+                                                        />  : null
+                            } Sign in
+                        </Button>
                         </Col>
                     </FormGroup>
                     <p>

@@ -27,7 +27,7 @@ export default function withAuth(ComponentToProtect) {
           console.error(err);
           this.setState({ loading: false, redirect: true });
         });
-    }
+      }
 
 
     render() {

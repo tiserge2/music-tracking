@@ -6,16 +6,6 @@ var UserSchema = new Schema(
     {
         username: String,
         password: String,
-        favorites: [
-            {
-                artist: String,
-                title: String,
-                album: String,
-                cover: String,
-                cover_medium: String,
-                date:  Date
-            }
-        ]
     }
 );
 

@@ -4,19 +4,19 @@ import Menu from './menu-bar'
 import Main from './main'
 import Cockpit from './Cockpit'
 import Error from './Error'
-import axios from 'axios'
 import Authentication from './authentication/authentication'
 import { Switch, Route, Router, Redirect } from 'react-router-dom'
-import withAuth from '../utils/withAuth'
 import {isFirstTime} from '../utils/visitor'
-
-
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
  
 
 class App extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+          username: ''
+        }
     }
 
     componentDidMount = () => {
@@ -51,6 +51,8 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                <ToastContainer />
+
                 <Switch>
                     <Route  path='/home'  render={(props) =>  <Cockpit {...props}/>} />  
                     <Route  path='/auth'  render={(props) =>  <Authentication {...props}/>} />

@@ -2,13 +2,13 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import { Form, FormGroup, ControlLabel, Button, FormControl, Col, Checkbox } from 'react-bootstrap'
 import '../../css/forget.css'
-// require('!style-loader!css-loader!../../css/forget.css')
+import Loader from 'react-loader-spinner'
 
 class Forget extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isForgeted: this.props.forgetState
+            retrieving: false
         }
     }
 
@@ -23,7 +23,15 @@ class Forget extends React.Component {
                                      type="text" 
                                      inputRef={input => this.email = input} 
                                      placeholder="Email" />
-                        <Button type='submit' id='button-forget-send'>Retrieve Password</Button><br/>
+                        <Button type='submit' id='button-forget-send'>
+                        {
+                                this.state.retrieving ? <Loader type="Circles" 
+                                                                color="#80bfff" 
+                                                                height={20} 
+                                                                width={20} 
+                                                        />  : null
+                        } Retrieve Password
+                        </Button><br/>
                         <Link to='/auth/login'>Return</Link>
                         </Col>
                         

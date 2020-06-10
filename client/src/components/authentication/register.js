@@ -2,7 +2,9 @@ import React from 'react'
 import axios from 'axios'
 import { Form, FormGroup, ControlLabel, Button, FormControl, Col, Checkbox } from 'react-bootstrap'
 import '../../css/register.css'
+import { toast } from 'react-toastify'
 import {Link} from 'react-router-dom'
+import Loader from 'react-loader-spinner'
 let queryString = require('querystring')
 
 // require('!style-loader!css-loader!../../css/register.css')
@@ -12,7 +14,7 @@ class Register extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isRegistered: this.props.registerState
+            registering: false
         }
         this.submitForm = this.submitForm.bind(this)
     }
@@ -26,6 +28,7 @@ class Register extends React.Component {
     }
 
     submitForm = () => {
+        this.setState({registering: true})
         console.log("we are in the submit form")
         let username    = this.username.value,
             password1   = this.password1.value,
@@ -41,23 +44,35 @@ class Register extends React.Component {
                         "content-type": "application/x-www-form-urlencoded"
                     }
                 }).then((response) => {
-                        if(response.status === 200) {
+                        if(response.data.message === "saved") {
                             this.props.history.push('/auth/login');
-                        } 
-                        console.log("message du server apres registration:", response)
-                        this.props.callBackParentFaillure(response.data.message)
+                            // this.props.callBackParentFaillure(response.data.message)
+                            toast(username + "'s account created, you can login!", {position: toast.POSITION.TOP_CENTER,
+                                type: toast.TYPE.SUCCESS})
+                        } else {
+                            this.setState({registering: false})
+                            console.log("message du server apres registration:", response)
+                            // this.props.callBackParentFaillure(response.data.message)
+                            toast(response.data.message, {position: toast.POSITION.TOP_CENTER,
+                                type: toast.TYPE.ERROR})
+                        }
                     }
                 ).catch((err) => {
                     console.log(err)
                 })
-                // alert( username + "\n" + password1+ "\n" + password2)
             } else {
+                this.setState({registering: false})
                 console.log("Password arent the same")
-                this.props.callBackParentFaillure("Password aren't the same")
+                // this.props.callBackParentFaillure("Password aren't the same")
+                toast("Password aren't the same", {position: toast.POSITION.TOP_CENTER,
+                    type: toast.TYPE.ERROR})
             }
         } else {
+            this.setState({registering: false})
             console.log("No empty field allowed")
-            this.props.callBackParentFaillure("No empty field allowed")
+            // this.props.callBackParentFaillure("No empty field allowed")
+            toast("No empty field allowed", {position: toast.POSITION.TOP_CENTER,
+                type: toast.TYPE.ERROR})
         }
     }
     render() {
@@ -95,7 +110,15 @@ class Register extends React.Component {
 
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
-                        <Button id='registerButton' type="submit" onClick={this.submitForm}>Get Registered</Button>
+                        <Button id='registerButton' type="submit" onClick={this.submitForm}>
+                        {
+                                this.state.registering ? <Loader type="Circles" 
+                                                                color="#80bfff" 
+                                                                height={20} 
+                                                                width={20} 
+                                                        />  : null
+                        } Get Registered
+                        </Button>
                         </Col>
                     </FormGroup>
                     <p>

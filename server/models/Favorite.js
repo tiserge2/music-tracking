@@ -2,6 +2,7 @@ var mongoose        = require("mongoose");
 var Schema          = mongoose.Schema;
 
 var FavoriteSchema = new Schema({
+    userId: String,
     artist: String,
     title: String,
     album: String,

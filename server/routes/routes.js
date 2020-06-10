@@ -57,7 +57,7 @@ module.exports = function(app, passport) {
                 if(err) {
                   res.json({message: "Error registering new user please try again."});
                 } 
-                res.json({message: "Vous etes enregistre!"});
+                res.json({message: "saved"});
               });
           }
         }
@@ -75,7 +75,7 @@ module.exports = function(app, passport) {
       if (err) {
         console.error(err);
         res.status(500)
-           .json({error: 'Internal error please try again'});
+           .json({error: 'Internal error please try again'}); 
       } 
       
       if (!user) {
@@ -106,34 +106,51 @@ module.exports = function(app, passport) {
     });
   });
 
-  app.post('/addFavorite', async function(req, res) {
+  app.post('/addFavorite',  function(req, res) {
     console.log("we are in the /addFavorite route...")
     console.log(req.body)
 
     var favorite = new Favorite()
+    console.log("The server received the add request..")
+    
+    User.find({username: req.body.username}, function(err, user) {
+      if(err)
+        res.send(err)
+
+      var userId = user[0]._id
+      console.log('id user: ', user[0]._id)
+
+      favorite.userId = userId
       favorite.artist = req.body.artist
       favorite.title  = req.body.title
       favorite.album  = req.body.album
       favorite.cover  = req.body.cover
       favorite.cover_medium = req.body.cover_medium
       favorite.date = new Date()
-    console.log("The server received the add request..")
-    await favorite.save(function(err) {
-      if(err)
-        res.send(err);
-      req.flash('info', 'the new data has been saved to the db..')
-      res.send("the new data has been saved to the db..")
-    }) 
-    
+
+      favorite.save(function(err) {
+        if(err)
+          res.send(err);
+
+        console.log("favorite: ", favorite)
+        req.flash('info', 'the new data has been saved to the db..')
+        res.send("the new data has been saved to the db..")
+      }) 
+    })
   });
  
   app.get('/getFavorite', function(req, res) {
     console.log("we are in the /getFavorite route");
-    Favorite.find({}, function(err, favorites) {
+    console.log('User to get favorite: ', req.query.username)
+    User.find({username: req.query.username}, function(err, user) {
       if(err)
         res.send(err)
-      console.log(favorites)
-      res.json(favorites) 
+      Favorite.find({userId: user[0]._id}, function(err, favorites) {
+        if(err)
+          res.send(err)
+        console.log(favorites)
+        res.json(favorites)
+      })
     })
   });
 

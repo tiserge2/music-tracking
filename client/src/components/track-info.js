@@ -56,6 +56,7 @@ class Title extends React.Component {
                                      album      = {this.props.album}  
                                      cover      = {this.props.cover}
                                      cover_medium={this.props.cover_medium}
+                                     {...this.props}
                                 />
                             :
                                 <Remove 
@@ -66,6 +67,7 @@ class Title extends React.Component {
                                     cover_medium={this.props.cover_medium}
                                     id          ={this.props.id}
                                     callRefresh ={() => {this.props.callGetFavorite()}}
+                                    {...this.props}
                                 />
                         }
                         
@@ -75,7 +77,7 @@ class Title extends React.Component {
                             <Download artist     = {this.props.artist} 
                                       title      = {this.props.title} 
                                       album      = {this.props.album}
-                            
+                                      {...this.props}
                             />
                         </div>
 
