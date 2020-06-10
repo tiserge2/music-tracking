@@ -6,6 +6,8 @@ import Error from './Error'
 import axios from 'axios'
 import { Switch, Route } from 'react-router-dom'
 import withAuth from '../utils/withAuth'
+import UserAction from './User'
+
 
 var history = require("history").createBrowserHistory
 
@@ -67,24 +69,16 @@ class Main extends React.Component {
         }
 
     render() {
-        // let match = this.props.match
 
         return(
             <div className='windowPosition'>
                 <main>
-                    {/* <BrowserRouter basename="home"> */}
-                        <Switch>
-                            <Route  exact path='/home' render={(props) => <Home data={[this.state.values, this.state.loading]}/>} />
-                            <Route exact   path='/home/search' render={(props) => <Search />} />
-                            <Route  exact  path='/home/list' component={withAuth(List)}/>
-                        </Switch>
-                    {/* </BrowserRouter> */}
-                        {/* <Route  exact path={`${match.path}`} render={(props) => (<Home data={[this.state.values, this.state.loading]}/>)} />
-                        <Route  path={`${match.path}/search`} render={(props) => <Search />} />
-                        <Route  path={`${match.path}/list`} render={(props) => ( withAuth(List) )}/> */}
-
-                        {/*  */}
-                    {/* </Switch> */}
+                    <UserAction />
+                    <Switch>
+                        <Route  exact path='/home' render={(props) => <Home data={[this.state.values, this.state.loading]}/>} />
+                        <Route exact   path='/home/search' render={(props) => <Search />} />
+                        <Route  exact  path='/home/list' component={withAuth(List)}/>
+                    </Switch>
                 </main>
             </div>
         )

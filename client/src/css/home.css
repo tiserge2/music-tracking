@@ -17,7 +17,7 @@
     position:relative;
     top: 7px;
     left: 7px;
-    font-size: 30px;
+    font-size: 10sp;
 }
 
 .titleContainer { 
@@ -77,8 +77,7 @@
         position:relative;
         top: 7px;
         left: 7px;
-        font-size: 30px;
-        text-align: center;
+        font-size: 20sp;
     }
 
     .titleContainer {
@@ -131,7 +130,6 @@
         top: 7px;
         left: 7px;
         font-size: 30px;
-        text-align: center;
     }
 
     .titleContainer {

@@ -43,16 +43,12 @@ class List extends React.Component {
         });
     }
 
-    componentWillMount = () => {
-        // this.getFavorite()
-    }
-
-    componentWillUpdate = () => {
-        // this.getFavorite()
-    }
-
     componentDidMount = () => {
         this.getFavorite()
+    }
+
+    removeElement = (id) => {
+        console.log("element to remove: ", id)
     }
 
     render(){
@@ -75,7 +71,7 @@ class List extends React.Component {
                                                    cover = {favorite['cover']}
                                                    id    = {favorite['_id']}
                                                    parent="favorite"
-                                                   callGetFavorite = {() => {this.getFavorite()}}
+                                                   callGetFavorite = {(id) => {this.removeElement(id)}}
                                 />
                             )
                         })                        

@@ -9,6 +9,7 @@ import { Switch, Route, Router, Redirect } from 'react-router-dom'
 import {isFirstTime} from '../utils/visitor'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../css/app.css'
  
 
 class App extends React.Component {

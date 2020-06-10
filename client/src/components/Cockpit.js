@@ -10,7 +10,6 @@ class Cockpit extends React.Component {
                 <Header />
                 <Main {...this.props}/>
                 <Menu {...this.props}/>
-                {/* <p >Hello world</p> */}
             </div>
         )
     }

@@ -1,6 +1,5 @@
 #header-bar {
     background-color:#0091EA ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100%;
     position: fixed;
     top: 0;
@@ -18,7 +17,6 @@
 @media all and (max-width: 320px) {
     #header-bar {
         background-color:#0091EA ;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         width: 100%;
         min-width:290px;
         position: fixed;
@@ -38,7 +36,6 @@
 @media all and (min-width: 321px) and (max-width: 484px) {
     #header-bar {
         background-color:#0091EA ;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         width: 100%;
         min-width:290px;
         position: fixed;
@@ -50,7 +47,7 @@
 
     #text {
         margin-top:-1px;
-        font-size: 30px;
+        font-size: 20sp;
         color:white;
     }
 }

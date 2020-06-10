@@ -3,7 +3,8 @@ import Modal from 'react-responsive-modal'
 import FaMinus from 'react-icons/lib/fa/minus'
 import axios from 'axios'
 import {Button} from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
+
 
 class Remove extends React.Component{
     constructor(props){
@@ -28,10 +29,12 @@ class Remove extends React.Component{
     onRemove = () => {
         axios.get('/removeFavorite/' + this.props.id)
             .then((response) => {
+                toast("Music removed successfully", {position: toast.POSITION.TOP_CENTER,
+                    type: toast.TYPE.SUCCESS})
+                this.props.callRefresh(this.props.id)
+                this.onCloseModal()
                 console.log(response.data)
             })
-            this.props.callRefresh()
-            this.onCloseModal()
     }
 
     render(){

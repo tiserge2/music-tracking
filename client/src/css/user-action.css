@@ -1,0 +1,21 @@
+#action-container {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    padding-top: 3px;
+    right: 0;
+    z-index: 1000;
+    position: absolute;
+    background-color: rgba(213, 238, 246, 0.5);
+    /* clip-path: circle(50%); */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    border-radius: 3px;
+    transition: background-color .75s ease-in-out;
+    cursor: pointer;
+}
+
+#action-container:hover {
+    box-shadow: 1px 6px 15px rgba(0,0,0,0.5);
+    background-color: #B3E5FC;
+}

@@ -66,7 +66,7 @@ class Title extends React.Component {
                                     cover      = {this.props.cover}
                                     cover_medium={this.props.cover_medium}
                                     id          ={this.props.id}
-                                    callRefresh ={() => {this.props.callGetFavorite()}}
+                                    callRefresh ={(id) => {this.props.callGetFavorite(id)}}
                                     {...this.props}
                                 />
                         }
