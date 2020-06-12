@@ -1,19 +1,11 @@
 import React from 'react'
-import FaPlus from 'react-icons/lib/fa/plus'
 import Add from './Add'
 import Remove from './Remove'
 import Download from './Download'
 import Play from './play'
-import FaPlay from 'react-icons/lib/fa/play'
-import FaDownload from 'react-icons/lib/fa/download'
-import FaPlusSquare from 'react-icons/lib/fa/plus-square'
 import '../css/track-info.css'
-// require('!style-loader!css-loader!../css/track-info.css');
 
 class Title extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     truncate(string){
             if (string.length > 13)
                 return string.substring(0,13) + '...';
@@ -25,7 +17,7 @@ class Title extends React.Component {
         return (
             <div className='musicField'>
                 <div className='titleImage'>
-                    <img src={this.props.cover} />
+                    <img src={this.props.cover} alt="title"/>
                 </div>
 
                 <div >
@@ -67,7 +59,7 @@ class Title extends React.Component {
                                     cover_medium={this.props.cover_medium}
                                     id          ={this.props.id}
                                     callRefresh ={(id) => {this.props.callGetFavorite(id)}}
-                                    {...this.props}
+                                    history={this.props.history}
                                 />
                         }
                         

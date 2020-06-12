@@ -8,8 +8,6 @@ import '../css/list.css'
 import Cookies from 'universal-cookie';
 
 const cookies = new Cookies();
-// require('!style-loader!css-loader!../css/setWindowHeight.css');
-// require('!style-loader!css-loader!../css/list.css');
 
 class List extends React.Component {
     constructor(props){
@@ -21,20 +19,15 @@ class List extends React.Component {
             hasData: false
         }
         this.getFavorite = this.getFavorite.bind(this)
-        console.log("getting username from cookie ", cookies.get('username'))
     }
 
     getFavorite = () => {
-        console.log("user asking for favorite: ", this.state.username)
         axios.get('/getFavorite', {
             params: {
                 username: this.state.username
             }
         } 
         ).then((response) => {
-            console.log("has the data been arrived?")
-            console.log(response.data)
-            console.log(this.state)
             if(this.state.length === 0 || response.data.length > this.state.length) {
                 this.setState({favorites: response.data, length: response.data.length})
                 console.log(this.state)
@@ -48,7 +41,6 @@ class List extends React.Component {
     }
 
     removeElement = (id) => {
-        console.log("element to remove: ", id)
     }
 
     render(){
@@ -72,6 +64,7 @@ class List extends React.Component {
                                                    id    = {favorite['_id']}
                                                    parent="favorite"
                                                    callGetFavorite = {(id) => {this.removeElement(id)}}
+                                                   history={this.props.history}
                                 />
                             )
                         })                        

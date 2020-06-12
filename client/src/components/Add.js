@@ -3,10 +3,7 @@ import  {Button}  from 'react-bootstrap'
 import FaPlus from 'react-icons/lib/fa/plus'
 import Modal from 'react-responsive-modal'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 import Cookies from 'universal-cookie'
-import checkLogin from '../utils/checkLogin'
-import {Redirect} from 'react-router-dom'
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -59,18 +56,9 @@ class Add extends React.Component{
     }
 
      addFavorite =  () => {
-        console.log("add favorite button has been clicked...")
-        console.log(this.props.title, this.props.artist, new Date())
-        // this.closeConfirm();
-        let responseArrived = false
-
         fetch('/checkToken')
             .then(res => {
                 if (res.status === 200) {
-                    console.log("status from true: ", res.status)
-                    // return true
-                    console.log('checking login state,', checkLogin()) 
-                    
                     axios.post('/addFavorite', querystring.stringify({
                         username: this.state.username,
                         artist: this.props.artist,
@@ -84,24 +72,17 @@ class Add extends React.Component{
                             "content-type": "application/x-www-form-urlencoded"
                         }
                     }).then( function(response){
-                        
-                        console.log("Reponse du server:" + response.data)
                         toast("Music added successfully", {position: toast.POSITION.TOP_CENTER,
                             type: toast.TYPE.SUCCESS})
-                        if(response.data != "") 
-                            responseArrived = true
                     });
                     this.closeConfirm();
                 } else {
-                    console.log("status from false: ", res.status)
-                    console.log("You need to login first")
                     toast("You need to login first", {position: toast.POSITION.TOP_CENTER,
                                                       type: toast.TYPE.ERROR})
                 }
             })
             .catch(err => {
                 console.error(err);
-                //   return false;
                 this.props.history.push('/home/list');
             });
     }
@@ -119,7 +100,7 @@ class Add extends React.Component{
                 <FaPlus onClick={this.onOpenModal}/>
                 <Modal open={open} onClose={this.onCloseModal}  showCloseIcon={false} little >
                     <div >
-                        <img src={this.props.cover_medium} />
+                        <img src={this.props.cover_medium} alt="cover"/>
                         <br/> <br/>
                         <p style={{color: 'black'}}>Title : <strong>{this.props.title}</strong></p>
                         <p style={{color: 'black'}}>Author: <strong>{this.props.artist}</strong></p>

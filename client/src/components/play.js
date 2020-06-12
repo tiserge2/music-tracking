@@ -25,12 +25,13 @@ class Play extends React.Component {
 
     render() {
         let { open } = this.state
+        
         return(
             <div>
                 <FaPlay onClick={this.onOpenModal}/>
                 <Modal open={open} onClose={this.onCloseModal}  showCloseIcon={true} center >
                     <div >
-                        <img style={{width:"100%",margin:"25px auto"}} src={this.props.cover_medium}/>
+                        <img style={{width:"100%",margin:"25px auto"}} src={this.props.cover_medium} alt="artist"/>
                     </div>
                     <span><strong>{this.props.title}</strong> | </span>  
                     <span><strong>{this.props.artist}</strong> | </span> 

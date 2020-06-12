@@ -1,4 +1,3 @@
-import React from 'react'
 
 const checkLogin = () => {
     console.log("[withAuth] checking auth");

@@ -12,7 +12,7 @@ class Remove extends React.Component{
         this.state = {
             open: false
         }
-
+        console.log("[Remove.js] props: ", this.props.history)
         this.onOpenModal = this.onOpenModal.bind(this)
         this.onCloseModal = this.onCloseModal.bind(this)
         this.onRemove     = this.onRemove.bind(this)
@@ -32,6 +32,7 @@ class Remove extends React.Component{
                 toast("Music removed successfully", {position: toast.POSITION.TOP_CENTER,
                     type: toast.TYPE.SUCCESS})
                 this.props.callRefresh(this.props.id)
+                this.props.history.push('/home/list')
                 this.onCloseModal()
                 console.log(response.data)
             })

@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import { Form, FormGroup, ControlLabel, Button, FormControl, Col, Checkbox } from 'react-bootstrap'
+import { FormGroup, ControlLabel, Button, FormControl, Col } from 'react-bootstrap'
 import '../../css/forget.css'
 import Loader from 'react-loader-spinner'
 

@@ -5,7 +5,6 @@ export default function withAuth(ComponentToProtect) {
   return class extends Component {
     constructor(props) {
       super(props);
-      console.log("[withAuth] constructor")
       this.state = {
         loading: true,
         redirect: false,
@@ -13,7 +12,6 @@ export default function withAuth(ComponentToProtect) {
     }
 
     componentDidMount() {
-      console.log("[withAuth] checking auth");
       fetch('/checkToken')
         .then(res => {
           if (res.status === 200) {

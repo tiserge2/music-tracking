@@ -2,25 +2,15 @@ import React from 'react'
 import Home from './home'
 import Search from './search'
 import List from './list'
-import Error from './Error'
-import axios from 'axios'
 import { Switch, Route } from 'react-router-dom'
 import withAuth from '../utils/withAuth'
 import UserAction from './User'
-
-
-var history = require("history").createBrowserHistory
-
-
-// require('!style-loader!css-loader!../css/setWindowHeight.css');
 
 
 class Main extends React.Component {
      /*ill make the api call here instead*/
         constructor(props) { 
             super(props);
-            console.log("[Main.js] Match: ", this.props.match)
-
             this.state = {
                 values : [],
                 loading: true

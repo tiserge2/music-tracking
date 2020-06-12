@@ -2,12 +2,8 @@ import React from 'react'
 import FaMusic from 'react-icons/lib/fa/music'
 import MdMusicNote from 'react-icons/lib/md/music-note'
 import '../../css/animation.css'
-// require('!style-loader!css-loader!../../css/animation.css')
 
 class Animation extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return(
             <div className='animation'>

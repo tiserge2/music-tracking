@@ -1,8 +1,6 @@
 import React from 'react'
 import { FormGroup, FormControl, Button} from 'react-bootstrap'
 import '../css/searchBar.css'
-// require('!style-loader!css-loader!../css/searchBar.css');
-
 
 class SearchBar extends React.Component {
     constructor({initialChecked}) {
@@ -86,8 +84,8 @@ class SearchBar extends React.Component {
         return(
             <div >
                 <FormGroup controlId="formControlsSelect" ref="selectInput" className='form-group1'>
-                    <FormControl  inputRef={input => this.selectInput = input} componentClass="select" id='select' placeholder="select">
-                        <option value="track" selected>Track</option>
+                    <FormControl  inputRef={input => this.selectInput = input} componentClass="select"  placeholder="select">
+                        <option value="track" defaultValue>Track</option>
                         <option value="artist">Artist</option>
                         <option value="album">Album</option>
                     </FormControl>

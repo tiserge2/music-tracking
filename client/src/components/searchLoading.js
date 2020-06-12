@@ -1,8 +1,6 @@
 import React from 'react'
-import FaSearch from 'react-icons/lib/fa/search'
 import Loader from 'react-loader-spinner'
 import '../css/noSearch.css'
-// require('!style-loader!css-loader!../css/noSearch.css');
 
 class SearchLoading extends React.Component {
     render() {

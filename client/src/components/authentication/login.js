@@ -1,21 +1,18 @@
 import React from 'react'
 import axios from 'axios'
 import '../../css/login.css'
-import { Form, FormGroup, ControlLabel, Button, FormControl, Col, Checkbox } from 'react-bootstrap'
-import { Redirect, Link } from 'react-router-dom';
+import { FormGroup, ControlLabel, Button, FormControl, Col, Checkbox } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 import Loader from 'react-loader-spinner'
-import Cookies from 'universal-cookie'
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-const cookies = new Cookies()
 let queryString = require('querystring')
 
 
 class Login extends React.Component {
     constructor(props) {
         super(props);
-        console.log("[Login] props: ", this.props)
         this.state = {
             loggingIn: false
         }
@@ -24,10 +21,6 @@ class Login extends React.Component {
 
     submitForm = () => {
         this.setState({loggingIn: true})
-        let user="sergio"
-        let password="sergio"
-        console.log('we are in the submit form fnction...' +
-                    '\n' +  this.password.value + " " + this.username.value )
         if(this.password.value !== "" && this.username.value !== "") {
             axios.post('/login', queryString.stringify(
                 {
@@ -40,10 +33,7 @@ class Login extends React.Component {
                 }
             } ).then(
                 (response) => {
-                    console.log("checking status... ", response.status)
                     if(response.status === 200) {
-                        console.log("user connected successfully: ", this.username.value)
-                        cookies.set("username", this.username.value)
                         this.props.history.push('/home/list');
                     } else {
                         this.setState({loggingIn: false})

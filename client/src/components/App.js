@@ -1,11 +1,7 @@
 import React from 'react'
-import Header from './header-bar'
-import Menu from './menu-bar'
-import Main from './main'
 import Cockpit from './Cockpit'
-import Error from './Error'
 import Authentication from './authentication/authentication'
-import { Switch, Route, Router, Redirect } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import {isFirstTime} from '../utils/visitor'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -30,7 +26,6 @@ class App extends React.Component {
       }
     
       updateVisit = () => {
-        const proxyurl = "https://cors-anywhere.herokuapp.com/";
         fetch('https://tiserge2-visit.herokuapp.com/api/addVisit', {
           method: 'POST',
           mode: "no-cors",

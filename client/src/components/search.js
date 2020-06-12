@@ -6,9 +6,7 @@ import Title from './track-info'
 import '../css/setWindowHeight.css'
 import '../css/search.css'
 import '../css/home.css'
-// require('!style-loader!css-loader!../css/setWindowHeight.css');
-// require('!style-loader!css-loader!../css/search.css');
-// require('!style-loader!css-loader!../css/home.css');
+
 
 class Search extends React.Component {
     constructor() {

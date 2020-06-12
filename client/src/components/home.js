@@ -1,18 +1,10 @@
 import React from 'react'
 import Title from './track-info'
-import axios from 'axios'
 import SearchLoading from './searchLoading'
 import '../css/setWindowHeight.css'
 import '../css/home.css'
-// require('!style-loader!css-loader!../css/setWindowHeight.css');
-// require('!style-loader!css-loader!../css/home.css');
-
 
 class Home extends React.Component {
-    constructor(props) {
-            super(props);
-        }
-
     render () {
         
         return (
