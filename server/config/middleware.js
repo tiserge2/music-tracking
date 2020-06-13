@@ -17,7 +17,7 @@ const withAuth = function(req, res, next) {
       } else {
         req.username = decoded.username;
         next();
-      }
+      } 
     });
   }
 }

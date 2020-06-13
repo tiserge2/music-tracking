@@ -64,14 +64,14 @@ module.exports = function(app, passport) {
       });
   });
 
-    //creating the route responsibe of the login
+    //creating the route responsible of the login
   app.post("/login", function(req, res) {
     console.log("We are in login route");
     // TO-DO 
     // Backend verify the value are not empty
     const { username, password } = req.body;
     User.findOne({ username }, function(err, user) {
-      console.log("Checking if user exist");
+      console.log("Checking if user exist"); 
       if (err) {
         console.error(err);
         res.status(500)

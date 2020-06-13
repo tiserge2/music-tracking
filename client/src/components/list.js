@@ -7,11 +7,12 @@ import '../css/home.css'
 import '../css/list.css'
 import Cookies from 'universal-cookie';
 
-const cookies = new Cookies();
+const cookies = new Cookies(); 
 
 class List extends React.Component {
     constructor(props){
         super(props);
+        console.log("Username: ", cookies.get('username'))
         this.state = {
             username: cookies.get('username'),
             favorites: [],

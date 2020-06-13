@@ -6,8 +6,12 @@ import { Link } from 'react-router-dom';
 import Loader from 'react-loader-spinner'
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Cookies from 'universal-cookie';
 
 let queryString = require('querystring')
+
+
+const cookies = new Cookies(); 
 
 
 class Login extends React.Component {
@@ -34,6 +38,7 @@ class Login extends React.Component {
             } ).then(
                 (response) => {
                     if(response.status === 200) {
+                        cookies.set("username", this.username.value);
                         this.props.history.push('/home/list');
                     } else {
                         this.setState({loggingIn: false})
