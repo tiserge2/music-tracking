@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link} from 'react-router-dom'
-import FaHome from 'react-icons/lib/fa/home'
-import FaSearch from 'react-icons/lib/fa/search'
-import FaListOl from 'react-icons/lib/fa/list-ol'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faSearch, faListOl } from '@fortawesome/free-solid-svg-icons'
 import '../css/menu-bar.css'
  
 class Menu extends React.Component {
@@ -12,19 +11,19 @@ class Menu extends React.Component {
                 <div id='menu-bar-item'>
                     <div className='menu-item'>
                         <Link to='/home' >
-                            <FaHome className='faSize'/> 
+                            <FontAwesomeIcon icon={faHome} className='faSize'/>
                         </Link>
                     </div>
 
                     <div className='menu-item'>
-                        <Link to='/home/search'>  
-                            <FaSearch className='faSize'/> 
+                        <Link to='/home/search'>
+                            <FontAwesomeIcon icon={faSearch} className='faSize'/>
                         </Link>
                     </div>
 
                     <div className='menu-item'>
                         <Link to='/home/list'>
-                            <FaListOl className='faSize'/> 
+                            <FontAwesomeIcon icon={faListOl} className='faSize'/>
                         </Link>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-regular-svg-icons'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 import '../css/user-action.css'
 import {Modal} from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'

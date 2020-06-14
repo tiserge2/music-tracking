@@ -12,17 +12,17 @@
 #menu-bar-item {
     position: relative;
     bottom:3px;
-    margin: 0 auto;
+    margin: 10px auto;
     width: 330px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-item {
-    float:left;
-    font-size: 30px;
-    margin-right: 50px;
     margin-top: 7px;
-    /*border: 4px solid white;
-    border-radius: 5px;*/
 }
 
 .faSize:active {
@@ -30,8 +30,9 @@
 }
 
 .faSize {
-    font-size: 2em;
+    font-size: 2.5em;
     color:white;
+    transition: color .50s ease-in-out;
 }
 
 .faSize:hover {
@@ -53,28 +54,27 @@
     #menu-bar-item {
         position: relative;
         bottom:3px;
-        width: 100%;
-        left: 11px;
-        margin: 3px 40px;
+        margin: 10px auto;
+        width: 330px;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
     }
-
+    
     .menu-item {
-        float:left;
-        font-size: 28px;
-        margin-right: 25px;
         margin-top: 7px;
-        /*border: 4px solid white;
-        border-radius: 5px;*/
     }
-
-
+    
     .faSize:active {
         color:black;;
     }
-
+    
     .faSize {
-        font-size: 2em;
+        font-size: 1.5em;
         color:white;
+        transition: color .50s ease-in-out;
     }
 
     .faSize:hover {
@@ -85,7 +85,7 @@
 @media all and (min-width: 321px) and (max-width: 484px){
     #menu-bar {
         background-color: #0091EA;
-    color:#E1F5FE;
+        color:#E1F5FE;
         width:100%;
         height: 65px;
         position:fixed;
@@ -97,27 +97,27 @@
     #menu-bar-item {
         position: relative;
         bottom:3px;
-        left: 22%;
-        width: auto;
+        margin: 10px auto;
+        width: 330px;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
     }
-
+    
     .menu-item {
-        float:left;
-        font-size: 28px;
-        margin-right: 25px;
         margin-top: 7px;
-        /*border: 4px solid white;
-        border-radius: 5px;*/
     }
-
-
+    
     .faSize:active {
         color:black;;
     }
-
+    
     .faSize {
-        font-size: 2em;
+        font-size: 1.9em;
         color:white;
+        transition: color .50s ease-in-out;
     }
 
     .faSize:hover {
