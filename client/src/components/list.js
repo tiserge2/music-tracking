@@ -31,7 +31,6 @@ class List extends React.Component {
         ).then((response) => {
             if(this.state.length === 0 || response.data.length > this.state.length) {
                 this.setState({favorites: response.data, length: response.data.length})
-                console.log(this.state)
                 this.setState({hasData: true})
             }
         });
@@ -55,7 +54,7 @@ class List extends React.Component {
                     <div className='titleContainer' id='style-2'>
                     {
                         !this.state.hasData ? <SearchLoading />
-                        :
+                        : this.state.length === 0 ? "No preference added" :
                         this.state.favorites.map((favorite, i) => {
                             return(
                                 <Title key={i}     artist = {favorite['artist']} 

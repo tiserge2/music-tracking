@@ -85,7 +85,7 @@ module.exports = function(app, passport) {
         console.log("Checking if password is correct");
         user.isCorrectPassword(password, function(err, same) {
           if (err) {
-            res.status(500)
+            res.status(500) 
                .json({error: 'Internal error please try again'});
           } 
           

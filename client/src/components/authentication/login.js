@@ -50,9 +50,8 @@ class Login extends React.Component {
                 }
             ).catch(err => {
                 this.setState({loggingIn: false})
-                toast("Internal server error.", {position: toast.POSITION.TOP_CENTER,
+                toast(err.response.data.error, {position: toast.POSITION.TOP_CENTER,
                     type: toast.TYPE.ERROR})
-                console.error(err);
               });
         } else {
             this.setState({loggingIn: false})
