@@ -2,7 +2,10 @@ import React from 'react'
 import Modal from 'react-responsive-modal'
 import FaDownload from 'react-icons/lib/fa/download'
 import { Button } from 'react-bootstrap'
-import axios from 'axios'
+import axios from 'axios' 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
+
 
 class Download extends React.Component {
     constructor(props){
@@ -36,6 +39,7 @@ class Download extends React.Component {
         return(
             <div>
                 <FaDownload onClick={this.onOpenModal}/>
+                {/* <FontAwesomeIcon icon={faDownload} onClick={this.onOpenModal} /> */}
                 <Modal open={open} onClose={this.onCloseModal} showCloseIcon={false} little>
                     <p style={{color: "black"}}>{this.props.title}</p>
                     <p style={{color: "black"}}>{this.props.artist}</p>

@@ -2,9 +2,10 @@ import React from 'react'
 import Modal from 'react-responsive-modal'
 import FaMinus from 'react-icons/lib/fa/minus'
 import axios from 'axios'
-import {Button} from 'react-bootstrap'
+import {Button} from 'react-bootstrap' 
 import { toast } from 'react-toastify'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMinus } from '@fortawesome/free-solid-svg-icons'
 
 class Remove extends React.Component{
     constructor(props){
@@ -43,6 +44,7 @@ class Remove extends React.Component{
         return(
             <div>
                 <FaMinus onClick={this.onOpenModal}/>
+                {/* <FontAwesomeIcon icon={faMinus} onClick={this.onOpenModal}/> */}
                 <Modal open={open} onClose={this.onCloseModal} little >
                     <p style={{color: "black"}}>Title: {this.props.title} </p>
                     <p style={{color: "black"}}>Artist: {this.props.artist} </p>

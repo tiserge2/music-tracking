@@ -60,19 +60,20 @@ p {
 }
 
 .addButton {
-    float: right;
+    float: right; 
     position:relative;
     top: 6px;
     width:19%;
     height: 100px;
     margin-left: 5px;
-    max-width: 80px;
-    font-size:3.5em;
+    max-width: 60px;
+    font-size:1.9em;
     color:#40C4FF;
+    transition: color .5s ease-in-out;
 }
 
 .addButton:hover {
-    color:#0D47A1;
+    color:black;
 }
 
 @media all and (min-width: 482px) and (max-width: 770px) {
@@ -136,26 +137,28 @@ p {
         top:-23px;
     }
 
-    .buttonGroup {
+    /* .buttonGroup {
         display: inline-block;
         float: right;
         width: 120px;
         margin-right: 20px;
-    }
+    } */
 
     .addButton {
-        display: inline-block;
-        float: right;
-        position:relative;
-        top: 6px;
-        height: 100px;
-        margin-left: 15px;
-        font-size:2em;
-        color:#40C4FF;
+        float: right; 
+    position:relative;
+    top: 6px;
+    width:19%;
+    height: 100px;
+    margin-left: 5px;
+    max-width: 40px;
+    font-size:1.9em;
+    color:#40C4FF;
+    transition: color .5s ease-in-out;
     }
 
     .addButton:hover {
-        color:#E1F5FE;
+        color:black;
     }
 }
 
@@ -236,10 +239,11 @@ p {
         max-width: 80px;
         font-size:1.2em;
         color:#40C4FF;
+        transition: color .5s ease-in-out;
     }
 
     .addButton:hover {
-        color:#E1F5FE;
+        color:black;
     }
 }
 
@@ -318,10 +322,11 @@ p {
         font-size:1.6em;
         margin-left: -8px;
         color:#40C4FF;
+        transition: color .5s ease-in-out;
     }
 
     .addButton:hover {
-        color:#E1F5FE;
+        color:black;
     }
 }
 
@@ -401,10 +406,11 @@ p {
         max-width: 80px;
         font-size:1.2em;
         color:#40C4FF;
+        transition: color .5s ease-in-out;
     }
 
     .addButton:hover {
-        color:#E1F5FE;
+        color:black;
     }
 }
 

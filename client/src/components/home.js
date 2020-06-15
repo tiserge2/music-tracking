@@ -10,9 +10,9 @@ class Home extends React.Component {
         return (
             <div className='windowPosition home'>
                 <div className='trendsBoard'>
-                    <h1 className='texte1'>
+                    <p className='texte1'>
                         Trending board
-                    </h1>
+                    </p>
 
                     <div className='titleContainer' id='style-2'>
                         {
