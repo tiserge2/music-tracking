@@ -145,12 +145,16 @@ module.exports = function(app, passport) {
     User.find({username: req.query.username}, function(err, user) {
       if(err)
         res.send(err)
-      Favorite.find({userId: user[0]._id}, function(err, favorites) {
-        if(err)
-          res.send(err)
-        console.log(favorites)
-        res.json(favorites)
-      })
+      if(user[0]._id) {
+        Favorite.find({userId: user[0]._id}, function(err, favorites) {
+          if(err)
+            res.send(err)
+          console.log(favorites)
+          res.json(favorites)
+        })
+      } else {
+        res.send("Internal problem, please try again.")
+      }
     })
   });
 
