@@ -1,5 +1,7 @@
 import React from 'react'
 import { FormGroup, FormControl, Button} from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import '../css/searchBar.css'
 
 class SearchBar extends React.Component {
@@ -84,7 +86,7 @@ class SearchBar extends React.Component {
         return(
             <div >
                 <FormGroup controlId="formControlsSelect" ref="selectInput" className='form-group1'>
-                    <FormControl  inputRef={input => this.selectInput = input} componentClass="select"  placeholder="select">
+                    <FormControl  inputRef={input => this.selectInput = input} componentClass="select" id='select'  placeholder="select">
                         <option value="track" defaultValue>Track</option>
                         <option value="artist">Artist</option>
                         <option value="album">Album</option>
@@ -98,7 +100,7 @@ class SearchBar extends React.Component {
                 <Button type="submit" 
                         onClick={this.makeApiCall.bind(this)}
                 >
-                        Search
+                        <FontAwesomeIcon icon={faSearch} />
                 </Button>
             </div>
         )

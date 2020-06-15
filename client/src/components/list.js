@@ -47,9 +47,9 @@ class List extends React.Component {
         return (
             <div className='windowPosition home'>
                 <div className='listPreferenceBoard'>
-                    <h1 className='texte1'>
+                    <p className='texte1'>
                         Preferences
-                    </h1>
+                    </p>
 
                     <div className='titleContainer' id='style-2'>
                     {

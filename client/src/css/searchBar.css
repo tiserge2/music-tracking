@@ -6,7 +6,6 @@ input[type=text] {
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-    background-image: url('https://www.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-strong-128.png');
     background-position: 10px 10px; 
     background-size: 25px 25px;
     background-repeat: no-repeat;
@@ -18,11 +17,15 @@ input[type=text] {
 
 #select {
     width: 110px;
+    display: none !important;
 }
 
 button {
-    height: 35px;
-    top: -19px;
+    background-color: #0091EA !important;
+    color: white !important;
+    height: 39px !important;
+    /* width: 20px;
+    top: -19px; */
 }
 
 button:hover input {
@@ -36,13 +39,12 @@ button:hover input {
 
 @media all and (max-width: 320px) {
     input[type=text] {
-    width: 200px;
+    width: 120px !important;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-    background-image: url('https://www.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-strong-128.png');
     background-position: 10px 10px; 
     background-size: 25px 25px;
     background-repeat: no-repeat;
@@ -60,6 +62,7 @@ button:hover input {
     }
 
     button {
+        background-color: #0091EA;
         height: 46px;
     }
 
@@ -76,7 +79,6 @@ button:hover input {
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-    background-image: url('https://www.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-strong-128.png');
     background-position: 10px 10px; 
     background-size: 25px 25px;
     background-repeat: no-repeat;
@@ -94,6 +96,7 @@ button:hover input {
     }
 
     button {
+        background-color: #0091EA;
         height: 46px;
     }
 

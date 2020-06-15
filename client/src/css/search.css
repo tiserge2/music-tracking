@@ -1,6 +1,5 @@
 .home {
         background-color: #d4eff7;
-        background-image: url(../asset/img/music-tracker-background.jpg);
         min-width: 482px;
         position: fixed; 
 }
@@ -17,7 +16,6 @@
 @media all and (max-width:320px) {
     .home {
         background-color: #d4eff7;
-        background-image: url(../asset/img/music-tracker-background.jpg);
         width: 320px;
         position: fixed;
     }
@@ -34,7 +32,6 @@
 @media all and (min-width:320px) and (max-width: 481px) {
     .home {
         background-color: #d4eff7;
-        background-image: url(../asset/img/music-tracker-background.jpg);
         width: 100vw;
         position: fixed;
     }
