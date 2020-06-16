@@ -47,7 +47,8 @@ class Title extends React.Component {
                                      title      = {this.props.title} 
                                      album      = {this.props.album}  
                                      cover      = {this.props.cover}
-                                     cover_medium={this.props.cover_medium}
+                                     cover_medium = {this.props.cover_medium}
+                                     preview = {this.props.preview}
                                      {...this.props}
                                 />
                             :

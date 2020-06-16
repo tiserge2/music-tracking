@@ -126,6 +126,7 @@ module.exports = function(app, passport) {
       favorite.album  = req.body.album
       favorite.cover  = req.body.cover
       favorite.cover_medium = req.body.cover_medium
+      favorite.preview =  req.body.preview
       favorite.date = new Date()
 
       favorite.save(function(err) {
@@ -170,7 +171,7 @@ module.exports = function(app, passport) {
 
    app.get('/downloadMusic/:artist&:title', async function(req, res) {
     console.log("we are in the download favorite route");
-    let youtubeKey = "AIzaSyAkWn9RFdFLEkxUPOeoz3GzoIxx7Gqokek";
+    let youtubeKey = "AIzaSyAqKrDHg-xF9VVh5h8loAgSj9iCV5O5yWA";
     let options    = {
       q: req.params.artist + req.params.title + 'audio',
       part: 'snippet',
@@ -178,27 +179,29 @@ module.exports = function(app, passport) {
     }
     var listOFLink = [];
     youtubeSearch(youtubeKey, options, (error, result) => {
-      if(error)
-        console.log(error)
-      result.items.map((item,i) => {
-        listOFLink.push("http://www.youtube.com/watch?v=" + item.id.videoId)
-        //res.send(item)
-      });
-      console.log(listOFLink);
-      const download =  videos(listOFLink[0], youtubeKey,'./server/download/music/')
-       download.then( downloads => {
-        downloads[0].onProgress(progress => {
-          console.log(progress*100)
-        })
-        downloads[0].then(() => {
-          console.log("finished")
-        })
-        downloads[0].catch(err => {
-          console.log(err)
-        })
-      }) 
-      //getYoutubeMusic(listOFLink[1])
-      res.send("Music downloaded Successfully")
+      if(error) {
+        console.log("WE have an error")
+        console.log(error.error.errors)
+      } else {
+        console.log("Result: ", result.error.errors)
+        // result.items.map((item,i) => {
+        //   listOFLink.push("http://www.youtube.com/watch?v=" + item.id.videoId)
+        // });
+        // console.log(listOFLink);
+        // const download =  videos(listOFLink[0], youtubeKey,'./server/download/music/')
+        //  download.then( downloads => {
+        //   downloads[0].onProgress(progress => {
+        //     console.log(progress*100)
+        //   })
+        //   downloads[0].then(() => {
+        //     console.log("finished")
+        //   })
+        //   downloads[0].catch(err => {
+        //     console.log(err)
+        //   })
+        // }) 
+        // res.send("Music downloaded Successfully")
+      }
     });
   });  
 }

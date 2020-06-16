@@ -20,7 +20,7 @@ input[type=text] {
     display: none !important;
 }
 
-button {
+#search-button {
     background-color: #0091EA !important;
     color: white !important;
     height: 39px !important;
@@ -28,7 +28,7 @@ button {
     top: -19px; */
 }
 
-button:hover input {
+#search-button:hover input {
     width:70%;
 }
 
@@ -61,12 +61,12 @@ button:hover input {
         height: 46px;
     }
 
-    button {
+    #search-button {
         background-color: #0091EA;
         height: 46px;
     }
 
-    button:hover input {
+    #search-button:hover input {
         width:70%;
     }
 }
@@ -95,12 +95,12 @@ button:hover input {
         height: 46px;
     }
 
-    button {
+    #search-button {
         background-color: #0091EA;
         height: 46px;
     }
 
-    button:hover input {
+    #search-button:hover input {
         width:70%;
     }
 }

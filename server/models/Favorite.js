@@ -8,6 +8,7 @@ var FavoriteSchema = new Schema({
     album: String,
     cover: String,
     cover_medium: String,
+    preview: String,
     date:  Date
 });
 

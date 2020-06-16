@@ -61,6 +61,8 @@ class List extends React.Component {
                                                    title = {favorite['title']}
                                                    album = {favorite['album']} 
                                                    cover = {favorite['cover']}
+                                                   cover_medium = {favorite['cover_medium']}
+                                                   preview = {favorite['preview']}
                                                    id    = {favorite['_id']}
                                                    parent="favorite"
                                                    callGetFavorite = {(id) => {this.removeElement(id)}}

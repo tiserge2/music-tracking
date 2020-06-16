@@ -6,8 +6,7 @@ import axios from 'axios'
 import Cookies from 'universal-cookie'
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
+
 
 
 
@@ -55,7 +54,7 @@ class Add extends React.Component{
                 console.log("in set interval function...")
                 this.onCloseModal()
         }, 2000)
-    }
+    } 
 
      addFavorite =  () => {
         fetch('/checkToken')
@@ -67,6 +66,7 @@ class Add extends React.Component{
                         title: this.props.title,
                         album: this.props.album,
                         cover: this.props.cover,
+                        preview: this.props.preview,
                         cover_medium: this.props.cover_medium
                     }),
                     {
@@ -100,7 +100,6 @@ class Add extends React.Component{
         return(
             <div>
                 <FaPlus onClick={this.onOpenModal}/>
-                {/* <FontAwesomeIcon font={faPlus} onClick={this.onOpenModal} /> */}
                 <Modal open={open} onClose={this.onCloseModal}  showCloseIcon={false} little >
                     <div >
                         <img src={this.props.cover_medium} alt="cover"/>

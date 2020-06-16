@@ -98,6 +98,7 @@ class SearchBar extends React.Component {
                     ref="textInput"
                 />
                 <Button type="submit" 
+                        id="search-button"
                         onClick={this.makeApiCall.bind(this)}
                 >
                         <FontAwesomeIcon icon={faSearch} />
