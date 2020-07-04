@@ -9,6 +9,8 @@ var bodyParser  = require('body-parser');
 var flash       = require('connect-flash');
 var passport    = require('passport');
 var configDB    = require('./config/database');
+const socketIO  = require('socket.io');
+const http      = require('http');
   
 //connection to the database
 mongoose.connect(configDB.online_url,
@@ -25,6 +27,7 @@ require('./config/passport')(passport);
 var app         = express();
 
 app.use(express.static(path.join(path.resolve(__dirname, '..'), 'client/build')));
+// app.use(express.static(path.join(path.resolve(__dirname), 'download/music')));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -48,7 +51,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash())
 
-require("./routes/routes.js")(app, passport);
+
+const server = http.createServer(app)
+const io     = socketIO(server)
+
+require("./routes/routes.js")(app, io);
+
 
 var serverPort = 8080;
 var port = process.env.PORT || serverPort;
@@ -57,3 +65,4 @@ app.listen(port, function() {
 });
 
 module.exports = app;
+module.exports = io;

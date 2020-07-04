@@ -20,6 +20,8 @@
     "babel-preset-stage-0": "^6.24.1",
     "bootstrap": "^4.5.0",
     "css-loader": "^3.5.3",
+    "downloadjs": "^1.4.7",
+    "js-file-download": "^0.4.12",
     "react": "^16.13.1",
     "react-bootstrap": "^0.32.4",
     "react-bs-notifier": "^5.0.0",
@@ -33,9 +35,12 @@
     "react-toastify": "^6.0.5",
     "react-transition-group": "^4.4.1",
     "sass-loader": "^8.0.2",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
     "style-loader": "^1.2.1",
     "universal-cookie": "^4.0.3",
-    "url-loader": "^4.1.0"
+    "url-loader": "^4.1.0",
+    "videos": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -6,8 +6,8 @@ const readline = require('readline');
 
 async function getYoutubeMusic(url) {
     let starttime
-    try {
-        return youto(url)
+    console.log("Getting youtube music")
+     youto(url)
             .pipe(fs.createWriteStream('./server/download/music/music.mp3'))
             .once('response', () => {
                 starttime = Date.now()
@@ -19,19 +19,6 @@ async function getYoutubeMusic(url) {
             .on('end', () => {
                 console.log("terminated")
             })
-    } catch(err) {
-        console.log(err)
-    }
+    
 }
 module.exports = getYoutubeMusic;
-
-
-// youto(listOFLink[0])
-//         .pipe(write)
-//         .once('response', () => {
-//             starttime = Date.now();
-//             console.log("ok")
-//           })
-//         .on("progress",(chunkLength, downloaded, total) => {
-          
-//         })
