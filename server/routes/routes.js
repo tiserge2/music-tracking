@@ -9,6 +9,7 @@ var YoutubeMp3Downloader = require("youtube-mp3-downloader");
 const path          = require('path');
 var withAuth        = require('../config/middleware');
 const jwt           = require('jsonwebtoken');
+const fs            = require('fs')
 
 var secret          = 'mysecretsshhh';
 
@@ -171,7 +172,7 @@ module.exports = function(app, io) {
     })
   });
 
-   app.post('/downloadMusic/', async function(req, res) {
+  app.post('/downloadMusic/', async function(req, res) {
     console.log("we are in the download favorite route");
     console.log("Data: ", req.body)
     let youtubeKey = "AIzaSyAS5Achi7g3-awm4o88Th_sVLpTt-hagTM";
@@ -221,9 +222,14 @@ module.exports = function(app, io) {
                 console.log(err)
               } else {
                 console.log("Everything is ok");
+                //delete the file from server
+                fs.unlink(filePath, function (err) {
+                  if (err) throw err;
+                  // if no error, file has been deleted successfully
+                  console.log('File deleted!');
+              }); 
               }
             });
-            // res.json({state: 'done', message: 'Receiving music...'})
         });
         
         YD.on("error", function(error) {
@@ -240,30 +246,15 @@ module.exports = function(app, io) {
   });  
 }
 
-
-// getYoutubeMusic(listOFLink[0])
-        // const download =  videos(listOFLink[1], youtubeKey,'./server/download/music/')
-        //  download.then( downloads => {
-        //   downloads[0].onProgress(progress => {
-        //     console.log(progress*100)
-        //   })
-        //   downloads[0].then(() => {
-        //     console.log("finished")
-        //   })
-        //   downloads[0].catch(err => {
-        //     console.log(err)
-        //   })
-        // }) 
-
-        var removeG = function(value) {
-          var temp = []
-          var temp1 = []
-          for(var i = 0; i < value.length; i++) {
-              temp.push(value[i])
-          }
+var removeG = function(value) {
+  var temp = []
+  var temp1 = []
+  for(var i = 0; i < value.length; i++) {
+    temp.push(value[i])
+  }
   
-          for(var j = 1; j < temp.length - 1; j++) {
-              temp1.push(temp[j])
-          }
-          return temp1.join("")
-        }
+  for(var j = 1; j < temp.length - 1; j++) {
+    temp1.push(temp[j])
+  }
+  return temp1.join("")
+}
