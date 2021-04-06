@@ -19,7 +19,7 @@ class Main extends React.Component {
         }
  
         getChart = () => {
-            var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+            var proxyUrl = 'https://corsanywhere.herokuapp.com/',
                 targetUrl = 'https://api.deezer.com/chart&limit=50';
             const values = [];
             
