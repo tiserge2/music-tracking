@@ -29,7 +29,7 @@ class SearchBar extends React.Component {
             this.props.callbackParent(newState)
             //this place will be for the api call
             //so that the user could search for something
-            var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+            var proxyUrl = 'https://corsanywhere.herokuapp.com/',
                 targetUrl = 'https://api.deezer.com/search/'
             const values = []
             fetch(proxyUrl + targetUrl + inpt + '?q=' + val + '&limit=100')
