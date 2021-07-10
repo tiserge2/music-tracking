@@ -23,16 +23,17 @@ mongoose.connect(configDB.online_url,
 );
 mongoose.Connection;
 
+//test DB connection
 var Favorite        = require('./models/Favorite');   
+var User        = require('./models/User');   
 
-
-Favorite.find({userId: "5ee41c9b21a3cc0017cf1a1e"}, function(err, favorites) {
+User.find({username: "tiserge2"}, function(err, favorites) {
         console.log("Inside favorite") 
         if(err)
-          res.send(err)
+                res.send(err)
         console.log(favorites)
-        res.json(favorites)
-      })
+        // res.json(favorites)
+})
 
 require('./config/passport')(passport);
 var app         = express();

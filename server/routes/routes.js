@@ -188,7 +188,7 @@ module.exports = function(app, io) {
         console.log(error)
         res.json({status: 'error', message: 'Error downloading, please try again'})
       } else {
-        // console.log("Result: ", result)
+        console.log("Result: ", result)
         result.items.map((item,i) => {
           listOFLink.push(item.id.videoId)
         });
