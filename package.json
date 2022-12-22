@@ -20,7 +20,7 @@
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.9.16",
     "morgan": "^1.10.0",
     "node-sass": "^4.14.1",
