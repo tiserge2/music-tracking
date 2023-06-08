@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import '../css/searchBar.css'
+import axios from 'axios'
 
 class SearchBar extends React.Component {
     constructor({initialChecked}) {
@@ -29,13 +30,10 @@ class SearchBar extends React.Component {
             this.props.callbackParent(newState)
             //this place will be for the api call
             //so that the user could search for something
-            var proxyUrl = 'https://corsanywhere.herokuapp.com/',
-                targetUrl = 'https://api.deezer.com/search/'
             const values = []
-            fetch(proxyUrl + targetUrl + inpt + '?q=' + val + '&limit=100')
-                .then( blob => blob.json()) 
-                .then( data => {
-                    console.log(data);
+
+            axios.post('/searchDeezer/', {'input': inpt, "q": val})
+                .then(data => {
                     data.data.map((infos) => {
                         var object = {
                             "artist" : "",
@@ -73,9 +71,9 @@ class SearchBar extends React.Component {
                     this.props.callbackParentForMusicSearch(values)
                     console.table(this.state.musicSearches)
                 })
-            console.log(this.state.search)
-            console.log(val)
-            console.log(inpt)
+                .catch(error => {
+                    console.log(error)
+                })
         } else {
             alert("No search words")
         }

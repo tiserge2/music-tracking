@@ -66,13 +66,13 @@ class Title extends React.Component {
                         
                         </div>
 
-                        <div className='addButton'>
+                        {/* <div className='addButton'>
                             <Download artist     = {this.props.artist} 
                                       title      = {this.props.title} 
                                       album      = {this.props.album}
                                       {...this.props}
                             />
-                        </div>
+                        </div> */}
 
                         <div className='addButton'>
                             <Play   artist     = {this.props.artist} 

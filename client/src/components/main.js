@@ -5,7 +5,7 @@ import List from './list'
 import { Switch, Route } from 'react-router-dom'
 import withAuth from '../utils/withAuth'
 import UserAction from './User'
-
+import axios from 'axios'
 
 class Main extends React.Component {
      /*ill make the api call here instead*/
@@ -19,15 +19,12 @@ class Main extends React.Component {
         }
  
         getChart = () => {
-            var proxyUrl = '',
-                targetUrl = 'https://api.deezer.com/chart&limit=50';
             const values = [];
-            
-            fetch(proxyUrl + targetUrl)
-                .then(blob => blob.json())
-                .then(data => {
-                    console.log(data);
-                    data.tracks.data.map((infos) => {
+
+            axios.get("/getChartDeezer/")
+                .then(response => {
+                    console.log(response.data)
+                    response.data.tracks.data.map((infos) => {
                         var object = {
                             "artist" : "",
                             "title" : "",
@@ -48,10 +45,6 @@ class Main extends React.Component {
                     });
                     this.setState({ values: values, loading: false });
                 })
-                .catch(e => {
-                    console.log(e);
-                    return e;
-                });
         }
 
         componentDidMount(){

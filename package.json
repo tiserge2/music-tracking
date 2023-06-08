@@ -18,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.4.0",
     "bcrypt": "^4.0.1",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.5",

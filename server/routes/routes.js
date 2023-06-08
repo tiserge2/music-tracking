@@ -5,6 +5,7 @@ var User            = require('../models/User')
 var getYoutubeMusic = require('../module/youto.js')
 var youtubeSearch   = require('youtube-api-v3-search');
 var YoutubeMp3Downloader = require("youtube-mp3-downloader");
+const axios         = require('axios');
 
 const path          = require('path');
 var withAuth        = require('../config/middleware');
@@ -160,6 +161,32 @@ module.exports = function(app, io) {
         res.send("Internal problem, please try again.")
       }
     })
+  });
+
+  app.get('/getChartDeezer', function(req, res) {
+    console.log("getting chart")
+    axios.get('https://api.deezer.com/chart&limit=50')
+      .then(response => {
+        res.send(response.data)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  });
+
+  app.post('/searchDeezer',  function(req, res) {
+    console.log(req.body)
+    let inpt = req.body.input
+    let q = req.body.q
+
+    axios.get("https://api.deezer.com/search/" + inpt + '?q=' + q + '&limit=100')
+      .then(response => {
+        console.log(response.data)
+        res.send(response.data.data)
+      })
+      .catch(error => {
+        console.log(error)
+      })
   });
 
   app.get('/removeFavorite/:id', async function(req, res) {

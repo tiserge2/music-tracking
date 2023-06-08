@@ -1,4 +1,5 @@
 node_modules/
 .vscode/
 client/build
+client/node_modules/
 .gitignore
