@@ -9,9 +9,6 @@ Music Tracker is an open-source utility tool designed to assist users in managin
 ## Table of Contents
 
 - [Installation](#installation)
-<!-- - [Usage](#usage)
-- [Configuration Options](#configuration-options)
-- [Examples](#examples) -->
 - [API Documentation](#api-documentation)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
