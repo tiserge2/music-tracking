@@ -41,7 +41,6 @@
     "url-loader": "^4.1.0",
     "videos": "^1.2.0"
   },
-  "resolutions": { "babel-loader": "8.1.0" },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
