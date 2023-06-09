@@ -3,7 +3,6 @@ import { FormGroup, FormControl, Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import '../css/searchBar.css'
-import axios from 'axios'
 
 class SearchBar extends React.Component {
     constructor({initialChecked}) {
@@ -11,9 +10,7 @@ class SearchBar extends React.Component {
         this.state = {
             search : initialChecked,
             apiCall : false,
-            musicSearches: {
-                
-            }
+            musicSearches: {}
         }
     }
 
@@ -32,9 +29,17 @@ class SearchBar extends React.Component {
             //so that the user could search for something
             const values = []
 
-            axios.post('/searchDeezer/', {'input': inpt, "q": val})
+            fetch('/searchDeezer/', {
+                    method: "POST",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({input: inpt, q: val})
+                })
+                .then(blob => blob.json())
                 .then(data => {
-                    data.data.map((infos) => {
+                    data.map((infos) => {
                         var object = {
                             "artist" : "",
                             "title" : "",
@@ -69,10 +74,6 @@ class SearchBar extends React.Component {
                     });
                     this.setState({musicSearches : values})
                     this.props.callbackParentForMusicSearch(values)
-                    console.table(this.state.musicSearches)
-                })
-                .catch(error => {
-                    console.log(error)
                 })
         } else {
             alert("No search words")

@@ -5,7 +5,7 @@ var User            = require('../models/User')
 var getYoutubeMusic = require('../module/youto.js')
 var youtubeSearch   = require('youtube-api-v3-search');
 var YoutubeMp3Downloader = require("youtube-mp3-downloader");
-// var axios         = require('axios');
+const fetch = require("node-fetch");
 
 const path          = require('path');
 var withAuth        = require('../config/middleware');
@@ -165,9 +165,10 @@ module.exports = function(app, io) {
 
   app.get('/getChartDeezer', function(req, res) {
     console.log("getting chart")
-    axios.get('https://api.deezer.com/chart&limit=50')
+    fetch('https://api.deezer.com/chart&limit=50')
+      .then(blob => blob.json())
       .then(response => {
-        res.send(response.data)
+        res.send(response)
       })
       .catch(error => {
         console.log(error)
@@ -179,10 +180,10 @@ module.exports = function(app, io) {
     let inpt = req.body.input
     let q = req.body.q
 
-    axios.get("https://api.deezer.com/search/" + inpt + '?q=' + q + '&limit=100')
+    fetch("https://api.deezer.com/search/" + inpt + '?q=' + q + '&limit=100')
+      .then(blob => blob.json())
       .then(response => {
-        console.log(response.data)
-        res.send(response.data.data)
+        res.send(response.data)
       })
       .catch(error => {
         console.log(error)

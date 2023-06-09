@@ -3,9 +3,8 @@ import Home from './home'
 import Search from './search'
 import List from './list'
 import { Switch, Route } from 'react-router-dom'
-import withAuth from '../utils/withAuth'
+import withAuth from '../utils/withAuth' 
 import UserAction from './User'
-import axios from 'axios'
 
 class Main extends React.Component {
      /*ill make the api call here instead*/
@@ -21,10 +20,11 @@ class Main extends React.Component {
         getChart = () => {
             const values = [];
 
-            axios.get("/getChartDeezer/")
+            fetch("/getChartDeezer/")
+                .then( blob => blob.json())
                 .then(response => {
                     console.log(response.data)
-                    response.data.tracks.data.map((infos) => {
+                    response.tracks.data.map((infos) => {
                         var object = {
                             "artist" : "",
                             "title" : "",
