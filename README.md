@@ -9,9 +9,9 @@ Music Tracker is an open-source utility tool designed to assist users in managin
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
+<!-- - [Usage](#usage)
 - [Configuration Options](#configuration-options)
-- [Examples](#examples)
+- [Examples](#examples) -->
 - [API Documentation](#api-documentation)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
@@ -22,11 +22,11 @@ Music Tracker is an open-source utility tool designed to assist users in managin
 
 To run the applicaiton locally you need to have NodeJS, NPM, MongoDB installed on your computer.
 
-## Usage
+<!-- ## Usage
 
 Explain how users can interact with your application. Provide instructions on how to run the application, navigate its interface, and utilize its features. If your application has a command-line interface (CLI) or graphical user interface (GUI), explain how users can utilize them effectively.
 
-<!-- ## Configuration Options
+## Configuration Options
 
 If your application offers customizable settings or options, describe them here. Explain how users can modify these settings and the impact they have on the application's behavior.
 
