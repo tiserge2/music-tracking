@@ -40,7 +40,17 @@ Our Application uses the Deezer API to get the data related to the music.
 
 ## Troubleshooting
 
-Anticipate potential issues or common pitfalls that users might encounter when using your application. Provide solutions or workarounds for known problems, and include relevant error messages or logs that can help users troubleshoot issues.
+Issue: Application fails to start after installation
+
+Possible Causes:
+
+- Missing or incompatible dependencies
+- Incorrect configuration settings
+
+Solution:
+
+- Ensure that all required dependencies are installed and up to date. Refer to the installation instructions in the README for more details.
+- Verify that the configuration settings are correctly set. Double-check any environment variables or configuration files required by the application.
 
 ## Contributing
 
