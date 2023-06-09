@@ -46,14 +46,15 @@ Anticipate potential issues or common pitfalls that users might encounter when u
 
 We welcome contributions from the developer community to enhance and improve the project. To contribute to this project, please follow the guidelines below:
 
-Reporting Issues
+#### Reporting Issues
 
 If you come across any issues or bugs, please submit a detailed bug report through our issue tracker. Include steps to reproduce the problem, expected behavior, and any relevant error messages or logs.
 
-Requesting Features
+#### Requesting Features
+
 If you have a feature request or an idea to enhance the project, please submit an issue in the issue tracker. Clearly describe the feature you would like to see implemented and provide any additional context or examples that would be helpful.
 
-Pull Requests
+#### Pull Requests
 
 We gladly accept pull requests for bug fixes, new features, or improvements. If you plan to contribute code to this project, please follow these steps:
 
@@ -62,7 +63,7 @@ We gladly accept pull requests for bug fixes, new features, or improvements. If 
 - Commit your changes with clear and descriptive commit messages.
 - Submit a pull request, explaining the purpose and details of your changes. Reference any related issues or feature requests.
 
-Code Style and Guidelines
+#### Code Style and Guidelines
 
 To maintain consistency and readability, please adhere to the following guidelines when contributing:
 
