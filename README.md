@@ -26,13 +26,13 @@ To run the applicaiton locally you need to have NodeJS, NPM, MongoDB installed o
 
 Explain how users can interact with your application. Provide instructions on how to run the application, navigate its interface, and utilize its features. If your application has a command-line interface (CLI) or graphical user interface (GUI), explain how users can utilize them effectively.
 
-## Configuration Options
+<!-- ## Configuration Options
 
 If your application offers customizable settings or options, describe them here. Explain how users can modify these settings and the impact they have on the application's behavior.
 
 ## Examples
 
-Provide some example use cases or scenarios that demonstrate how your application can be used effectively. Include code snippets, screenshots, or even animated GIFs to illustrate the expected output or behavior.
+Provide some example use cases or scenarios that demonstrate how your application can be used effectively. Include code snippets, screenshots, or even animated GIFs to illustrate the expected output or behavior. -->
 
 ## API Documentation
 
