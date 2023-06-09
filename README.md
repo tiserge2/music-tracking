@@ -47,25 +47,32 @@ Anticipate potential issues or common pitfalls that users might encounter when u
 We welcome contributions from the developer community to enhance and improve the project. To contribute to this project, please follow the guidelines below:
 
 Reporting Issues
+
 If you come across any issues or bugs, please submit a detailed bug report through our issue tracker. Include steps to reproduce the problem, expected behavior, and any relevant error messages or logs.
 
 Requesting Features
 If you have a feature request or an idea to enhance the project, please submit an issue in the issue tracker. Clearly describe the feature you would like to see implemented and provide any additional context or examples that would be helpful.
 
 Pull Requests
+
 We gladly accept pull requests for bug fixes, new features, or improvements. If you plan to contribute code to this project, please follow these steps:
 
-Fork the repository and create a new branch for your feature or bug fix.
-Make your changes and ensure that the code is well-tested.
-Commit your changes with clear and descriptive commit messages.
-Submit a pull request, explaining the purpose and details of your changes. Reference any related issues or feature requests.
+- Fork the repository and create a new branch for your feature or bug fix.
+- Make your changes and ensure that the code is well-tested.
+- Commit your changes with clear and descriptive commit messages.
+- Submit a pull request, explaining the purpose and details of your changes. Reference any related issues or feature requests.
+
 Code Style and Guidelines
+
 To maintain consistency and readability, please adhere to the following guidelines when contributing:
 
-Follow the existing code style and naming conventions.
-Write clear and concise documentation where necessary.
-Include unit tests for any new features or modifications.
-We appreciate your contributions and will review and merge pull requests that align with the project's goals and quality standards. Thank you for helping to improve this project!
+- Follow the existing code style and naming conventions.
+- Write clear and concise documentation where necessary.
+- Include unit tests for any new features or modifications.
+
+We appreciate your contributions and will review and merge pull requests that align with the project's goals and quality standards. 
+
+Thank you for helping to improve this project!
 
 Remember to customize these guidelines based on the specific needs and processes of your project. You can also provide additional information such as code of conduct, development setup instructions, or links to contribution guidelines documentation, if applicable.
 
