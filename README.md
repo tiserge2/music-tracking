@@ -36,7 +36,7 @@ Provide some example use cases or scenarios that demonstrate how your applicatio
 
 ## API Documentation
 
-If your application provides an API or integration capabilities, document the available endpoints, request/response formats, authentication requirements, and any other relevant details.
+Our Application uses the Deezer API to get the data related to the music. 
 
 ## Troubleshooting
 
@@ -48,8 +48,8 @@ If you want to encourage contributions from other developers, explain how they c
 
 ## License
 
-Specify the license under which your application is distributed. Include any terms and conditions that users should be aware of.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-Provide a way for users to get in touch with you if they have questions, feedback, or need support. This could be an email address, a link to a discussion forum, or your social media handles.
+If you would like to contribute to this project you can send me an email ossonsergio@live.com. I will be very happy to have you participating in this project as we still have a lot of features to add, lot of code refactoring, lot of optimization to be done.
