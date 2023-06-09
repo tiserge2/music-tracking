@@ -4,7 +4,7 @@
   "description": "",
   "main": "bin/www",
   "engines": {
-    "node": "14.21.3"
+    "node": "18.16.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
