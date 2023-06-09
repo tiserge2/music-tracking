@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-Provide a brief introduction to your application, explaining its purpose, main features, and target audience. Describe what problem it aims to solve or what value it offers to users.
+Music Tracker is an open-source utility tool designed to assist users in managing their music preferences based on top chart music. With Music Tracker, users can effortlessly stay up-to-date with the latest trends and popular songs, making it easier to discover and organize their favorite tracks. This application provides a user-friendly interface and powerful features that allow users to explore, search, and categorize music according to their personal preferences. Whether you're a music enthusiast, a DJ, or simply someone who enjoys discovering new music, Music Tracker is the perfect companion to enhance your music listening experience.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ Provide a brief introduction to your application, explaining its purpose, main f
 
 ## Installation
 
-Outline the steps required to install and set up your application. Include any prerequisites, dependencies, or configuration settings needed. If your application is available on a specific platform or requires specific hardware, mention that as well.
+To run the applicaiton locally you need to have NodeJS, NPM, MongoDB installed on your computer.
 
 ## Usage
 
