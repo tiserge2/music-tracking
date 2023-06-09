@@ -86,7 +86,7 @@ Remember to customize these guidelines based on the specific needs and processes
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://opensource.org/license/mit/) file for details.
 
 ## Contact
 
