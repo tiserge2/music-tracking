@@ -12,7 +12,7 @@
     "server": "nodemon --watch server server/app.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server/app.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true yarn install --prefix client && yarn run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm cache clean --force --prefix client && npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
